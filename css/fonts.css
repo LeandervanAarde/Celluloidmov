@@ -1,0 +1,36 @@
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+h5{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+p{
+    font-family: 'Overpass', sans-serif; 
+    font-weight: 400;
+    font-size: 16px;
+}
+
