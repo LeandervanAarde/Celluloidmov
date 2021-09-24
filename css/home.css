@@ -9,19 +9,22 @@ body{
 
 .header-image{
 height: 100vh;
-background-color: grey;
+/* background-color: grey; */
+background-image: url("../img/PLaceholder-1.jpg");
+background-position: center;
+background-size: contain;
 
 }
 
 .navbar{
     height: 20vh;
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
 }
 
 .logo-container{
     height: 80%;
     /* background-color: white; */
-    background-image: url("../img/SVG/Asset\ 1.svg");
+    background-image: url("../img/SVG/Asset\ 2.svg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -44,6 +47,24 @@ background-color: grey;
 }
 
 .mainMovie{
-    height: 550px;
-    background-color: darkblue;
+    height: 505px;
+    /* background-color: darkblue; */
+}
+
+.movieCover{
+    height: 100%;
+    background-color: white;
+    float: left;
+}
+
+.description{
+    float: left;
+    margin: 0 auto;
+    margin-left: 2%;
+}
+
+.btn-primary{
+    background-color: #1A00B9 !important;
+    border: none !important;
+    padding: 12px 20px !important;
 }
