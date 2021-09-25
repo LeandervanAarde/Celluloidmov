@@ -5,7 +5,7 @@ height: 100vh;
 /* background-color: grey; */
 background-image: url("../img/PLaceholder-1.jpg");
 background-position: center;
-background-size: contain;
+background-size: cover;
 
 }
 /* navigation */
@@ -28,6 +28,7 @@ background-size: contain;
     height: 100%;
     /* background-color: red; */
 }
+
 
 /* This is for the profile image */
 .photo{
