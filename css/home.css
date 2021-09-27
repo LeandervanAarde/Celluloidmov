@@ -32,9 +32,10 @@ background-size: cover;
 
 /* This is for the profile image */
 .photo{
-    height: 90%;
+    height: 89px;
     background-color: white;
     border-radius: 100%;
+  
 }
 
 /* The name of the account holder */

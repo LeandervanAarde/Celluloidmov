@@ -28,7 +28,8 @@ html{
 
 /* Card */
 .card{
-    height: 500px;
+    height: 350px;
+
     background-color: none !important;
     border-radius: 7px !important;
     border: none !important;
@@ -41,7 +42,7 @@ position: relative;
 }
 
 .card-img-top{
-    height: 70% !important;
+    height: 100% !important;
     /* image is just temp, delete once Api is implemented */
     background-image: url("../img/Placeholder-mov.jpeg");
     background-position: center;
@@ -56,6 +57,7 @@ position: relative;
     background-color: black !important;
     opacity: 90%;
     border-radius: 0 0 7px 7px  !important;
+
 }
 
 
