@@ -1,3 +1,73 @@
-.col-6{
-    background-color: red;
+.bg{
+    /* background-color: red; */
+    height: 100vh;
+}
+
+.signUp-con{
+    margin: 0 auto;
+    height: 90vh;
+    width: 80%;
+    background-color: white;
+    margin-top: 5vh;
+    box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
+    -moz-box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
+    border-radius: 30px;
+}
+
+.logo-img{
+    margin: 0 auto;
+    width: 30%;
+    height: 150px;
+    background-image: url(../img/SVG/Asset\ 1.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#signUp-heading{
+    margin: 0 auto;
+    margin-top: 10vh;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-container{
+    text-align: center;
+    width: 40%;
+    height: 40vh;
+    margin: 0 auto;   
+    margin-top: 2vh;
+    padding-top: 20px;
+}
+
+input{
+    width: 60%;
+    height: 35px;
+    border: none;
+    background-color: #f7f7f7;
+    border-radius: 40px;
+    padding-left: 4%;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.btn{
+    width: 80%;
+    background-color: #2b2b2b;
+    color: #f7f7f7;
+    margin:  0 auto;
+    margin-top: 20px;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 300 !important;
+    transition: all ease 200ms;
+}
+.btn:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.input-sections{
+    margin-top: 2vh;
 }
