@@ -44,11 +44,12 @@
     <!-- Insert content in container-fluid -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12 bg">
+            <div class="col-3 d-md-none"></div>
+         
+            <div class="col-6 col-md-12 d-lg-none bg">
                 <div class="signUp-con">
                     <div class="logo-img"></div>
                     <h1 id="signUp-heading">Sign Up</h1>
-
                     <div class="form-container">
                         <form>
                             <input type="text" placeholder="Name & Surname" class="input-sections">
@@ -58,9 +59,41 @@
                             <input type="submit" class="btn" value="Sign Up" class="input-sections">
                         </form>
                     </div>
-
                 </div>
             </div>
+
+            <div class="d-xs-none col-lg-12 bg">
+
+                <div class="login-left">
+                    <div class="logo-img"></div>
+                    <h1 id="signUp-heading">Log In</h1>
+                    <div class="form-container">
+                        <form>
+                            <input type="text" placeholder="User Name" class="input-sections">
+                            <input type="email" placeholder="Your Email" class="input-sections">
+                            <input type="number" placeholder="Password" class="input-sections"> 
+                            <input type="submit" class="btn" value="Log In" class="input-sections">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="signUp-LgMain">
+                    <div class="logo-img"></div>
+                    <h1 id="signUp-heading">Sign Up</h1>
+                    <div class="form-container">
+                        <form>
+                            <input type="text" placeholder="Name & Surname" class="input-sections">
+                            <input type="text" placeholder="User Name" class="input-sections">
+                            <input type="email" placeholder="Your Email" class="input-sections">
+                            <input type="number" placeholder="Password" class="input-sections"> 
+                            <input type="submit" class="btn" value="Sign Up" class="input-sections">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 d-md-none"></div>
+            <div class="d-none d-lg-block col-lg-6 panel"><div class="btn-click"><em>Sign Up</em></div></div>
             
         </div>
     </div> 
