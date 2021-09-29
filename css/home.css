@@ -9,40 +9,7 @@ background-size: cover;
 
 }
 /* navigation */
-.navbar{
-    height: 20vh;
-    /* background-color: lightgrey; */
-}
-/* the logo is in here */
-.logo-container{
-    height: 80%;
-    /* background-color: white; */
-    background-image: url("../img/SVG/Asset\ 2.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
 
-/* This is a div for the profile */
-.profile{
-    height: 100%;
-    /* background-color: red; */
-}
-
-
-/* This is for the profile image */
-.photo{
-    height: 89px;
-    background-color: white;
-    border-radius: 100%;
-  
-}
-
-/* The name of the account holder */
-.name{
-    text-align: center;
-    
-}
 /* Featured movie in the header */
 .mainMovie{
     height: 70%;
