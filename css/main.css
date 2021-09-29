@@ -35,7 +35,8 @@ html{
 
 /* This is for the profile image */
 .photo{
-    height: 89px;
+    height: 100px;
+    width: 100px;
     background-color: white;
     border-radius: 100%;
   
