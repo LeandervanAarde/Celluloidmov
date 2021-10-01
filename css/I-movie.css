@@ -1,0 +1,28 @@
+.left, .cover, .right{
+    height: 250px;
+    background-color: white;
+    border-radius: 7px;
+}
+
+.I-movie{
+    position: relative;
+    overflow-x: scroll;
+}
+
+.left{
+    position: relative;
+    left: -50px;
+    overflow-x: scroll;
+}
+
+.cover{
+    position: relative;
+    top: -20px;
+    left: 0px;
+}
+
+.right{
+    position: relative;
+    right: -50px;
+    overflow-x: scroll;
+}
