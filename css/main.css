@@ -100,3 +100,17 @@ position: relative;
 .B-menu{
     background-color: white;
 }
+
+.footer-logo{
+    padding-left: 10%;
+    height: 75px;
+    background-image: url("../img/SVG/Asset\ 2.svg");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.social{
+    margin-left: 20px !important;
+}
