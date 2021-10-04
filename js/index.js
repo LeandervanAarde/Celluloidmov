@@ -4,12 +4,12 @@ $(document).ready(function(){
     // Hover for Movie cards
     
     $(".card").mouseenter(function(){
-        $(".card-body").removeClass("d-none");
-        $(".card-body").addClass("d-block");
+        $(".card-body").removeClass("d-lg-none");
+        $(".card-body").addClass("d-lg-block");
     });
 
     $(".card").mouseleave(function(){
-        $(".card-body").removeClass("d-block");
-        $(".card-body").addClass("d-none");
+        $(".card-body").removeClass("d-lg-block");
+        $(".card-body").addClass("d-lg-none");
     });
 });
