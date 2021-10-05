@@ -30,15 +30,29 @@ background-size: cover;
     margin-left: 2%;
 }
 
+/* @media starts here  */
+
 
 @media only screen and (max-width: 2560px){
     .mainMovie{
-        height: 500px;
+        height: 900px;
+    }
+
+    .card{
+        height: 600px;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    
+    .mainMovie{
+        height: 700px;
     }
 
     .card{
         height: 400px;
     }
+
 }
 
 @media only screen and (max-width: 1024px){
