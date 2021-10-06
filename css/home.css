@@ -1,69 +1,54 @@
-
-/* Background image in header */
 .header-image{
-height: 100vh;
+    height: 110vh;
 /* background-color: grey; */
 background-image: url("../img/PLaceholder-1.jpg");
 background-position: center;
 background-size: cover;
 
 }
-/* navigation */
-
-/* Featured movie in the header */
-.mainMovie{
-    height: 70%;
-    /* background-color: darkblue; */
-}
-
-/* Movie cover insider the header */
-.movieCover{
-    height: 100%;
-    background-color: yellow;
-    float: left;
-}
-
-/* Movie descriwtion inside the header */
-.description{
-    float: left;
-    margin: 0 auto;
-    margin-left: 2%;
-}
-
-/* @media starts here  */
 
 
-@media only screen and (max-width: 2560px){
-    .mainMovie{
-        height: 900px;
+@media  (max-width: 576px){
+
+    .welcome{
+        margin-top: 40px;
     }
 
-    .card{
-        height: 600px;
-    }
-}
-
-@media only screen and (max-width: 1440px) {
-    
-    .mainMovie{
-        height: 700px;
+    .mainM{
+        height: 200px;
+        background-color: yellow;
     }
 
-    .card{
-        height: 400px;
+    .btn-primary{
+        width: 45%;
+        margin-left: 2%;
     }
 
-}
-
-@media only screen and (max-width: 1024px){
-    .mainMovie{
-        height: 470px;
+    .btn-outline-secondary{
+        width: 45%;
+    }
+    .card-container{
+        height: 350px;
     }
 
-    .card{
-        height: 300px;
+    .card-body{
+        height: 120px;
     }
 
+    .card-name{
+        font-size: 12px;
+    }
 
+    .card-img-top{
+        height: 170px;
+    }
+
+    .footer{
+        padding-top: 5%;
+    }
+
+    .social{
+        height: 35px;
+    }
 
 }
