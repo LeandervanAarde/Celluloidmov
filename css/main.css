@@ -13,12 +13,13 @@ html{
 }
 
 .navbar{
-    height: 20vh;
+    height: 10vh;
+    margin-bottom: 7%;
     /* background-color: lightgrey; */
 }
 /* the logo is in here */
 .logo-container{
-    height: 80%;
+    height: 100%;
     /* background-color: white; */
     background-image: url("../img/SVG/Asset\ 2.svg");
     background-position: center;
@@ -27,10 +28,10 @@ html{
 }
 
 /* This is a div for the profile */
-.profile{
+/* .profile{
   
-    /* background-color: red; */
-}
+     background-color: red; 
+}*/ 
 
 
 /* This is for the profile image */

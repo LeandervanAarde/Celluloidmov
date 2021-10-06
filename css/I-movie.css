@@ -34,6 +34,20 @@
     border-radius: 100%;
 }
 
+.circleL{
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    border-radius: 100%;
+    float: left;
+    margin-top: 5%;
+}
+
+.circle-block{
+    float: left;
+    margin-left: 5%;
+}
+
 
 /* @Media starts here */
 @media only screen and (max-width: 2560px) {
