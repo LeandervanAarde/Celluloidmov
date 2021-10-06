@@ -52,19 +52,20 @@ h1 {
 
 .featured-movies-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
+    overflow: auto;
 }
 
 .img-container {
-    width: 154px;
-    height: 154px;
+    width: 354px;
+    height: 354px;
     border-radius: 50%;
     background-color: gray;
 }
 
 .img-container img {
-    width: 100%;
+    
     height: 100%;
     border-radius: 50%;
 }
