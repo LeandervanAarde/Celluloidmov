@@ -11,6 +11,13 @@ background-size: cover;
     background-color: #262626;
 }
 
+
+.mainM{
+    background-image: url("../img/Placeholder-mov.jpeg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 /* @Media for small */
 
 @media  (max-width: 576px){
@@ -26,7 +33,7 @@ background-size: cover;
 
     .mainM{
         height: 200px;
-        background-color: yellow;
+      
     }
 
     .description{
@@ -87,7 +94,7 @@ background-size: cover;
 
     .mainM{
         height: 210px;
-        background-color: yellow;
+      
     }
 
     .description{
@@ -148,7 +155,7 @@ background-size: cover;
 
     .mainM{
         height: 290px;
-        background-color: yellow;
+      
         margin-left: 60px;
     }
 
@@ -184,7 +191,7 @@ background-size: cover;
 
 .mainM{
     height: 500px;
-    background-color: yellow;
+  
 }
 
 .btn-primary{
@@ -222,7 +229,7 @@ background-size: cover;
     
     .mainM{
         height: 500px;
-        background-color: yellow;
+      
     }
     
     .btn-primary{
