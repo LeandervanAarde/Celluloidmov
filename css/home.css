@@ -7,11 +7,21 @@ background-size: cover;
 
 }
 
+.about{
+    background-color: #262626;
+}
+
+/* @Media for small */
 
 @media  (max-width: 576px){
 
     .welcome{
         margin-top: 40px;
+        text-align: center;
+    }
+
+    .Movie-name{
+        text-align: center;
     }
 
     .mainM{
@@ -19,13 +29,17 @@ background-size: cover;
         background-color: yellow;
     }
 
+    .description{
+        text-align: center;
+    }
+
     .btn-primary{
-        width: 45%;
+        width: 43%;
         margin-left: 2%;
     }
 
     .btn-outline-secondary{
-        width: 45%;
+        width: 47%;
     }
     .card-container{
         height: 350px;
@@ -52,3 +66,194 @@ background-size: cover;
     }
 
 }
+
+
+
+@media (min-width: 577px) and (max-width: 767.98px){
+   .welcome{
+       text-align: center;
+    margin-top: 2%;
+
+   }
+
+   .Movie-name{
+    text-align: center;
+}
+
+   .header-image{
+       height: 112vh;
+   }
+   
+
+    .mainM{
+        height: 210px;
+        background-color: yellow;
+    }
+
+    .description{
+        text-align: center;
+    }
+
+    .btn-primary{
+        width: 43%;
+        margin-left: 2%;
+    }
+
+    .btn-outline-secondary{
+        width: 47%;
+    }
+    .card-container{
+        height: 400px;
+    }
+
+    .card-body{
+        height: 150px;
+    }
+
+    .card-name{
+        font-size: 12px;
+    }
+
+    .card-img-top{
+        height: 250px;
+    }
+
+    .footer{
+        padding-top: 5%;
+    }
+
+    .social{
+        height: 40px;
+    }
+
+}
+
+/* @media for md */
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+    .welcome{
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    .Movie-name{
+        text-align: left;
+        margin-left: 35px;
+    }
+
+    .description{
+        text-align: left;
+    }
+
+    .mainM{
+        height: 290px;
+        background-color: yellow;
+        margin-left: 60px;
+    }
+
+    .btn-primary{
+        margin-right: 40px;
+    }
+
+    .footer{
+        padding-top: 2%;
+    }
+
+    .social{
+        height: 40px;
+    }
+
+}
+
+@media (min-width: 992px){ 
+
+.welcome{
+    text-align: left;
+    margin-left: 30px;
+}
+
+.Movie-name{
+    text-align: left;
+    margin-left: 50px;
+
+}
+.description{
+    text-align: left;
+}
+
+.mainM{
+    height: 500px;
+    background-color: yellow;
+}
+
+.btn-primary{
+    margin-left: 80px;
+}
+
+.footer{
+    padding-top: 2%;
+}
+
+.social{
+    height: 40px;
+}
+
+
+
+ }
+
+
+ @media (min-width: 1440px){ 
+
+    .welcome{
+        text-align: left;
+        margin-left: 30px;
+    }
+    
+    .Movie-name{
+        text-align: left;
+        margin-left: 50px;
+    
+    }
+    .description{
+        text-align: left;
+    }
+    
+    .mainM{
+        height: 500px;
+        background-color: yellow;
+    }
+    
+    .btn-primary{
+        margin-left: 80px;
+    }
+
+    .card-container{
+        height: 700px;
+    }
+
+    .card-body{
+        height: 200px;
+    }
+
+    .card-name{
+        font-size: 12px;
+    }
+
+    .card-img-top{
+        height: 500px;
+    }
+
+    
+    .footer{
+        padding-top: 2%;
+    }
+    
+    .social{
+        height: 40px;
+    }
+    
+    
+    
+     }

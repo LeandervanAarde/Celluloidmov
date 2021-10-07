@@ -4,6 +4,10 @@ html{
 
 }
 
+.row{
+    background-color: #262626;
+}
+
 .navbar{
     height: 15vh;
     /* background-color: lightgrey; */
