@@ -1,83 +1,75 @@
-.left, .cover, .right{
+.left, .center, .right{
     height: 300px;
+    width: 210px;
     background-color: white;
     border-radius: 7px;
+    float: left;
+    box-shadow: 8px 6px 19px -7px rgba(26,0,185,0.6);
+    -webkit-box-shadow: 8px 6px 19px -7px rgba(26,0,185,0.6);
+    -moz-box-shadow: 8px 6px 19px -7px rgba(26,0,185,0.6);
+
+}
+
+.center, .right{
+    margin-left: 20px;
+}
+
+.left, .right{
+    margin-top: 20px;
+}
+.movie-container{
+    width: 680px;
+    height: 380px;
+    /* background-color: red; */
+
 }
 
 .I-movie{
-    position: relative;
-    overflow-x: scroll;
-}
-
-.left{
-    position: relative;
-    left: -50px;
-    overflow-x: scroll;
+    overflow: scroll;
 }
 
 .cover{
-    position: relative;
-    top: -20px;
-    left: 0px;
+    height: 300px;
+    background-color: yellow;
 }
 
-.right{
-    position: relative;
-    right: -50px;
-    overflow-x: scroll;
+.back, .title{
+    float: left;
 }
 
+.year, .duration, .genre{
+    float: left;
+}
+
+.movieCover{
+
+    height: 400px;
+    background-color: blue;
+}
+
+.rating-container{
+    height: 100px;
+    /* background-color: yellow; */
+    margin-top: 20px;
+    margin-left: 25px;
+    float: left;
+}
 
 .circle{
-    height: 115px;
-    background-color: red;
-    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* background-color: white; */
+    float: left;
+    margin-bottom: 10px;
+    border: 5px solid white;
+
 }
 
-.circleL{
-    height: 200px;
-    width: 200px;
-    background-color: yellow;
-    border-radius: 100%;
-    float: left;
-    margin-top: 5%;
-}
-
-.circle-block{
-    float: left;
-    margin-left: 5%;
+.btn{
+    width: 47% !important;
 }
 
 
 /* @Media starts here */
-@media only screen and (max-width: 2560px) {
-    
-    .circle{
-        height: 200px;
-        background-color: yellow;
-        
-    }
 
-    .M-cover{
-        height: 650px;
-    }
-}
-
-@media only screen and (max-width: 1440px) {
-    
-    .circle{
-        height: 115px;
-        background-color: yellow;
-    }
-
-
-}
-
-@media only screen and (max-width: 1024px) {
-    
-    .M-cover{
-        height: 400px;
-    }
-
-
-}

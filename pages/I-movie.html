@@ -44,193 +44,196 @@
 <body>
     <!-- Insert content in container-fluid -->
     <div class="container-fluid">
-        <div class="row"> 
-            <!-- Background image of featured movie behind navbar  -->
-            <div class=" col-12 col-md-12 col-lg-12 header-image">
-                <div class="col-12 col-md-12 col-lg-12 navbar"> 
-                    <!-- Logo container is here, logo source is in the css -->
-                    <div class="col-3 col-md-3 col-lg-3 col-lg-offset-1 logo-container"> </div>
+        <div class="row ">
+            <div class="col-12 navbar mt-4">
+                <div class="col-4 col-md-3 logo-container"> </div>
 
-                    <!-- profile for small devices -->
-                    <div class=" col-3 h-75  d-md-none profile2">
-                        <!-- Photo for the profile -->
-                        <div class="col-lg-7 offset-2 photo"></div>
-                        <!-- Name for the profile -->
-                        <div class="col-lg-12 text-center name mb-4"> <h5>Name here</h5></div>
-                         <!-- profile ends here for phone -->
+                <div class="col-3 d-md-none profileS"> <!--Profile for small devices -->
+                    <!-- Photo for the profile -->
+                    <div class="photo"></div>
+                        <p class="name">Name here</p>
+                </div> <!--profile for small devices end here-->
+
+                <div class="col- d-block d-md-none B-menu">
+                    <div class="burger"><!--Lines for burger container-->
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                        <div class="line-3"></div>
+                    </div> <!--Lines for burger container-->
+
+                    <p class="">MENU</p> 
+
+                </div> <!--Burger menu ends-->
+
+                <!-- Navigation for md and bigger devices -->
+                <div class="d-none d-md-block col-md-1 col-lg-1 navI "><a href="../pages/home.html"><h5>HOME</h5> </a></div>
+                <div class="d-none d-md-block col-md-1  col-lg-1 navI"><a href="../pages/Movies.html"><h5>BROWSE</h5></a></div>
+                <div class="d-none d-md-block col-md-2 text-center  col-lg-1 navI"> <a href="../pages/watchlist.html"> <h5>WATCHLIST</h5></a> </div>
+                <div class="d-none d-md-block col-md-1 text-center col-lg-1 navI"><a href=""><h5>ABOUT</h5></div></a> <!--insert link-->
+
+                <!-- Profile for md and larger devices -->
+                <div class="col-2 d-none d-md-block  profileL"> <!--Profile for small devices -->
+                    <!-- Photo for the profile -->
+                    <div class="photo"></div>
+                        <p class="name">Name here</p>
+                </div> <!--Profile for md and larger ends here-->
+
+            </div> <!--navbar ends here-->
+
+        </div>
+
+        <div class="row movie-info"> <!--movie info for small devices-->
+            <div class="col-12 d-block d-md-none I-movie">
+                <div class="movie-container">
+
+
+                    <div class="movie left">
+
                     </div>
 
-                    <!-- burger menu -->
-                    <div class="col-3 offset-1 d-block h-75 d-md-none B-menu">
+                    <div class="movie center">
                         
-
                     </div>
-                    <!-- Burger menu ends -->
 
-
-
-
-                    <!-- Navigation items  -->
-                    <div class="d-none d-md-block col-md-1 col-lg-1  "><a href="../pages/home.html"><h5>HOME</h5> </a></div> 
-                    <div class="d-none d-md-block col-md-1 col-lg-1 "><a href="../pages/Movies.html"><h5>BROWSE</h5></a></div>
-                    <div class="d-none d-md-block col-md-1 col-lg-1  "> <a href="../pages/watchlist.html"> <h5>MY LIST</h5></a> </div>
-                    <div class="d-none d-md-block col-md-1 col-lg-1 "><h5>ABOUT US</h5></div>
-                    
-                    <!-- Profile here for md and lg device-->
-                    <div class=" d-none d-md-block col-3 profile">
-                        <!-- Photo for the profile -->
-                        <div class="col-md-6  mt-lg-1 mx-auto col-lg-4 col-xl-3 offset-3 photo"></div>
-                        <!-- Name for the profile -->
-                        <div class="col-md-12 col-lg-12 name"> <h5>Name here</h5></div>
-                         <!-- profile ends here -->
+                    <div class="movie right">
+                        
                     </div>
+
                     
-                </div> <!--navbar ends-->
-        <!--row ends here-->
+                </div> <!--Movie container ends here-->
+            </div> <!--I movie container ends here-->
+
+            <!-- Movies for md devices -->
+            <div class="col-6 d-none d-md-block">
+                <div class="col-5 back"><h5>Back</h5></div>
+                <div class="col-6 title"><h3>Movie name</h3></div>
+                <div class="col-2 offset-4 year"><p>Year</p></div>
+                <div class="col-3 duration"><p>Duration</p></div>
+                <div class="col-3 genre"><p>Genre</p></div>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor in imperdiet mauris integer integer massa id. Lorem commodo lorem malesuada sagittis, eu. Quis magna pretium senectus amet, ut. Id at sed at integer diam eget orci quam. habitant volutpat at nunc. Imperdiet facilisis quam ultrices vitae massa.</p>
+                <button type="button" class="btn btn-primary  "> Watch now</button>
+                <button type="button" class="btn btn-outline-secondary">Watch later</button>
+
+                <div class="col-12">
+
+                    <div class=" col-3 rating-container d-md-none d-lg-block">
+                        <div class="rating circle"> </div>
+    
+                        <p class="text-center"><strong>Rating</strong></p>
+                    </div>
+    
+    
+                    <div class=" col-3 rating-container d-md-none d-lg-block">
+                        <div class="age circle"> </div>
+                        <p class="text-center"><strong>Age</strong></p>
+                    </div>
+    
+    
+                    <div class=" col-3 rating-container d-md-none d-lg-block">
+                        <div class="trailer circle"> </div>
+                        <p class="text-center"><strong>Trailer</strong></p>
+                    </div>
+                </div>
 
     
-
-        <div class="row I-movie mt-3">
-            <div class="col-1"><h5>-</h5></div>
-            <div class="col-2"><h5>Back</h5></div>
-            <div class="col-6 M-name text-center"><h3>Movie Name</h3></div>
-            <div class="col-2"></div>
-            
-            <br>
-            <br>
-            <br>
-            
-            <div class="col-md-1 d-none d-md-block offset-3 text-center">
-                <h5>Year</h5>
             </div>
 
-            <div class="col-md-2 d-none d-md-block text-center">
-                <h5>Duration</h5>
+            <div class="col-6 d-none d-md-block">
+                <div class="col-10 offset-1 movieCover"></div>
+
+                <div class=" col-3 rating-container d-md-block d-lg-none">
+                    <div class="rating circle"> </div>
+
+                    <p class="text-center"><strong>Rating</strong></p>
+                </div>
+
+
+                <div class=" col-3 rating-container d-md-block d-lg-none">
+                    <div class="age circle"> </div>
+                    <p class="text-center"><strong>Age</strong></p>
+                </div>
+
+
+                <div class=" col-3 rating-container d-md-block d-lg-none">
+                    <div class="trailer circle"> </div>
+                    <p class="text-center"><strong>Trailer</strong></p>
+                </div>
+                
+    
             </div>
+           
 
-            <div class="col-md-2 d-none d-md-block text-center ">
-                <h5>Genre</h5>
-            </div>
-
-            <div class="col-4 d-block d-md-none left mt-3"></div>
-            <div class="col-4 d-block d-md-none cover mt-3"></div>
-            <div class="col-4 d-block d-md-none right mt-3"></div>
-
-         
-
-        </div> <!--row ends here-->
-
-        <div class="row mt-4 ">
-            <div class="d-none col-md-6 d-md-block iDescription mt-4" > 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor in imperdiet mauris integer integer massa id. Lorem commodo lorem malesuada 
-                    sagittis, eu. Quis magna pretium senectus amet, ut. Id at sed at integer diam eget orci quam. habitant volutpat at nunc. Imperdiet facilisis quam ultrices vitae massa.</p>
-                    <button type="button" class="btn btn-primary "> Watch now</button>
-                    <button type="button" class="btn btn-outline-secondary">Watch later</button>
-
-                    <p class="small-text mt-4">
-                       <b>Cast:</b>  Cast names, actors and actres names and stuff, this is honestly just placeholder and I had nothing better to do
-                    </p>
-                    <p class="small-text">
-                       <b>Director:</b>  The director of the movie will be here and stuff
-                    </p>
-                    <!-- Description div ends here -->
-
-                              <!-- Circles for laptop -->
-            <div class="col-lg-3  d-none d-lg-block circle-block ">
-                <div class=" circleL" ></div>
-            </div>
-            <div class="col-lg-3  d-none d-md-none d-lg-block circle-block" >
-                <div class=" circleL " ></div>
-            </div>
-            <div class="col-lg-3  d-none d-md-none d-lg-block circle-block">
-                <div class=" circleL" ></div>
-            </div>
-                    
-
-            </div> <!--Description ends here-->
-            
-            
-            
-                <!-- Movie cover here -->
-            <div class="d-none col-md-6 d-md-block mt-4">
-                <div class="col-10  col-lg-7 offset-lg-2 offset-1  M-cover" style="background-color: yellow;"></div>
-            </div> <!--Movie cover ends here-->
             
 
-                <!-- Circles for rating etc -->
-            <div class="col-md-2 offset-6 d-none d-md-block d-lg-none ">
-                <div class=" circle " ></div>
-            </div>
-            <div class="col-md-2 d-none d-md-block  d-lg-none" >
-                <div class=" circle " ></div>
-            </div>
-            <div class="col-md-2 d-none d-md-block d-lg-none">
-                <div class=" circle" ></div>
-            </div>
-
-  
         
+
+            <!-- Movie information for small devices to end here -->
 
         </div> <!--Row ends here-->
 
-        <div class="row">
-            <div class="col-12 mt-3">
-                <h3>OTHER PEOPLE PEOPLE ALSO LIKED</h3>
+        <!-- New row -->
+        <div class="row body p-3 gx-4 gy-4"> <!--Body row start-->
+
+            <div class="col-12"><h1>Top Rated Movies</h1></div> <!--heading-->
+
+            <div class="col-6 col-md-4 col-lg-3 card-container" style="border: none;">  <!--container for card-->
+                <div class="card" style="border: none;"> <!-- card starts uere-->
+                    <img src="../img/Placeholder-mov.jpeg" class="card-img-top img-fluid" alt="">
+                    <div class="card-body d-block d-lg-none"> <!--body for card with movie name etc-->
+                        <p class="cardName"><strong>STEP BROTHERS</strong> <br>Rating: 100% <br> 1h 38m</p> 
+                        <button type="button" class="btn btn-primary d-none d-lg-block "> Watch now</button>
+                    </div> <!--Card body ends here-->
+                </div> <!--Card ends here-->
+
+        </div> <!--container for card ends here-->
+
+             <div class="col-6 col-md-4 col-lg-3 card-container" style="border: none;">
+                    <div class="card" style="border: none;">
+                        <img  src="../img/Placeholder-mov.jpeg" class="card-img-top img-fluid" alt="">
+                        <div class="card-body d-block d-lg-none">
+                            <p class="cardName"><strong>STEP BROTHERS</strong> <br>Rating: 100% <br> 1h 38m</p> 
+                            <button type="button" class="btn btn-primary d-none d-lg-block "> Watch now</button>
+                        </div>
+                    </div>
+
             </div>
 
-            <div class="col-6 col-md-4 col-lg-3"> 
-               
-                <div class="card">
-                    <img class="card-img-top">
-                    <div class="card-body d-none">
-                          <h5>STEP BROTHERS</h5> 
-                          <p class="card-text">100%</p> 
-                          <p class="card-text">1h 38m</p> 
-                     
-
+            <div class="col-6 col-md-4 col-lg-3 card-container" style="border: none;">
+                <div class="card" style="border: none;">
+                    <img src="../img/Placeholder-mov.jpeg" class="card-img-top img-fluid" alt="">
+                    <div class="card-body d-block d-lg-none">
+                        <p class="cardName"><strong>STEP BROTHERS</strong> <br>Rating: 100% <br> 1h 38m</p> 
+                        <button type="button" class="btn btn-primary d-none d-lg-block "> Watch now </button>
                     </div>
-        
-                </div> <!--Card ends-->
-
-            </div> <!--Div that holds card ends here-->
-
-            <div class="col-12 mt-5">
-                <h3>MORE MOVIES WITH ACTOR NAME</h3>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3"> 
-               
-                <div class="card">
-                    <img class="card-img-top">
-                    <div class="card-body d-none">
-                          <h5>STEP BROTHERS</h5> 
-                          <p class="card-text">100%</p> 
-                          <p class="card-text">1h 38m</p> 
-                     
-
-                    </div>
-        
-                </div> <!--Card ends-->
-
-            </div> <!--Div that holds card ends here-->
-
+                </div>
 
         </div>
-        
-        <div class="row mt-4" >
-            <div class="col-3 footer-logo">
+
+             <div class="col-6 col-md-4 col-lg-3 card-container" style="border: none;">
+                    <div class="card" style="border: none;">
+                        <img src="../img/Placeholder-mov.jpeg" class="card-img-top img-fluid" alt="">
+                        <div class="card-body d-block d-lg-none">
+                            <p class="cardName"><strong>STEP BROTHERS</strong> <br>Rating: 100% <br> 1h 38m</p> 
+                            <button type="button" class="btn btn-primary d-none d-lg-block "> Watch now</button>
+                        </div>
+                    </div>
+
             </div>
-            
-            <div class="col-2 social " style="background-color: blue;"></div>
-            <div class="col-2 social" style="background-color: red;"></div>
-            <div class="col-2 social" style="background-color: yellow;"></div>
 
+        </div> <!--Body row end-->
 
-            
-        </div>
-        
+        <div class="row footer ">
+         
+            <div class="col-4 col-md-3 logo-container"> </div>
+            <div class="col-1 social icon-1"></div>
+            <div class="col-1 social"></div>
+            <div class="col-1 social"></div>
 
-    </div> 
+            <div class="col-3 "><p class="text-center">Celluloid 2021</p></div>
+
+    </div>
+    </div>
     <!-- Content ends here -->
 
     <!-- script sources added here -->

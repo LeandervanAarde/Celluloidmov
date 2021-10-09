@@ -109,22 +109,13 @@ background-size: cover;
     .btn-outline-secondary{
         width: 47%;
     }
-    .card-container{
-        /* height: 400px; */
-    }
-
-    .card-body{
-        /* height: 150px; */
-    }
+  
    
 
     .card-name{
         font-size: 12px;
     }
 
-    .card-img-top{
-        /* height: 250px; */
-    }
 
     .footer{
         padding-top: 5%;
@@ -237,21 +228,12 @@ background-size: cover;
         margin-left: 80px;
     }
 
-    .card-container{
-        /* height: 700px; */
-    }
-
-    .card-body{
-        /* height: 200px; */
-    }
 
     .card-name{
         font-size: 12px;
     }
 
-    .card-img-top{
-        /* height: 500px; */
-    }
+   
 
     
     .footer{
