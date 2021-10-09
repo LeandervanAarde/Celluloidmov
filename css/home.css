@@ -48,21 +48,21 @@ background-size: cover;
     .btn-outline-secondary{
         width: 47%;
     }
-    .card-container{
+    /* .card-container{
         height: 350px;
-    }
+    } */
 
-    .card-body{
+    /* .card-body{
         height: 120px;
-    }
+    } */
 
     .card-name{
         font-size: 12px;
     }
 
-    .card-img-top{
+    /* .card-img-top{
         height: 170px;
-    }
+    } */
 
     .footer{
         padding-top: 5%;
@@ -110,19 +110,20 @@ background-size: cover;
         width: 47%;
     }
     .card-container{
-        height: 400px;
+        /* height: 400px; */
     }
 
     .card-body{
-        height: 150px;
+        /* height: 150px; */
     }
+   
 
     .card-name{
         font-size: 12px;
     }
 
     .card-img-top{
-        height: 250px;
+        /* height: 250px; */
     }
 
     .footer{
@@ -237,11 +238,11 @@ background-size: cover;
     }
 
     .card-container{
-        height: 700px;
+        /* height: 700px; */
     }
 
     .card-body{
-        height: 200px;
+        /* height: 200px; */
     }
 
     .card-name{
@@ -249,7 +250,7 @@ background-size: cover;
     }
 
     .card-img-top{
-        height: 500px;
+        /* height: 500px; */
     }
 
     
