@@ -43,8 +43,12 @@
 
 .movieCover{
 
-    height: 400px;
-    background-color: blue;
+    height: 400px !important;
+    /* background-color: blue; */
+    background-image: url("../img/Placeholder-mov.jpeg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .rating-container{
@@ -70,6 +74,109 @@
     width: 47% !important;
 }
 
+.movie-info{
+    margin-top: 80px !important;
+}
+
+
+
 
 /* @Media starts here */
 
+@media  (max-width: 576px){
+
+    .movie-info{
+        margin-top: 40px !important;
+    }
+
+  
+
+    .footer{
+        padding-top: 5%;
+    }
+
+    .social{
+        height: 35px;
+    }
+
+}
+
+
+
+@media (min-width: 577px) and (max-width: 767.98px){
+  
+    .movie-info{
+        margin-top: 40px !important;
+    }
+   
+
+    .footer{
+        padding-top: 5%;
+    }
+
+    .social{
+        height: 40px;
+    }
+
+}
+
+/* @media for md */
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+    .btn{
+        width: 45% !important;
+    }
+  
+    .footer{
+        padding-top: 2%;
+    }
+
+    .social{
+        height: 40px;
+    }
+
+}
+
+@media (min-width: 992px){ 
+
+
+
+.footer{
+    padding-top: 2%;
+}
+
+.social{
+    height: 40px;
+}
+
+
+
+ }
+
+
+ @media (min-width: 1440px){ 
+
+    .circle{
+  
+        height: 150px;
+ 
+    
+    }
+
+    .body{
+        margin-top: 60px !important;
+    }
+
+    
+    .footer{
+        padding-top: 2%;
+    }
+    
+    .social{
+        height: 40px;
+    }
+    
+    
+    
+     }
