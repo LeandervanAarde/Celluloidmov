@@ -41,12 +41,14 @@ background-size: cover;
     }
 
     .btn-primary{
-        width: 43%;
+        width: 47%;
         margin-left: 2%;
+        font-size: small !important;
     }
 
     .btn-outline-secondary{
-        width: 47%;
+        width: 43%;
+        font-size: small !important;
     }
     /* .card-container{
         height: 350px;

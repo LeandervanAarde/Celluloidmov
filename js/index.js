@@ -12,4 +12,24 @@ $(document).ready(function(){
         $(".card-body").removeClass("d-lg-block");
         $(".card-body").addClass("d-lg-none");
     });
+
+    $(".dropdown").hide();
+
+
+
+    $(".burger").click(function(){
+        $(".dropdown").toggle(100);
+    });
+        
+   
+
+  
+    
+
+
+
+
+
+
 });
+
