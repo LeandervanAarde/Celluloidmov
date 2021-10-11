@@ -19,6 +19,7 @@ $(document).ready(function(){
 
     $(".burger").click(function(){
         $(".dropdown").toggle(100);
+    
     });
         
    

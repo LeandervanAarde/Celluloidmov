@@ -161,16 +161,33 @@ transition: 0.3s;
 
 .social{
     height: 100px;
-    background-color: red;
+    /* background-color: red; */
 margin-left: 2%;
 
 }
 
-/* Social icon 1 */
-
 .icon-1{
     margin-left: 10%;
+    background-image: url("../assets/icons8-twitter.svg");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
+
+.icon-2{
+    background-image: url("../assets/icons8-youtube.svg");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-3{
+    background-image: url("../assets/icons8-facebook\ \(1\).svg");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 
 .card-img-top{
 
