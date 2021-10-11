@@ -7,5 +7,16 @@ $(document).ready(function(){
         $(this).html(($(this).html() == "Log In") ? 'Sign Up' : 'Log In');
     });
 
+    // $(".btnFlip").click(function(){
+    //     $(".flipper").addClass("flip");
+    //     console.log("Flip");
+    //   });
+
+    $(".login-con").hide();
     
+    $(".change-btn").on("click", function(){
+        $(".signUp-con").hide();
+        $(".login-con").slideDown();
+    });
+
 });
