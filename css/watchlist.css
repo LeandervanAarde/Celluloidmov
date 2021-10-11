@@ -4,6 +4,10 @@ html{
 
 }
 
+body{
+    background-color: #262626 !important;
+}
+
 .row{
     background-color: white;
 }
@@ -69,70 +73,417 @@ html{
     margin-top: 1vh;
 }
 
-.movie-con{
-    height: 60vh;
-    /* background-color: hotpink; */
-    float: left;
+
+
+
+
+
+.header-image{
+    height: 110vh;
+/* background-color: grey; */
+background-image: url("../img/PLaceholder-1.jpg");
+background-position: center;
+background-size: cover;
+
 }
 
-.thecard-con{
-    height: 60vh;
-    position: relative;
-    /* background-color: teal; */
-}
-
-.movie-card{
-    background-color: hotpink;
-    margin: 0 auto;
-    width: 95%;
-    height: 90%;
-    outline: solid black 3px;
-    margin-top: 4%;
-    /* border-radius: 15px; */
-    position: absolute;
-    transform-style: preserve-3d;
-    transition: all 0.5s ease;
+.about{
+    background-color: #262626;
 }
 
 
-.movie-card:hover{
-    transform: rotateY(180deg);
-}
-
-/* Front */
-.card-img{
-    width: 100%;
-    height: 100%;
-    background-image: url(../img/Placeholder-mov.jpeg);
+.mainM{
+    background-image: url("../img/Placeholder-mov.jpeg");
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    margin: 0 auto;
-    padding: 0%;
-    position: absolute;
-    backface-visibility: hidden;
-   
+}
+/* @Media for small */
+
+@media  (max-width: 576px){
+
+
+    .Movie-name{
+        text-align: center;
+    }
+
+    .mainM{
+        height: 200px;
+      
+    }
+
+    .description{
+        text-align: center;
+    }
+
+    .btn-primary{
+        width: 43%;
+        margin-left: 2%;
+    }
+
+    .btn-outline-secondary{
+        width: 47%;
+    }
+
+
+
 }
 
 
-/* Back */
-.card-infoCon{
-    /* border-radius: 15px; */
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-    margin: 0 auto;
-    padding: 0%;
-    backface-visibility: hidden;
-    transform: rotateY(180deg);
-}
 
-.movie-info{
-    color: white;
-    padding-top: 2%;
+@media (min-width: 577px) and (max-width: 767.98px){
+
+   .Movie-name{
     text-align: center;
-    margin: 0 auto;
 }
+
+   .header-image{
+       height: 112vh;
+   }
+   
+
+    .mainM{
+        height: 210px;
+      
+    }
+
+    .description{
+        text-align: center;
+    }
+
+    .btn-primary{
+        width: 43%;
+        margin-left: 2%;
+    }
+
+    .btn-outline-secondary{
+        width: 47%;
+    }
+  
+   
+
+    .card-name{
+        font-size: 12px;
+    }
+
+
+    .footer{
+        padding-top: 5%;
+    }
+
+    .social{
+        height: 40px;
+    }
+
+}
+
+/* @media for md */
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+
+
+    .Movie-name{
+        text-align: left;
+        margin-left: 35px;
+    }
+
+    .description{
+        text-align: left;
+    }
+
+    .mainM{
+        height: 290px;
+      
+        margin-left: 60px;
+    }
+
+    .btn-primary{
+        margin-right: 40px;
+    }
+
+    .footer{
+        padding-top: 2%;
+    }
+
+    .social{
+        height: 40px;
+    }
+
+}
+
+@media (min-width: 992px){ 
+
+.welcome{
+    text-align: left;
+    margin-left: 30px;
+}
+
+.Movie-name{
+    text-align: left;
+    margin-left: 50px;
+
+}
+.description{
+    text-align: left;
+}
+
+.mainM{
+    height: 500px;
+  
+}
+
+.btn-primary{
+    margin-left: 80px;
+}
+
+.footer{
+    padding-top: 2%;
+}
+
+.social{
+    height: 40px;
+}
+
+
+
+ }
+
+
+ @media (min-width: 1440px){ 
+
+    .welcome{
+        text-align: left;
+        margin-left: 30px;
+    }
+    
+    .Movie-name{
+        text-align: left;
+        margin-left: 50px;
+    
+    }
+    .description{
+        text-align: left;
+    }
+    
+    .mainM{
+        height: 500px;
+      
+    }
+    
+    .btn-primary{
+        margin-left: 80px;
+    }
+
+
+    .card-name{
+        font-size: 12px;
+    }
+
+   
+
+    
+    .footer{
+        padding-top: 2%;
+    }
+    
+    .social{
+        height: 40px;
+    }
+    
+    
+    
+     }
+
+
+
+
+
+
+
+    
+
+    
+    .row{
+        background-color: #262626;
+    }
+    
+    .navbar{
+        height: 15vh;
+        /* background-color: lightgrey; */
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .logo-container{
+        height: 100%;
+        /* background-color: white; */
+        background-image: url("../img/SVG/Asset\ 2.svg");
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 2%;
+    }
+    
+    .photo{
+        height: 75px;
+        width: 75px;
+        background-color: white;
+        border-radius: 100%;
+        
+      
+    }
+    
+    .B-menu{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .burger{
+        width: 75px;
+        height: 75px;
+        /* background-color: white; */
+        padding-top: 10%;
+        padding-right: 10%;
+        
+       
+    }
+    
+    .line-1{
+        width: 35%;
+        height: 8px;
+        background-color: rgba(26,0,185,0.66);
+        margin-bottom: 15%;
+        border-radius: 25px;
+    }
+    
+    .line-2{
+        width: 100%;
+        height: 8px;
+        background-color: rgba(26,0,185,0.66);
+        margin-bottom: 15%;
+        border-radius: 25px;
+    }
+    
+    .line-3{
+        width: 75%;
+        height: 8px;
+        background-color: rgba(26,0,185,0.66);
+        border-radius: 25px;
+    
+    }
+    
+        /* Dropdowon div */
+    .dropdown{
+        padding-top: 50px;
+        padding-left: 5%;
+        background-color: #262626;
+        height: 350px;
+        box-shadow: -11px 10px 28px -8px rgba(26,0,185,0.67);
+        -webkit-box-shadow: -11px 10px 28px -8px rgba(26,0,185,0.67);
+        -moz-box-shadow: -11px 10px 28px -8px rgba(26,0,185,0.67);
+        border-radius: 7px;
+      
+        
+    
+    }
+    
+    .navItem{
+        width: 100%;
+        height: 0 auto;
+    }
+    
+    .b-Item{
+        margin-bottom: 50px !important;
+    }
+    
+    .body{
+        background-color: #262626;
+    }
+    
+    /* Button styling */
+    .btn-primary{
+        background-color: #1A00B9 !important;
+        border: none !important;
+        padding: 12px 20px !important;
+        transition: ease-in-out 1s;
+    }
+    
+    .btn-primary:hover{
+        
+        background-color: rgb(211, 209, 209) !important;
+        color: black !important;
+        box-shadow: 7px 5px 20px -8px rgba(227,232,0,0.85);
+        -webkit-box-shadow: 7px 5px 20px -8px rgba(227,232,0,0.85);
+        -moz-box-shadow: 7px 5px 20px -8px rgba(227,232,0,0.85);
+    }
+    
+    /* This style is for all secondary buttons */
+    .btn-outline-secondary{
+        border: 3px solid #1A00B9 !important;
+        padding: 10px 22px !important;
+        margin-left: 20px;
+        transition: ease-in-out 1s;
+    }
+    
+    
+    
+    .card-container{
+        /* height: 600px; */
+      border: none;
+    }
+    
+    .card{
+        box-shadow: 8px 6px 19px -7px rgba(26,0,185,0.6);
+    -webkit-box-shadow: 8px 6px 19px -7px rgba(26,0,185,0.6);
+    -moz-box-shadow: 8px 6px 19px -7px rgba(26,0,185,0.6);
+    
+    transition: 0.3s;
+    }
+    
+    
+    
+    .card-body{
+        background-color: #262626;
+        border: none;
+    }
+    
+    
+    .footer{
+        height: 15vh;
+        background-color: #262626;
+    }
+    
+    .social{
+        height: 100px;
+        background-color: red;
+    margin-left: 2%;
+    
+    }
+    
+    /* Social icon 1 */
+    
+    .icon-1{
+        margin-left: 10%;
+    }
+    
+    .card-img-top{
+    
+        /* height: 400px;  */
+        border: none;
+    }
+    
+    .card:hover{
+        transform: scale(1.1);
+        box-shadow: none;
+    }
+    
+    .btn{
+        transition: 0.3s;
+    }
+    
+    .btn:hover{
+        transform: scale(1.1);
+    }
 
 
