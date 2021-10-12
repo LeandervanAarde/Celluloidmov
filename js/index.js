@@ -3,15 +3,15 @@ $(document).ready(function(){
 
     // Hover for Movie cards
     
-    $(".card").mouseenter(function(){
-        $(".card-body").removeClass("d-lg-none");
-        $(".card-body").addClass("d-lg-block");
+    $(".card-body").hide();
+
+    
+
+    $(".card").hover(function(){
+        $(".card-body").toggle();
     });
 
-    $(".card").mouseleave(function(){
-        $(".card-body").removeClass("d-lg-block");
-        $(".card-body").addClass("d-lg-none");
-    });
+
 
     $(".dropdown").hide();
 
