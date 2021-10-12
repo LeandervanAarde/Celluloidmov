@@ -101,6 +101,14 @@ section {
     border-radius: 50%;
 }
 
+.search-input {
+    width: 80%;
+}
+
+.search-button {
+    width: 10%;
+}
+
 
 
 /* @Media for small */
