@@ -33,44 +33,70 @@
     <title>All movies</title>
 
     <!-- Stylesheets inserted here -->
-   <link rel="stylesheet" href="../css/main.css">
-   <link rel="stylesheet" href="../css/movies.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/movies.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 <body>
     <!-- Insert content in container-fluid -->
     <div class="container-fluid">
 
-        <div class="nav-container row">
-            <div class="col-3 left">
-                <img src="../assets/svg/Logo.svg">
-            </div>
-            <div class="col-6 middle">
-                <h1><a href="">Home</a></h1>
-                <h1><a href="">Browse</a></h1>
-                <h1><a href="">My List</a></h1>
-            </div>
-            <div class="col-3 right">
-                <div class="user-profile">
-                    <img src="../assets/img/photo-1535713875002-d1d0cf377fde.jpg">
-                </div>
-                <div class="user-name">
-                    <h1>Vian</h1>
-                </div>
-                <div class="dropdown">
-                    <img src="../assets/svg/Dropdown-icon.svg">
-                </div>
-            </div>
-        </div>
+        <div class="col-12 navbar">
+            <div class="col-4 col-md-3 logo-container"> </div>
 
-        <div class="heading-container row">
+            <div class="col-3 d-md-none profileS"> <!--Profile for small devices -->
+                <!-- Photo for the profile -->
+                <div class="photo"></div>
+                    <p class="name">Name here</p>
+            </div> <!--profile for small devices end here-->
+
+            <div class="col- d-block d-md-none B-menu">
+                <div class="burger"><!--Lines for burger container-->
+                    <div class="line-1"></div>
+                    <div class="line-2"></div>
+                    <div class="line-3"></div>
+                </div> <!--Lines for burger container-->
+
+                <p class="">MENU</p> 
+
+            </div> <!--Burger menu ends-->
+    
+            <div class="col-6  d-md-none dropdown offset-6" >
+
+                <div class="navItem"><a href="../pages/home.html"><h5 class=" b-Item">HOME</h5> </a> </div>
+                <a href="../pages/Movies.html"><h5 class=" b-Item">BROWSE</h5></a>
+                 <a href="../pages/watchlist.html"> <h5 class=" b-Item">WATCHLIST</h5></a> 
+                <a href=""><h5 class="b-Itemr">ABOUT</h5></a> <!--insert link-->
+
+            </div>
+
+            <!-- Navigation for md and bigger devices -->
+            <div class="d-none d-md-block col-md-1 col-lg-1 navI "><a href="../pages/home.html"><h5 >HOME</h5> </a></div>
+            <div class="d-none d-md-block col-md-1  col-lg-1 navI"><a href="../pages/Movies.html"><h5>BROWSE</h5></a></div>
+            <div class="d-none d-md-block col-md-2 text-center  col-lg-1 navI"> <a href="../pages/watchlist.html"> <h5>WATCHLIST</h5></a> </div>
+            <div class="d-none d-md-block col-md-1 text-center col-lg-1 navI"><a href=""><h5>ABOUT</h5></div></a> <!--insert link-->
+
+            <!-- Profile for md and larger devices -->
+            <div class="col-2 d-none d-md-block  profileL"> <!--Profile for small devices -->
+                <!-- Photo for the profile -->
+                <div class="photo"></div>
+                    <p class="name">Name here</p>
+            </div> <!--Profile for md and larger ends here-->
+            
+
+
+
+    </div> <!--navbar ends here-->
+
+        <div class="heading-container row g-0">
             <h1 class="text-center">Movies</h1>
         </div>
 
-        <div class="sub-heading-container row">
+        <div class="sub-heading-container row g-0">
             <h1 class="text-left">Featured</h1>
         </div>
 
@@ -157,6 +183,9 @@
             </section>
 
         </div>
+
+        <div class="row body p-3 gx-4 gy-4 g-0"></div>
+        </div> <!--Body row end-->
 
     </div> 
     <!-- container-fluid -->
