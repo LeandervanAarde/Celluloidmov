@@ -18,8 +18,16 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
             </div>" ;
 
            
-            
-        $(".body").append( card)
+            // for header
+        $(".body").append( card);
+
+        $(".Movie-name").html(result.results[0].original_title);
+
+        $(".mainM").html("<img src='https://image.tmdb.org/t/p/original"+result.results[0].poster_path+"'class='card-img-top img-fluid' alt=''>");
+
+        $(".description").html(result.results[0].overview)
+
+
             
         }
 
