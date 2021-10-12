@@ -2,10 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.container-fluid {
-    padding: 0 !important;
-}
-
 .left {
     height: 74px;
 }
