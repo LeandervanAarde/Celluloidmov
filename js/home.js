@@ -5,7 +5,7 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
     $.getJSON(popularurl, function(result) {
         console.log(result); 
 
-        for(var i= 0; i < result.results.length; i++){
+        for(var i= 0; i < 8; i++){
             var card= 
             "<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>\
                 <div class='card' style='border: none;'>\
