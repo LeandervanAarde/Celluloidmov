@@ -8,9 +8,12 @@ console.log("Homepage JQuery is active")
     $(".card").mouseleave(function(){
         $(".card-body").removeClass("d-block");
         $(".card-body").addClass("d-none");
-console.log("Homepage JQuery is active");
+    });
 
-const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1";
+    console.log("Homepage JQuery is active");
+
+    const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1";
+
     $.getJSON(popularurl, function(result) {
         console.log(result); 
 
