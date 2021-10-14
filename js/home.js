@@ -1,9 +1,56 @@
+
+var counter = 1;
+var names = [];
+var images = [];
+var description = [];
+var backdrop = [];
+
+function sleep(time){
+    return new Promise(resolve => setTimeout(resolve, time));
+}
+
+ async function changeImage(){
+
+    $(".Movie-name").fadeOut(300);
+    $(".mainM").fadeOut(300);
+    $(".description").fadeOut(300);
+    $(".header-image").css("backgroundImage","url("+backdrop[counter]+")");
+    $(".header-image .btn").fadeOut(300);
+    await sleep(300); 
+
+
+    $(".Movie-name").html(names[counter]);
+
+    $(".mainM").html("<img id='mainCover' src=' "+images[counter]+"'class='card-img-top img-fluid' alt=''>");
+
+    $(".description").html(description[counter]);
+
+
+
+    $(".Movie-name").fadeIn(300);
+    $(".mainM").fadeIn(300);
+    $(".description").fadeIn(300);
+    $(".header-image .btn").fadeIn(300);
+
+
+    counter ++;
+
+    if (counter >= 3){
+        counter = 0; 
+    }
+};
+
+
+
 $(document).ready(function(){
 console.log("Homepage JQuery is active");
 
 const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1";
     $.getJSON(popularurl, function(result) {
         console.log(result); 
+
+ 
+
 
         for(var i= 0; i < 8; i++){
             var card= 
@@ -21,15 +68,17 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
             // for header
         $(".body").append( card);
 
-        $(".Movie-name").html(result.results[0].original_title);
-
-        $(".mainM").html("<img src='https://image.tmdb.org/t/p/original"+result.results[0].poster_path+"'class='card-img-top img-fluid' alt=''>");
-
-        $(".description").html(result.results[0].overview)
-
-
+            if(i < 3){
+                names.push(result.results[i].original_title);
+                images.push('https://image.tmdb.org/t/p/original'+result.results[i].poster_path);
+                description.push(result.results[i].overview);  
+                backdrop.push('https://image.tmdb.org/t/p/original'+result.results[i].backdrop_path)          }
             
         }
+        changeImage();
+
+        var car = setInterval("changeImage()", 3000);
+
 
 
     });
