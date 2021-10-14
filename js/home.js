@@ -72,14 +72,15 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
                 names.push(result.results[i].original_title);
                 images.push('https://image.tmdb.org/t/p/original'+result.results[i].poster_path);
                 description.push(result.results[i].overview);  
-                backdrop.push('https://image.tmdb.org/t/p/original'+result.results[i].backdrop_path)          }
+                backdrop.push('https://image.tmdb.org/t/p/original'+result.results[i].backdrop_path)          
+            }  //If statement ends
             
-        }
+        }  //For loop ends 
         changeImage();
 
         var car = setInterval("changeImage()", 3000);
 
 
 
-    });
-});
+    }); //get JSON ends here
+});  //Document on load ends
