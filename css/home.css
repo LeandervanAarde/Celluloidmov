@@ -13,6 +13,28 @@ background-size: cover;
     background-color: #262626;
 }
 
+.navI{
+    text-decoration: none !important;
+    transition: 0.2s;
+}
+
+.navI:hover{
+    transform: scale(1.1);
+    color: rgba(26,0,185,0.6);
+    text-decoration: underline;
+}
+
+
+a{
+    text-decoration: none !important;
+}
+
+a:hover{
+    text-decoration: underline !important;
+    color: rgba(26,0,185,0.6) !important;
+}
+
+
 
 
 /* @Media for small */

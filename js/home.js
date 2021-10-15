@@ -55,13 +55,13 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
         for(var i= 0; i < 8; i++){
             var card= 
             "<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>\
-                <div class='card' style='border: none;'>\
+            <a href='I-movie.html?id=" + result.results[i].id + "'> <div class='card' style='border: none;'>\
                 <img src='https://image.tmdb.org/t/p/original"+result.results[i].poster_path+"'class='card-img-top img-fluid' alt=''>\
                     <div class='card-body d-block '>\
                         <p class='cardName'><strong>"+result.results[i].original_title+"</strong> <br>Rating: "+result.results[i].vote_average+" <br> Release date: "+result.results[i].release_date+"</p> \
-                        <a href='I-movie.html?id=" + result.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block '> Watch now</button>\
+                        <a href='I-movie.html?id=" + result.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block '> Watch now</button> </a>\
                     </div>\
-                 </div>\
+                 </div> </a>\
             </div>" ;
 
            
