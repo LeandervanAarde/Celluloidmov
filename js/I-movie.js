@@ -21,7 +21,7 @@ $.getJSON(url, function(result){
    var mov_runtime = mov_Duration.toPrecision(2);
    var mov_Name = result.original_title; 
    var mov_Rating = result.vote_average; 
-   
+   var mov_language = result.original_language; 
 
    console.log(mov_Duration)
 
@@ -36,6 +36,17 @@ $.getJSON(url, function(result){
    $(".genre p").html(mov_Genre);
    $(".mov_Title strong").html(mov_Name);
    $(".rate").text(mov_Rating);
+   $(".language").text(mov_language);
+
+   
+       
+
+ 
+   
+    
+   
+   
+   
 
 //    For small device
 

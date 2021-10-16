@@ -10,6 +10,7 @@
 
 }
 
+
 .center, .right{
     margin-left: 20px;
 }
@@ -83,6 +84,12 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    transition: 0.2ms;
+}
+
+.trailer:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .center{
