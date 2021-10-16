@@ -18,6 +18,9 @@ $.getJSON(url, function(result){
    var mov_Year = result.release_date.split("-", +1 ).join(' ');
    var mov_Duration = result.runtime/60;
    var mov_Genre = result.genres[0].name;
+   var mov_runtime = mov_Duration.toPrecision(2);
+   var mov_Name = result.original_title; 
+   var mov_Rating = result.vote_average; 
    
 
    console.log(mov_Duration)
@@ -29,12 +32,17 @@ $.getJSON(url, function(result){
    $(".dscript").html(mov_Description);
    $(".movieCover").css("backgroundImage", "url("+mov_Image+")")
    $(".year p").html(mov_Year);
-   $(".duration p").html(mov_Duration +" hours");
-   $(".genre p").text(mov_Genre);
-   
+   $(".duration p").html(mov_runtime +" hours");
+   $(".genre p").html(mov_Genre);
+   $(".mov_Title strong").html(mov_Name);
+   $(".rate").text(mov_Rating);
+
+//    For small device
+
+    $(".center").css("backgroundImage", "url("+mov_Image+")");
    
 
 
 });
 
-})
+});
