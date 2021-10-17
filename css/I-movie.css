@@ -11,6 +11,8 @@
 }
 
 
+
+
 .center, .right{
     margin-left: 20px;
 }
@@ -98,6 +100,17 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.similiar-movies{
+    overflow: scroll;
+}
+
+.outer-container{
+    width: 2800px;
+    height: 500px;
+}
+
+
 
 
 
