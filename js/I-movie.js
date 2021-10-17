@@ -12,6 +12,8 @@ const url = ' https://api.themoviedb.org/3/movie/'+id+'?api_key=fbdaccb39dfca477
 const url2 = 'https://api.themoviedb.org/3/movie/'+id+'/similar?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1';
 // Actor name url
 const url3 = 'https://api.themoviedb.org/3/movie/'+id+'/credits?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US';
+// trailer const
+const url4 = 'https://api.themoviedb.org/3/movie/'+id+'/videos?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US'
 
 
 $.getJSON(url, function(result){
@@ -28,6 +30,7 @@ $.getJSON(url, function(result){
         var mov_Name = result.original_title; 
         var mov_Rating = result.vote_average; 
         var mov_language = result.original_language; 
+        
 
         console.log(mov_Duration)
 
@@ -100,9 +103,39 @@ $.getJSON(url3, function(actor){
 
 });
 
+// Trailer for movie 
+
+$("#playtrailer").on('click', () =>{
+    $.getJSON(url4, function(vid){
+        // Console.log the result to see the data
+        // console.log(vid);
+    //    Variables for the data
+     let array = vid.results; 
+    
+     for( i = 0; i < array.length; i++){
+        if(array[i].name.includes("Trailer")){
+            
+            $('#video').html(`<iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/${array[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> `);
+            break;
+        }
+     } 
+    
+     
+    
+    
+    });
+
+});
+
+var myModalEl = document.getElementById('modaltrailer')
+myModalEl.addEventListener('hide.bs.modal', function (event) {
+    $('#video').html("");
+
+});
 
 
 
+// $('.modal').show();
 
 
 });
