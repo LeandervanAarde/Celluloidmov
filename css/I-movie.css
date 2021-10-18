@@ -1,7 +1,7 @@
 .left, .center, .right{
     height: 300px;
     width: 210px;
-    /* background-color: white; */
+    background-color: #292929;
     border-radius: 7px;
     float: left;
     box-shadow: 8px 6px 19px -7px rgba(26,0,185,0.6);
@@ -9,6 +9,19 @@
     -moz-box-shadow: 8px 6px 19px -7px rgba(26,0,185,0.6);
 
 }
+
+.left, .right{
+    padding: 10px !important;
+
+}
+
+/* Margins for information on small devices */
+
+.small{
+    margin-left: 0;
+}
+
+/* Circles for small devices */
 
 
 
@@ -70,6 +83,19 @@
     float: left;
     margin-bottom: 10px;
     border: 5px solid white;
+
+}
+
+.small-circle{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    /* background-color: white; */
+    margin-left: 35%;
+  margin-top: 70%;
+    border: 5px solid white;
+    background-image: url("../img/SVG/play.svg");
+    background-size: cover;
 
 }
 

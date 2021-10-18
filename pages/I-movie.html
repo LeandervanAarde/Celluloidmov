@@ -102,7 +102,10 @@
                 <div class="movie-container">
 
 
-                    <div class="movie left">
+                    <div class="movie left" style="overflow: scroll;">
+                        <h3 class="text-center"><strong>Overview</strong></h3>
+                        <!-- Description for small devices  -->
+                        <p class=" mt-4 dscript">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor in imperdiet mauris integer integer massa id. Lorem commodo lorem malesuada sagittis, eu. Quis magna pretium senectus amet, ut. Id at sed at integer diam eget orci quam. habitant volutpat at nunc. Imperdiet facilisis quam ultrices vitae massa.</p>
 
                     </div>
 
@@ -111,8 +114,40 @@
                     </div>
 
                     <div class="movie right">
+                        <div class="col-12 year small"><p class="text-left">year</p></div>
+                        <br>
+                        <div class="col-12 duration small"><p class="text-left">year</p></div>
+                        <br>
+                        <div class="col-12 genre small"><p class="text-left">strong</p></div>
+
+                        <!-- Rating  -->
+                        <div class=" rating-container d-md-none "style="margin-top: 0;">
+                                <h5 class="text-center rate">12.2</h5> 
+                            <p class="text-center"><strong>Rating</strong></p>
+                        </div>
+
+                        <!-- age rating  -->
+                        <div class="  rating-container d-md-none" style="margin-top: 0;">
+                           
+                                <h5 class="text-center rating" >13+</h5>
+                            
+                            <p class="text-center"><strong>Age</strong>
+                                  
+                            </p>
+                        </div>
+
+                        <div class=" small-circle-container playtrailer d-block d-md-none"data-bs-toggle="modal" data-bs-target="#modaltrailer">
+                                <div class="small-circle">
+
+
+                                </div>
+
+                        </div>
+
+
+        
                         
-                    </div>
+                    </div> <!--Right container "movie right" ends here-->
 
                     
                 </div> <!--Movie container ends here-->
@@ -155,9 +190,7 @@
     
                     <div class=" col-3 col-xl-2 rating-container d-md-none d-lg-block playtrailer"  data-bs-toggle="modal" data-bs-target="#modaltrailer">
                         <div class="trailer circle" > 
-             
 
-                       
                         </div>
                         <p class="text-center"><strong>Trailer</strong></p>
                     </div>
