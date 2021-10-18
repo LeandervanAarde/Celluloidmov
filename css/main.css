@@ -5,6 +5,10 @@ html{
 
 }
 
+a{
+    text-decoration: none !important;
+}
+
 body{
     background-color: #262626 !important;
 }

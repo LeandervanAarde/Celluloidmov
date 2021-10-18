@@ -2,6 +2,24 @@ $(function(){
 
     console.log("Login");
 
+    $(".btn-click").on("click", function(){
+        $(".panel").toggleClass("panel-slider");
+        // $(".btn-click").html("Log In");
+        $(this).html(($(this).html() == "Log In") ? 'Sign Up' : 'Log In');
+    });
+
+    // $(".btnFlip").click(function(){
+    //     $(".flipper").addClass("flip");
+    //     console.log("Flip");
+    //   });
+
+    $(".login-con").hide();
+    
+    $(".change-btn").on("click", function(){
+        $(".signUp-con").hide();
+        $(".login-con").slideDown();
+    });
+
     $(".login-btn").on("click", function(){
 
         var username = $(".username").val();
@@ -52,3 +70,4 @@ $(function(){
 
 
 });
+
