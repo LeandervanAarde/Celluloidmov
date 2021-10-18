@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    console.log("JQuery is linked and ready");
+    // console.log("JQuery is linked and ready");
 
     $(".btn-click").on("click", function(){
         $(".panel").toggleClass("panel-slider");
@@ -18,5 +18,10 @@ $(document).ready(function(){
         $(".signUp-con").hide();
         $(".login-con").slideDown();
     });
+
+
+
+
+    
 
 });
