@@ -45,7 +45,7 @@ body{
     box-shadow: 4px -3px 18px -7px rgba(0,0,0,0.75);
     -webkit-box-shadow: 4px -3px 18px -7px rgba(0,0,0,0.75);
     -moz-box-shadow: 4px -3px 18px -7px rgba(0,0,0,0.75);
-    margin-bottom: 10vh;
+    /* margin-bottom: 10vh; */
 }
 
 .searchbutton{
