@@ -1,0 +1,303 @@
+.header-image{
+    height: 110vh;
+/* background-color: grey; */
+/* background-image: url("../img/PLaceholder-1.jpg"); */
+background-position: center;
+background-size: cover;
+
+
+}
+
+
+.about{
+    background-color: #262626;
+}
+
+.navI{
+    text-decoration: none !important;
+    transition: 0.2s;
+}
+
+.navI:hover{
+    transform: scale(1.1);
+    color: rgba(26,0,185,0.6);
+    text-decoration: underline;
+}
+
+
+a{
+    text-decoration: none !important;
+}
+
+a:hover{
+    text-decoration: underline !important;
+    color: rgba(26,0,185,0.6) !important;
+}
+
+.watch{
+margin-left: 0 !important;
+width: 50% !important;
+font-size: 14px !important;
+
+}
+
+.watchlater{
+    margin-left: 0 !important;
+width: 45% !important;
+font-size: 14px !important;
+
+}
+
+
+
+
+/* @Media for small */
+
+@media  (max-width: 576px){
+
+    .header-image{
+        height: 100vh;
+    }
+
+    .welcome{
+        
+        text-align: center;
+    }
+
+    .Movie-name{
+        text-align: center;
+    }
+
+    
+
+    .description{
+        text-align: center;
+        margin-top: 0 !important;
+    }
+
+    .btn-primary{
+        width: 47%;
+        margin-left: 2%;
+        font-size: small !important;
+    }
+
+    .btn-outline-secondary{
+        width: 43%;
+        font-size: small !important;
+        
+    }
+    /* .card-container{
+        height: 350px;
+    } */
+
+    /* .card-body{
+        height: 120px;
+    } */
+
+    .card-name{
+        font-size: 12px;
+    }
+
+    /* .card-img-top{
+        height: 170px;
+    } */
+
+    .footer{
+        padding-top: 5%;
+    }
+
+    .social{
+        margin-top: 20px !important;
+        height: 35px;
+    }
+
+    .icon-1{
+        margin-left: 10px !important;
+    }
+
+}
+
+
+
+@media (min-width: 577px) and (max-width: 767.98px){
+   .welcome{
+       text-align: center;
+    margin-top: 5%;
+
+   }
+
+   .Movie-name{
+    text-align: center;
+}
+
+   .header-image{
+       height: 112vh;
+   }
+   
+
+    .mainM{
+        height: 210px;
+      
+    }
+
+    .description{
+        text-align: center;
+    }
+
+    .btn-primary{
+        width: 43%;
+        margin-left: 2%;
+    }
+
+    .btn-outline-secondary{
+        width: 47%;
+
+    }
+  
+   
+
+    .card-name{
+        font-size: 12px;
+    }
+
+
+    .footer{
+        padding-top: 5%;
+    }
+
+    .social{
+        height: 40px;
+    }
+
+}
+
+/* @media for md */
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+    .welcome{
+        text-align: left;
+        margin-left: 30px;
+        margin-top: 5%;
+    }
+
+    .Movie-name{
+        text-align: left;
+        margin-left: 35px;
+    }
+
+    .description{
+        text-align: left;
+    }
+
+    .mainM{
+        height: 700px;
+      
+        margin-left: 60px;
+    }
+
+    .btn-primary{
+        margin-right: 40px;
+    }
+
+    .footer{
+        padding-top: 2%;
+    }
+
+    .social{
+        height: 40px;
+    }
+
+}
+
+@media (min-width: 992px){ 
+
+    .header-image{
+        height: 100vh;
+    }
+
+.welcome{
+    text-align: left;
+    margin-left: 30px;
+}
+
+.Movie-name{
+    text-align: left;
+    margin-left: 50px;
+
+}
+.description{
+    text-align: left;
+}
+
+.mainM{
+    height: 800px;
+  
+}
+
+.btn-primary{
+    width: 43%;
+    margin-left: 2%;
+}
+
+.footer{
+    padding-top: 2%;
+}
+
+.social{
+    height: 40px;
+}
+
+
+
+ }
+
+
+ @media (min-width: 1440px){ 
+     .header-image{
+         height: 105vh;
+     }
+
+    .welcome{
+        text-align: left;
+        margin-left: 30px;
+    }
+    
+    .Movie-name{
+        text-align: left;
+        margin-left: 50px;
+    
+    }
+    .description{
+        text-align: left;
+    }
+    
+    .mainM{
+        height: 500px !important;
+        overflow: hidden;
+      
+    }
+    
+    .btn-primary{
+        margin-left: 80px;
+    }
+
+
+    .card-name{
+        font-size: 12px;
+    }
+
+   
+
+    
+    .footer{
+        padding-top: 2%;
+    }
+    
+    .social{
+        height: 40px;
+    }
+    
+    
+    
+     }
