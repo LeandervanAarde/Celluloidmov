@@ -1,38 +1,27 @@
 $(document).ready(function(){
-    console.log("JQuery is linked and ready");
+    // console.log("JQuery is linked and ready");
 
-    // Hover for Movie cards
+    $(".btn-click").on("click", function(){
+        $(".panel").toggleClass("panel-slider");
+        // $(".btn-click").html("Log In");
+        $(this).html(($(this).html() == "Log In") ? 'Sign Up' : 'Log In');
+    });
+
+    // $(".btnFlip").click(function(){
+    //     $(".flipper").addClass("flip");
+    //     console.log("Flip");
+    //   });
+
+    $(".login-con").hide();
     
-    $(".card-body").hide();
-
-    
-
-    $(".card").hover(function(){
-        $(".card-body").toggle();
+    $(".change-btn").on("click", function(){
+        $(".signUp-con").hide();
+        $(".login-con").slideDown();
     });
 
 
 
-    $(".dropdown").hide();
 
-
-
-    $(".burger").click(function(){
-        $(".dropdown").toggle(100);
     
-    });
-
-  
-        
-   
-
-  
-    
-
-
-
-
-
 
 });
-

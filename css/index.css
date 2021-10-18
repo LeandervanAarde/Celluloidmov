@@ -1,3 +1,199 @@
-.col-6{
-    background-color: red;
+.bg{
+    /* background-color: red; */
+    height: 100vh;
+}
+
+
+#signUp-heading{
+    margin: 0 auto;
+    margin-top: 10vh;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.signUp-con{
+    margin: 0 auto;
+    height: 90vh;
+    width: 80%;
+    background-color: white;
+    margin-top: 5vh;
+    box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
+    -moz-box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
+    border-radius: 30px;
+    /* position: absolute;
+    backface-visibility: hidden; */
+}
+
+#login-heading{
+    margin: 0 auto;
+    margin-top: 10vh;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.login-con{
+    margin: 0 auto;
+    height: 90vh;
+    width: 80%;
+    background-color: white;
+    margin-top: 5vh;
+    box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
+    -moz-box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
+    border-radius: 30px;
+    /* position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg); */
+}
+
+.change-btn{
+    width: 100%;
+    height: 5vh;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 3vh;
+    text-align: center;
+    border: black solid 3px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#btn-text{
+    margin: 0 auto;
+    padding-top: 0.5vh;
+}
+
+.logo-img{
+    margin: 0 auto;
+    width: 30%;
+    height: 150px;
+    background-image: url(../img/SVG/Asset\ 1.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.form-container{
+    text-align: center;
+    width: 40%;
+    height: 40vh;
+    margin: 0 auto;   
+    margin-top: 2vh;
+    padding-top: 20px;
+    position: relative;
+}
+
+input{
+    width: 100%;
+    height: 35px;
+    border: none;
+    background-color: #f7f7f7;
+    border-radius: 40px;
+    padding-left: 4%;
+    margin-top: 15px;
+    text-align: center;
+     margin-top: 2vh;
+}
+
+.btn{
+    width: 80%;
+    background-color: #2b2b2b;
+    color: #f7f7f7;
+    margin:  0 auto;
+    margin-top: 20px;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 300 !important;
+    transition: all ease 200ms;
+}
+
+.input-sections{
+    margin-top: 2vh;
+}
+
+.login-left{
+    margin: 0 auto;
+    height: 90vh;
+    width: 50%;
+    background-color: white;
+    margin-top: 5vh;
+    box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
+    -moz-box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
+    border-radius: 30px;
+    float: left;
+    position: relative;
+}
+
+.signUp-LgMain{
+  /* margin: 0 auto; */
+    height: 90vh;
+    width: 50%;
+    background-color: lightgray;
+    margin-top: 5vh;
+    box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
+    -moz-box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
+    border-radius: 30px;
+    float: left;
+    position: relative;
+}
+
+.panel{
+    height: 90vh;
+    background-color: #E3E800;
+    color: white;
+    border-radius: 30px;
+    position: absolute;
+    top: 5vh;
+    text-align: center;
+    right: 0;
+    transition: all ease-in-out 500ms;
+}
+
+.panel-slider{
+    margin-right: 50%;
+}
+
+.btn-click{
+    width: 200px;
+    height: 50px;
+    border: solid #1A00B9;
+    padding-top: 10px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40vh;
+    color: #262626;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.message{
+    /* width: 100%; */
+    padding-top: 5px;
+    height: 31px;
+    font-size: 14px;
+    border-radius: 10px;
+    /* margin-top: 20px; */
+    text-align: center;
+    color: white;
+    /* width: 30%; */
+    margin: 0 auto;
+    text-align: center;
+    /* padding: 0; */
+}
+
+.login-btn{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding-top: 3px;
+    cursor: pointer;
+    margin-bottom: 25px;
 }
