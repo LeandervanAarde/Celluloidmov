@@ -1,0 +1,228 @@
+html{
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    background-color: #262626 !important;
+}
+/* 
+.row{
+    background-color: white;
+}
+
+.nav-con{
+    background-color: white;
+    height: 15vh;
+} */
+
+.logo-img{
+    /* position: absolute; */
+    height: 10vh;
+    background-image: url(../img/SVG/Asset\ 1.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 3vh;
+    float: left;
+}
+
+#my-list{
+    text-align: center;
+    margin-bottom: 5vh;
+    color: black;
+}
+
+.searchbar{
+    height: 4vh;
+    /* background-color: teal; */
+    position: relative;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 0%;
+    outline: 1px solid black;
+    box-shadow: 4px -3px 18px -7px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px -3px 18px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px -3px 18px -7px rgba(0,0,0,0.75);
+    margin-bottom: 10vh;
+}
+
+.searchbutton{
+    width: 10%;
+    height: 100%;
+    background-color: gray ;
+    padding: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* outline: 1px solid black; */
+    position: absolute;
+    right: 0%;
+    cursor: pointer;
+    /* border: black solid 3px; */
+}
+
+#search-img{
+    width: 50%;
+    height: 50%;
+    background-image: url(../img/SearchIcon.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-top: 1vh;
+}
+
+
+.watchlist-heading{
+    color: white;
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+
+@media  (max-width: 576px){
+
+    .welcome{
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .Movie-name{
+        text-align: center;
+    }
+
+    .mainM{
+        height: 200px;
+      
+    }
+
+    .description{
+        text-align: center;
+    }
+
+    .btn-primary{
+        width: 47%;
+        margin-left: 2%;
+        font-size: small !important;
+    }
+
+    .btn-outline-secondary{
+        width: 43%;
+        font-size: small !important;
+    }
+
+
+    .card-name{
+        font-size: 12px;
+        color: white;
+    }
+
+
+    .footer{
+        padding-top: 5%;
+    }
+
+    .social{
+        height: 35px;
+    }
+
+}
+
+
+
+@media (min-width: 577px) and (max-width: 767.98px){
+
+
+    .btn-primary{
+        width: 43%;
+        margin-left: 2%;
+    }
+
+    .btn-outline-secondary{
+        width: 47%;
+    }
+  
+   
+
+    .card-name{
+        font-size: 12px;
+    }
+
+
+    .footer{
+        padding-top: 5%;
+    }
+
+    .social{
+        height: 40px;
+    }
+
+}
+
+/* @media for md */
+
+@media (min-width: 768px) and (max-width: 991.98px){
+
+
+    .btn-primary{
+        margin-right: 40px;
+    }
+
+    .footer{
+        padding-top: 2%;
+    }
+
+    .social{
+        height: 40px;
+    }
+
+}
+
+@media (min-width: 992px){ 
+
+
+.btn-primary{
+    margin-left: 80px;
+}
+
+.footer{
+    padding-top: 2%;
+}
+
+.social{
+    height: 40px;
+}
+
+
+
+ }
+
+
+ @media (min-width: 1440px){ 
+
+    
+    .btn-primary{
+        margin-left: 80px;
+    }
+
+
+    .card-name{
+        font-size: 12px;
+        color: white;
+    }
+
+      
+    .footer{
+        padding-top: 2%;
+    }
+    
+    .social{
+        height: 40px;
+    }
+    
+    
+    
+     }
+
