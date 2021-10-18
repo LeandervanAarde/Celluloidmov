@@ -104,7 +104,7 @@ body{
 
     .btn-primary{
         width: 47%;
-        margin-left: 2%;
+        
         font-size: small !important;
     }
 
@@ -183,9 +183,7 @@ body{
 @media (min-width: 992px){ 
 
 
-.btn-primary{
-    margin-left: 80px;
-}
+
 
 .footer{
     padding-top: 2%;
@@ -203,9 +201,6 @@ body{
  @media (min-width: 1440px){ 
 
     
-    .btn-primary{
-        margin-left: 80px;
-    }
 
 
     .card-name{
