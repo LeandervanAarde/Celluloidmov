@@ -25,7 +25,7 @@ $(function(){
                     if(result.users[i].password === password){
 
                         if(result.users[i].account === "active"){
-                            window.location.href = "../pages/home.html";
+                            window.location.href = "../celluloidmov/pages/home.html";
                             sessionStorage.setItem("username", username);
                         }else{
                             $(".message").css("background-color", "orange");
