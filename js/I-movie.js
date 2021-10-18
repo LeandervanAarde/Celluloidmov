@@ -71,6 +71,7 @@ for(var i= 0; i < 8; i++){
             <div class='card-body d-block '>\
                 <p class='cardName'><strong>"+similiar.results[i].original_title+"</strong> <br>Rating: "+similiar.results[i].vote_average+" <br> Release date: "+similiar.results[i].release_date+"</p> \
                 <a href='I-movie.html?id=" + similiar.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block '> Watch now</button> </a>\
+                <a href='../pages/watchlist.html?id=''><button type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Watch later</button> </a> \
             </div>\
          </div> </a>\
     </div>" ;
@@ -105,7 +106,7 @@ $.getJSON(url3, function(actor){
 
 // Trailer for movie 
 
-$("#playtrailer").on('click', () =>{
+$(".playtrailer").on('click', () =>{
     $.getJSON(url4, function(vid){
         // Console.log the result to see the data
         // console.log(vid);
@@ -126,6 +127,8 @@ $("#playtrailer").on('click', () =>{
     });
 
 });
+
+
 
 var myModalEl = document.getElementById('modaltrailer')
 myModalEl.addEventListener('hide.bs.modal', function (event) {

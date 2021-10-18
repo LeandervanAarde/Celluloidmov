@@ -187,6 +187,35 @@
 
  }
 
+ @media (max-width: 1440px){ 
+
+   
+
+    .circle{
+  
+        height: 100px !important;
+ 
+    
+    }
+
+    .body{
+        margin-top: 60px !important;
+    }
+
+    
+    .footer{
+        padding-top: 2%;
+    }
+    
+    .social{
+        height: 40px;
+    }
+    
+    
+    
+     }
+
+
 
  @media (min-width: 1440px){ 
 
@@ -194,7 +223,7 @@
 
     .circle{
   
-        height: 150px;
+        height: 145px;
  
     
     }
