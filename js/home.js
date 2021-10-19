@@ -77,6 +77,9 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
             }  //If statement ends
             
         }  //For loop ends 
+
+
+
         changeImage();
 
         var car = setInterval("changeImage()", 3000);

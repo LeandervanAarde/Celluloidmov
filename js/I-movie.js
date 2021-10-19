@@ -62,7 +62,7 @@ $.getJSON(url2, function(similiar){
     console.log(similiar);
 //    Variables for the data
 
-    
+    // similar movies
 for(var i= 0; i < 8; i++){
     var card= 
     "<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>\

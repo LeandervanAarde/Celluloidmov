@@ -13,10 +13,12 @@ $(document).ready(function(){
     $.getJSON(popularurl, function(result) {
         console.log(result); 
 
+
+        
  
 
 
-        for(var i= 0; i < result.results.length; i++){
+        // for(var i= 0; i < result.results.length; i++){
             var card= 
             "<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>\
             <a href='I-movie.html?id=" + result.results[i].id + "'> <div class='card' style='border: none;'>\
@@ -29,13 +31,13 @@ $(document).ready(function(){
                  </div> </a>\
             </div>"
 
-            $(".body").append(card);
+            // $(".body").append(card);
             // if(i === sessionStorage.getItem("i")){
             //     $(".body").append(card);
             // }
 
             
-        }  //For loop ends 
+        // }  //For loop ends 
 
     });
 
