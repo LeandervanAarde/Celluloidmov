@@ -53,6 +53,22 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
 
 
         for(var i= 0; i < 8; i++){
+
+
+             
+
+            
+            
+            function btnIndex(index){
+                    document.getElementsByClassName("watchlater").addEventListener("click", function(){
+                        sessionStorage.setItem(result.results[i].original_title, result.results[i].original_title);
+                        console.log(index);
+                     });
+            }
+
+            btnIndex(i);
+
+
             var card= 
             "<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>\
             <a href='I-movie.html?id=" + result.results[i].id + "'> <div class='card' style='border: none;'>\
@@ -60,7 +76,7 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
                     <div class='card-body d-block '>\
                         <p class='cardName'><strong>"+result.results[i].original_title+"</strong> <br>Rating: "+result.results[i].vote_average+" <br> Release date: "+result.results[i].release_date+"</p> \
                         <a href='I-movie.html?id=" + result.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
-                        <a href='../pages/watchlist.html?id="+result.results[i].id+"'><button type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Watch later</button> </a> \
+                        <button type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater' id='" + result.results[i].id + "'>Watch later</button> </a> \
                     </div>\
                  </div> </a>\
             </div>" ;
@@ -76,11 +92,23 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
                 backdrop.push('https://image.tmdb.org/t/p/original'+result.results[i].backdrop_path)          
             }  //If statement ends
             
+
+           
+
+            // $(".watchlater").on("click", function(){
+            //     sessionStorage.setItem(result.results[i].original_title, result.results[i].original_title);
+            //     console.log("Movie Id: " + result.results[i].original_title);
+            // });
+
+
         }  //For loop ends 
         changeImage();
 
         var car = setInterval("changeImage()", 3000);
 
+
+
+     
 
 
     }); //get JSON ends here

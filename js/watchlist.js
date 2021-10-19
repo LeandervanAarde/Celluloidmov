@@ -16,7 +16,7 @@ $(document).ready(function(){
  
 
 
-        for(var i= 0; i < result.results.length; i++){
+        for(i= 0; i < result.results.length; i++){
             var card= 
             "<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>\
             <a href='I-movie.html?id=" + result.results[i].id + "'> <div class='card' style='border: none;'>\
@@ -24,20 +24,24 @@ $(document).ready(function(){
                     <div class='card-body d-block '>\
                         <p class='cardName'><strong>"+result.results[i].original_title+"</strong> <br>Rating: "+result.results[i].vote_average+" <br> Release date: "+result.results[i].release_date+"</p> \
                         <a href='I-movie.html?id=" + result.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
-                        <a href='../pages/watchlist.html?id="+result.results[i].id+"'><button type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Watch later</button> </a> \
+                        <button type='button' class='btn btn-outline-secondary d-lg-block watchlat d-noneer'>Remove Movie</button> </a> \
                     </div>\
                  </div> </a>\
             </div>"
 
-            $(".body").append(card);
-            // if(i === sessionStorage.getItem("i")){
-            //     $(".body").append(card);
-            // }
 
+            var idname = i.toString();
+
+            if(result.results[i].original_title === sessionStorage.getItem(result.results[i].original_title)){
+                $(".body").append(card);
+            }
             
+            console.log(sessionStorage.getItem(idname));
         }  //For loop ends 
-
+        
     });
+
+
 
 });
     
