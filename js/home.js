@@ -45,7 +45,7 @@ function sleep(time){
 $(document).ready(function(){
 console.log("Homepage JQuery is active");
 
-$('.welcome').html('welcome,' + username);
+// $('.welcome').html('welcome,' + /* username */);
 
 const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1";
     $.getJSON(popularurl, function(result) {
