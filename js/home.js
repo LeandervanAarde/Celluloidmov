@@ -59,14 +59,14 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
 
             
             
-            function btnIndex(index){
-                    document.getElementsByClassName("watchlater").addEventListener("click", function(){
-                        sessionStorage.setItem(result.results[i].original_title, result.results[i].original_title);
-                        console.log(index);
-                     });
-            }
+            // function btnIndex(index){
+            //         document.getElementsByClassName("watchlater").addEventListener("click", function(){
+            //             sessionStorage.setItem(result.results[i].original_title, result.results[i].original_title);
+            //             console.log(index);
+            //          });
+            // }
 
-            btnIndex(i);
+            // btnIndex(i);
 
 
             var card= 
@@ -76,10 +76,25 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
                     <div class='card-body d-block '>\
                         <p class='cardName'><strong>"+result.results[i].original_title+"</strong> <br>Rating: "+result.results[i].vote_average+" <br> Release date: "+result.results[i].release_date+"</p> \
                         <a href='I-movie.html?id=" + result.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
-                        <button type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater' id='" + result.results[i].id + "'>Watch later</button> </a> \
+                        <button type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater' id='" + result.results[i].id + "'><h1 class ='movie-id d-none'>"+result.results[i].id+"</h1>Watch later</button> </a> \
                     </div>\
                  </div> </a>\
             </div>" ;
+
+
+
+                // $('.watchlater').click(function(){
+
+                //     for(var j = 0; j < result.results.length; j++){
+                //         if(result.results[j].id === $('.movie-id')){
+                //             console.log(result.results[j].id)
+                //         }
+        
+                //     }
+
+
+                // }); 
+
 
            
             // for header
@@ -102,6 +117,11 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
 
 
         }  //For loop ends 
+
+
+
+
+
         changeImage();
 
         var car = setInterval("changeImage()", 3000);
