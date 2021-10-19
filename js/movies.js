@@ -2,38 +2,61 @@ $(document).ready(function(){
     console.log("Homepage JQuery is active");
     
     const popularURL = "https://api.themoviedb.org/3/movie/popular?api_key=7c133cc72a2ad03fcf238f8ad51a53a3&language=en-US&page=3";
+    var screenWidth,
+        screenHeight,
+        card;
 
     $.getJSON(popularURL, function(result) {
-        console.log(result); 
+        console.log(result)
+        for(var i = 0; i < 11; i++){
+            if(i < 5){
+                card = 
+                    `
+                        <div class="container container-1">
+                            <div class="box">
+                                <img src="https://image.tmdb.org/t/p/original${result.results[i].poster_path}" class="model">
+                            </div>
+                        </div>        
+                    `;
 
-            for(var i= 0; i < 11; i++){
+                    $(".featured-items-container").append(card);
+            } else if(i > 5){
+                card = 
+                    `
+                        <div class="container container-2 d-none">
+                            <div class="box">
+                                <img src="https://image.tmdb.org/t/p/original${result.results[i].poster_path}" class="model">
+                            </div>
+                        </div>        
+                    `;
 
-                if( i < 5 ){
-                    $("#section1").append(
-                        `
-                        <div class="item">
-                            <a href="#">
-                                <img
-                                    src="https://image.tmdb.org/t/p/original${result.results[i].poster_path}"
-                                    alt="Movie Image">
-                            </a>
-                        </div>   
-                        `
-                    )
-                } else if( i > 5){
-                    $("#section2").append(
-                        `
-                        <div class="item">
-                            <a href="#">
-                                <img
-                                    src="https://image.tmdb.org/t/p/original${result.results[i].poster_path}"
-                                    alt="Movie Image">
-                            </a>
-                        </div>   
-                        `
-                    )
-                }
+                    $(".featured-items-container").append(card);
             }
+        }
+    });
+
+    $(".featured-right-arrow").click(function(){
+                $(".container-1").fadeOut(500);
+                $(".featured-right-arrow").fadeOut(500);
+                $(".container-2").fadeIn(500);
+                $(".featured-left-arrow").fadeIn(500);
+                $(".container").css("display", "flex")
+                $(".container-1").addClass("d-none");
+                $(".container-2").removeClass("d-none");
+                $(".featured-left-arrow").removeClass("d-none");
+                $(".featured-right-arrow").addClass("d-none");
+    });
+
+    $(".featured-left-arrow").click(function(){
+                $(".container-2").fadeOut(500);
+                $(".featured-left-arrow").fadeOut(500);
+                $(".container-1").fadeIn(500);
+                $(".featured-right-arrow").fadeIn(500);
+                $(".container").css("display", "flex")
+                $(".container-2").addClass("d-none");
+                $(".container-1").removeClass("d-none");
+                $(".featured-right-arrow").removeClass("d-none");
+                $(".featured-left-arrow").addClass("d-none");
     });
 
     for(var i = 0; i < 500; i++){
@@ -42,9 +65,9 @@ $(document).ready(function(){
         $.getJSON(moviesURL, function(result) {
             console.log(result); 
 
-            if(result.poster_path !== null){
+            if(result.poster_path !== null && result.success !== false){
                 for(var i= 0; i < 1; i++){
-                    var card= 
+                    card= 
                     `<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>
                         <div class='card' style='border: none;'>
                         <img src='https://image.tmdb.org/t/p/original${result.poster_path}'class='card-img-top img-fluid' alt=''>
@@ -66,4 +89,5 @@ $(document).ready(function(){
                 $(".description").html(result.overview);
         });
     }
+
 });

@@ -54,7 +54,7 @@
                     <p class="name">Name here</p>
             </div> <!--profile for small devices end here-->
 
-            <div class="col- d-block d-md-none B-menu">
+            <div class="col-1 d-block d-md-none B-menu">
                 <div class="burger"><!--Lines for burger container-->
                     <div class="line-1"></div>
                     <div class="line-2"></div>
@@ -64,18 +64,16 @@
                 <p class="">MENU</p> 
             </div> <!--Burger menu ends-->
     
-            <div class="col-6  d-md-none dropdown offset-6" >
+            <div class="col-6 d-none d-md-none dropdown offset-6" >
                 <div class="navItem"><a href="../pages/home.html"><h5 class=" b-Item">HOME</h5> </a> </div>
                 <a href="../pages/Movies.html"><h5 class=" b-Item">BROWSE</h5></a>
-                 <a href="../pages/watchlist.html"> <h5 class=" b-Item">WATCHLIST</h5></a> 
-                <a href=""><h5 class="b-Itemr">ABOUT</h5></a> <!--insert link-->
+                <a href="../pages/watchlist.html"><h5 class=" b-Item">WATCHLIST</h5></a> 
             </div>
 
             <!-- Navigation for md and bigger devices -->
             <div class="d-none d-md-block col-md-1 col-lg-1 navI "><a href="../pages/home.html"><h5 >HOME</h5> </a></div>
             <div class="d-none d-md-block col-md-1  col-lg-1 navI"><a href="../pages/Movies.html"><h5>BROWSE</h5></a></div>
             <div class="d-none d-md-block col-md-2 text-center  col-lg-1 navI"> <a href="../pages/watchlist.html"> <h5>WATCHLIST</h5></a> </div>
-            <div class="d-none d-md-block col-md-1 text-center col-lg-1 navI"><a href=""><h5>ABOUT</h5></div></a> <!--insert link-->
 
             <!-- Profile for md and larger devices -->
             <div class="col-2 d-none d-md-block  profileL"> <!--Profile for small devices -->
@@ -93,41 +91,38 @@
             <h1 class="text-left">Featured</h1>
         </div>
 
-        <div class="wrapper featured-movies-container">
-           
-            <section id="section1">
-                <a href="#section2" class="arrow__btn left-arrow">‹</a>
-                
-                <a href="#section2" class="arrow__btn right-arrow">›</a>
-            </section>
+            <div class="featured-movies-container outer-container">
+                <div class="featured-button-container featured-left-arrow d-none">
+                    <button type='button' class='btn btn-primary button'><h1>‹</h1></button>
+                </div>
+                <div class="featured-items-container">
+    
+                </div>
+                <div class="featured-button-container featured-right-arrow">
+                    <button type='button' class='btn btn-primary button'><h1>›</h1></button>
+                </div>
+            </div>
 
-            <section id="section2">
-                <a href="#section1" class="arrow__btn left-arrow">‹</a>
-                
-                <a href="#section1" class="arrow__btn right-arrow">›</a>
-            </section>
-
-        </div>
 
         <div class="buttons-container row">
-            <select class="btn-outline-secondary col-2" name="Genre">
+            <select class="btn-outline-secondary col-2 genre_select" name="Genre">
                 <option>Genre</option>
                 <option value="Action">Action</option>
                 <option value="Comedy">Comedy</option>
                 <option value="Romance">Romance</option>
             </select>
-            <select class="btn-outline-secondary col-2" name="Title">
+            <select class="btn-outline-secondary col-2 rating_select" name="Title">
                 <option>Rating</option>
                 <option value="Title">Title</option>
                 <option value="Title">Title</option>
                 <option value="Title">Title</option>
             </select>
-            <select class="btn-outline-secondary col-2" name="Year">
+            <select class="btn-outline-secondary col-2 year_select" name="Year">
                 <option>Year</option>
-                <option value=2015>2015</option>
-                <option value=2016>2016</option>
-                <option value=2017>2017</option>
-                <option value=2018>2018</option>
+                <option value=2015>2015 and Newer</option>
+                <option value=2016>2016 and Newer</option>
+                <option value=2017>2017 and Newer</option>
+                <option value=2018>2018 and Newer</option>
             </select>
             <form class="col-5">
                 <input class="search-input btn-outline-secondary" type="text" placeholder="Search.." name="search">
