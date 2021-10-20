@@ -60,20 +60,6 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
         for(var i= 0; i < 8; i++){
 
 
-             
-
-            
-            
-            // function btnIndex(index){
-            //         document.getElementsByClassName("watchlater").addEventListener("click", function(){
-            //             sessionStorage.setItem(result.results[i].original_title, result.results[i].original_title);
-            //             console.log(index);
-            //          });
-            // }
-
-            // btnIndex(i);
-
-
             var card= 
             "<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>\
             <a href='I-movie.html?id=" + result.results[i].id + "'> <div class='card' style='border: none;' data-id = '"+result.results[i].id+"'>\
@@ -118,13 +104,6 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
             }  //If statement ends
             
 
-           
-
-            // $(".watchlater").on("click", function(){
-            //     sessionStorage.setItem(result.results[i].original_title, result.results[i].original_title);
-            //     console.log("Movie Id: " + result.results[i].original_title);
-            // });
-
 
         }  //For loop ends 
 
@@ -139,9 +118,6 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
             } else{
                 watchlater= temp.split(", ");
             }
-            // console.log(watchlater);
-            // console.log(id);
-
             var doesNotExist = watchlater.every(item =>{
                 return item != id;
             });
@@ -155,28 +131,7 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
 
             $(event.currentTarget).attr("disabled", "true").html("Added");
 
-
-            //create empty array var 
-            // Get everything from session storage 
-            // if statement (if there is nothing push current id to array)
-            // If there is something loop through array 
-            // push everything into empty array + this.card.id
-            // set session storage where the key value is 
-
-
-            // for(var j = 0; j < result.results.length; j++){
-            //     if(result.results[j].id === $('.movie-id').text()){
-            //         console.log(result.results[j].id)
-            //     }
-
-            // }
-
-
         }); 
-
-
-
-
 
         changeImage();
 
