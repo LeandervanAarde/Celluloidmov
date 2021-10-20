@@ -1,47 +1,59 @@
+function remove(id){
+
+    $('.remove').on('click', event =>{
+        let card = $(event.currentTarget).parent().parent().parent();
+        var watch = localStorage.getItem('watchlater').split(", ");
+     var index = watch.indexOf(id);
+
+     watch.splice(index, 1); 
+
+     localStorage.setItem('watchlater', watch.join(", ")); 
+     card.slideUp(4000, ()=>{card.remove()});
+     console.log('click');
+
+    });
+}
+
 $(document).ready(function(){
     console.log("JQuery is linked and ready");
 
-
-
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const id = urlParams.get('id');
-
-
-    // const popularurl= 'https://api.themoviedb.org/3/movie/popular?api_key=' + id;
-    const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1";
-    $.getJSON(popularurl, function(result) {
-        console.log(result); 
-
  
 
+   
 
-        for(i= 0; i < result.results.length; i++){
+
+    
+        var watchlater = localStorage.getItem('watchlater').split(", ");
+
+        for(var i= 0; i < watchlater.length; i++){
+            // Get the id
+            var watchurl = ' https://api.themoviedb.org/3/movie/'+watchlater[i]+'?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US';
+    
+            $.getJSON(watchurl, function(result) {
+                console.log(watchurl); 
+    
             var card= 
-            "<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>\
-            <a href='I-movie.html?id=" + result.results[i].id + "'> <div class='card' style='border: none;'>\
-                <img src='https://image.tmdb.org/t/p/original"+result.results[i].poster_path+"'class='card-img-top img-fluid' alt=''>\
-                    <div class='card-body d-block '>\
-                        <p class='cardName'><strong>"+result.results[i].original_title+"</strong> <br>Rating: "+result.results[i].vote_average+" <br> Release date: "+result.results[i].release_date+"</p> \
-                        <a href='I-movie.html?id=" + result.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
-                        <button type='button' class='btn btn-outline-secondary d-lg-block watchlat d-noneer'>Remove Movie</button> </a> \
-                    </div>\
-                 </div> </a>\
-            </div>"
-
-
-            var idname = i.toString();
-
-            if(result.results[i].original_title === sessionStorage.getItem(result.results[i].original_title)){
-                $(".body").append(card);
-            }
+            `<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>
+            <a href='I-movie.html?id=` +result.id + `'> <div class='card' style='border: none;' data-id = '`+result.id+`'>
+                <img src='https://image.tmdb.org/t/p/original`+result.poster_path+`'class='card-img-top img-fluid' alt=''>
+                    <div class='card-body d-block '>
+                        <p class='cardName'><strong>`+result.original_title+`</strong> <br>Rating: `+result.vote_average+` <br> Release date: `+result.release_date+`</p> 
+                        <a href='I-movie.html?id=` + result.id + `'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>
+                        <button type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater remove' onclick="remove(${result.id})">Remove</button>  
+                    </div>
+                 </div> </a>
+            </div>`;
+    
             
-            console.log(sessionStorage.getItem(idname));
-        }  //For loop ends 
-        
-    });
+            // for header
+                $(".body").append( card);
+                console.log('film added');
+            });
 
-
+            console.log("creating event listeners");
+    
+        } 
+   
 
 });
     
