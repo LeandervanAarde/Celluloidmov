@@ -76,24 +76,13 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
                     <div class='card-body d-block '>\
                         <p class='cardName'><strong>"+result.results[i].original_title+"</strong> <br>Rating: "+result.results[i].vote_average+" <br> Release date: "+result.results[i].release_date+"</p> \
                         <a href='I-movie.html?id=" + result.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
-                        <button type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater' id='" + result.results[i].id + "'><h1 class ='movie-id d-none'>"+result.results[i].id+"</h1>Watch later</button> </a> \
+                        <button type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater' id='" + result.results[i].id + "'><h1 class ='movie-id d-none'>"+result.results[i].id+"</h1>Watch later</button>  \
                     </div>\
                  </div> </a>\
             </div>" ;
 
 
 
-                // $('.watchlater').click(function(){
-
-                //     for(var j = 0; j < result.results.length; j++){
-                //         if(result.results[j].id === $('.movie-id')){
-                //             console.log(result.results[j].id)
-                //         }
-        
-                //     }
-
-
-                // }); 
 
 
            
@@ -117,6 +106,30 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
 
 
         }  //For loop ends 
+
+
+        $('.watchlater').click(function(){
+            
+
+            $(this).attr('id');
+            console.log($(this).attr('id'));
+            //create empty array var 
+            // Get everything from session storage 
+            // if statement (if there is nothing push current id to array)
+            // If there is something loop through array 
+            // push everything into empty array + this.card.id
+            // set session storage where the key value is 
+
+
+            // for(var j = 0; j < result.results.length; j++){
+            //     if(result.results[j].id === $('.movie-id').text()){
+            //         console.log(result.results[j].id)
+            //     }
+
+            // }
+
+
+        }); 
 
 
 
