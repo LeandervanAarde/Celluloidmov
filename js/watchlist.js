@@ -8,7 +8,7 @@ function remove(id){
      watch.splice(index, 1); 
 
      localStorage.setItem('watchlater', watch.join(", ")); 
-     card.slideUp(4000, ()=>{card.remove()});
+     card.slideUp(700, ()=>{card.remove()});
      console.log('click');
 
     });
