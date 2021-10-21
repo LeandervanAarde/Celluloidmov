@@ -40,12 +40,15 @@ function sleep(time){
     }
 };
 
+// Check the localstorage onload.
+if(!localStorage.getItem("watchlater")){
+    localStorage.setItem("watchlater", "");
+}
+
 
 
 $(document).ready(function(){
 console.log("Homepage JQuery is active");
-
-// $('.welcome').html('welcome,' + username);
 
 const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1";
     $.getJSON(popularurl, function(result) {
@@ -55,17 +58,39 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
 
 
         for(var i= 0; i < 8; i++){
+
+
             var card= 
             "<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>\
-            <a href='I-movie.html?id=" + result.results[i].id + "'> <div class='card' style='border: none;'>\
+            <a href='I-movie.html?id=" + result.results[i].id + "'> <div class='card' style='border: none;' data-id = '"+result.results[i].id+"'>\
                 <img src='https://image.tmdb.org/t/p/original"+result.results[i].poster_path+"'class='card-img-top img-fluid' alt=''>\
                     <div class='card-body d-block '>\
                         <p class='cardName'><strong>"+result.results[i].original_title+"</strong> <br>Rating: "+result.results[i].vote_average+" <br> Release date: "+result.results[i].release_date+"</p> \
                         <a href='I-movie.html?id=" + result.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
-                        <a href='../pages/watchlist.html?id="+result.results[i].id+"'><button type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Watch later</button> </a> \
+                        <button type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Watch later</button>  \
                     </div>\
                  </div> </a>\
             </div>" ;
+
+            if(localStorage.getItem('watchlater').includes(result.results[i].id)){
+
+                card= 
+                "<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>\
+                <a href='I-movie.html?id=" + result.results[i].id + "'> <div class='card' style='border: none;' data-id = '"+result.results[i].id+"'>\
+                    <img src='https://image.tmdb.org/t/p/original"+result.results[i].poster_path+"'class='card-img-top img-fluid' alt=''>\
+                        <div class='card-body d-block '>\
+                            <p class='cardName'><strong>"+result.results[i].original_title+"</strong> <br>Rating: "+result.results[i].vote_average+" <br> Release date: "+result.results[i].release_date+"</p> \
+                            <a href='I-movie.html?id=" + result.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
+                            <button disabled type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Added</button>  \
+                        </div>\
+                     </div> </a>\
+                </div>" ;
+
+            }
+
+
+
+
 
            
             // for header
@@ -78,14 +103,43 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
                 backdrop.push('https://image.tmdb.org/t/p/original'+result.results[i].backdrop_path)          
             }  //If statement ends
             
+
+
         }  //For loop ends 
 
 
+        $('.watchlater').click(function(event){
+            let card = $(event.currentTarget).parent().parent()[0];
+            let id= $(card).data("id"); 
+            var temp = localStorage.getItem('watchlater');
+            var watchlater ;
+            if(temp == ""){
+                 watchlater = []; 
+            } else{
+                watchlater= temp.split(", ");
+            }
+            var doesNotExist = watchlater.every(item =>{
+                return item != id;
+            });
+
+            if(doesNotExist){
+
+                watchlater.push(id + ""); 
+                localStorage.setItem("watchlater", watchlater.join(", "));
+            }
+            console.log(watchlater);
+
+            $(event.currentTarget).attr("disabled", "true").html("Added");
+
+        }); 
 
         changeImage();
 
         var car = setInterval("changeImage()", 3000);
 
+
+
+     
 
 
     }); //get JSON ends here
