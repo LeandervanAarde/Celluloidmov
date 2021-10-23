@@ -68,9 +68,12 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
                         <p class='cardName'><strong>"+result.results[i].original_title+"</strong> <br>Rating: "+result.results[i].vote_average+" <br> Release date: "+result.results[i].release_date+"</p> \
                         <a href='I-movie.html?id=" + result.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
                         <button type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Watch later</button>  \
+                        <button type='button' class='btn btn-outline-secondary d-block d-lg-none watchlater' style='width: 100% !important;'>Watch later</button>\
                     </div>\
                  </div> </a>\
             </div>" ;
+
+            // If already in localstorage append a card with disabled class that will state movie is already added
 
             if(localStorage.getItem('watchlater').includes(result.results[i].id)){
 
@@ -82,6 +85,7 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
                             <p class='cardName'><strong>"+result.results[i].original_title+"</strong> <br>Rating: "+result.results[i].vote_average+" <br> Release date: "+result.results[i].release_date+"</p> \
                             <a href='I-movie.html?id=" + result.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
                             <button disabled type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Added</button>  \
+                            <button disabled type='button' class='btn btn-outline-secondary d-block d-lg-none  watchlater'style='width: 100% !important; >Added</button>\
                         </div>\
                      </div> </a>\
                 </div>" ;

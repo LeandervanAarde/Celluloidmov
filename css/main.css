@@ -21,9 +21,12 @@ body{
    
     position: relative;
     z-index: 1;
-  
    
     
+}
+
+.bg-dark{
+    background-color: #262626 !important;
 }
 
 li{

@@ -40,6 +40,8 @@ $(document).ready(function(){
                         <p class='cardName'><strong>`+result.original_title+`</strong> <br>Rating: `+result.vote_average+` <br> Release date: `+result.release_date+`</p> 
                         <a href='I-movie.html?id=` + result.id + `'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>
                         <button type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater remove' onclick="remove(${result.id})">Remove</button>  
+                        <button type='button' class='btn btn-outline-secondary d-block d-lg-none watchlater remove' style='width: 100%; !important; margin-left: 0 !important; ' onclick="remove(${result.id})">Remove</button>  
+
                     </div>
                  </div> </a>
             </div>`;
