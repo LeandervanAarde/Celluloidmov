@@ -17,7 +17,7 @@ body{
    
     position: relative;
     z-index: 1;
-    margin-bottom: 2% !important;
+  
    
     
 }
@@ -26,13 +26,19 @@ li{
     margin-left: 20%;
 }
 
+.logo-container{
+    background-image: url("../img/SVG/Asset\ 2.svg");
+    margin-left: 1%;
+    background-repeat: no-repeat;
+}
+
 
 
 
 
 .photo{
-    height: 75px;
-    width: 75px;
+    height: 60px;
+    width: 60px;
     background-color: white;
     border-radius: 100%;
     
