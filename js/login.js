@@ -16,8 +16,8 @@ $(function(){
     $(".login-con").hide();
     
     $(".change-btn").on("click", function(){
-        $(".signUp-con").hide();
-        $(".login-con").slideDown();
+        $(".signUp-con").slideToggle();
+        $(".login-con").slideToggle();
     });
 
     $(".login-btn").on("click", function(){
@@ -30,6 +30,7 @@ $(function(){
         $.getJSON(url, function(result){
 
             console.log(result.users);
+          
 
 
             for(i = 0; i < result.users.length; i ++){
@@ -60,14 +61,18 @@ $(function(){
                     $(".message").text("Your email or password don't match");
                 }
 
-            };
+            }; // for loops ends here 
 
 
 
-        });
+        }); // get JSON ends here
 
-    });
+    }); //click for login ends here
+    
 
 
-});
+
+
+
+}); //Document.ready ends heere
 

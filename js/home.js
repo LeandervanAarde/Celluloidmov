@@ -50,6 +50,9 @@ if(!localStorage.getItem("watchlater")){
 $(document).ready(function(){
 console.log("Homepage JQuery is active");
 
+// Welcome message if the user does exist in the session storage
+$('.welcome').html("Welcome, " + sessionStorage.getItem("username"));
+// end of greeting
 const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1";
     $.getJSON(popularurl, function(result) {
         console.log(result); 
