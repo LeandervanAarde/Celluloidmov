@@ -57,6 +57,8 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
     $.getJSON(popularurl, function(result) {
         console.log(result); 
 
+        
+       
  
 
 
@@ -115,6 +117,7 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
         }  //For loop ends 
 
 
+        // Function to add to local storage.
         $('.watchlater').click(function(event){
             let card = $(event.currentTarget).parent().parent()[0];
             let id= $(card).data("id"); 
@@ -139,6 +142,8 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
             $(event.currentTarget).attr("disabled", "true").html("Added");
 
         }); 
+
+        // For image change
 
         changeImage();
 
