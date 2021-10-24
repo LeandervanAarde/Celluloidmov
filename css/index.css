@@ -6,7 +6,7 @@
 
 #signUp-heading{
     margin: 0 auto;
-    margin-top: 10vh;
+
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
@@ -82,9 +82,9 @@
 .form-container{
     text-align: center;
     width: 40%;
-    height: 40vh;
+    height: 70vh;
     margin: 0 auto;   
-    margin-top: 2vh;
+   
     padding-top: 20px;
     position: relative;
 }
@@ -121,7 +121,7 @@ input{
     margin: 0 auto;
     height: 90vh;
     width: 50%;
-    background-color: white;
+    background-color:#262626;
     margin-top: 5vh;
     box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
     -webkit-box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
@@ -135,7 +135,7 @@ input{
   /* margin: 0 auto; */
     height: 90vh;
     width: 50%;
-    background-color: lightgray;
+    background-color: #262626;
     margin-top: 5vh;
     box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
     -webkit-box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.52);
