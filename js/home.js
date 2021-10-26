@@ -42,8 +42,8 @@ function sleep(time){
 
 
     counter ++;
-
-    if (counter >= 3){
+ 
+   if (counter >= 3){
         counter = 0; 
     }
 };
