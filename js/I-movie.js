@@ -2,10 +2,9 @@
 if(!localStorage.getItem("watchlater")) {
 	localStorage.setItem("watchlater", "");
 }
-var names = [];
-var images = [];
-var description = [];
-var backdrop = [];
+
+
+
 $(function() {
 	console.log("Jquery is linked and ready I-movie")
 		// Get info
@@ -18,10 +17,10 @@ $(function() {
 	const url = ' https://api.themoviedb.org/3/movie/' + id + '?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US';
 	// Url for similiar movies
 	const url2 = 'https://api.themoviedb.org/3/movie/' + id + '/similar?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1';
-	// url for upcoming movies
-	const url3 = 'https://api.themoviedb.org/3/movie/upcoming?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1';
+	// url for the recommended movies 
+	const url3 = 'https://api.themoviedb.org/3/movie/' + id + '/recommendations?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1';
 	// trailer const
-	const url4 = 'https://api.themoviedb.org/3/movie/' + id + '/videos?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US'
+	const url4 = 'https://api.themoviedb.org/3/movie/' + id + '/videos?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US';
 
 	$.getJSON(url, function(result) {
 		// Console.log the result to see the data
@@ -88,13 +87,8 @@ $(function() {
 			}
 			// for header
 			$(".body").append(card);
-			if(i < 3) {
-				names.push(similiar.results[i].original_title);
-				images.push('https://image.tmdb.org/t/p/original' + similiar.results[i].poster_path);
-				description.push(similiar.results[i].overview);
-				backdrop.push('https://image.tmdb.org/t/p/original' + similiar.results[i].backdrop_path)
-			} //If statement ends
 		} //For loop ends 
+
 		$('.watchlater').click(function(event) {
 			let card = $(event.currentTarget).parent().parent()[0];
 			let id = $(card).data("id");
@@ -116,15 +110,68 @@ $(function() {
 			$(event.currentTarget).attr("disabled", "true").html("Added");
 		});
 	});
-	$.getJSON(url3, function(upcoming) {
+
+	// Recommended movies 
+	$.getJSON(url3, function(Recommended) {
 		// Console.log the result to see the data
-		console.log(upcoming);
+		console.log(Recommended);
 		//    Variables for the data
 		
-		
+		for(var i = 0; i < 4; i++) {
+			var card = "<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>\
+        <a href='I-movie.html?id=" + Recommended.results[i].id + "'> <div class='card' style='border: none;' data-id = '" + Recommended.results[i].id + "'>\
+            <img src='https://image.tmdb.org/t/p/original" + Recommended.results[i].poster_path + "'class='card-img-top img-fluid' alt=''>\
+                <div class='card-body d-block '>\
+                    <p class='cardName'><strong>" + Recommended.results[i].original_title + "</strong> <br>Rating: " + Recommended.results[i].vote_average + " <br> Release date: " + Recommended.results[i].release_date + "</p> \
+                    <a href='I-movie.html?id=" + Recommended.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
+                    <button type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Watch later</button>  \
+                    <button type='button' class='btn btn-outline-secondary   d-block d-lg-none watchlater' style='width: 100% !important; margin-right: 100px !important'>Watch later</button>\
+                    </div>\
+             </div> </a>\
+        </div>";
+
+           // If already in localstorage append a card with disabled class that will state movie is already added
+			if(localStorage.getItem('watchlater').includes(Recommended.results[i].id)) {
+				card = "<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>\
+            <a href='I-movie.html?id=" + Recommended.results[i].id + "'> <div class='card' style='border: none;' data-id = '" + Recommended.results[i].id + "'>\
+                <img src='https://image.tmdb.org/t/p/original" + Recommended.results[i].poster_path + "'class='card-img-top img-fluid' alt=''>\
+                    <div class='card-body d-block '>\
+                        <p class='cardName'><strong>" + Recommended.results[i].original_title + "</strong> <br>Rating: " + Recommended.results[i].vote_average + " <br> Release date: " + Recommended.results[i].release_date + "</p> \
+                        <a href='I-movie.html?id=" + Recommended.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
+                        <button disabled type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Added</button>  \
+                        <button disabled type='button' class='btn btn-outline-secondary d-block d-lg-none  watchlater'style='width: 100% !important; >Added</button>\
+                        </div>\
+                 </div> </a>\
+            </div>";
+			}
+			// for header
+			$(".body-2").append(card);
+		} //For loop ends 
+
+		$('.watchlater').click(function(event) {
+			let card = $(event.currentTarget).parent().parent()[0];
+			let id = $(card).data("id");
+			var temp = localStorage.getItem('watchlater');
+			var watchlater;
+			if(temp == "") {
+				watchlater = [];
+			} else {
+				watchlater = temp.split(", ");
+			}
+			var doesNotExist = watchlater.every(item => {
+				return item != id;
+			});
+			if(doesNotExist) {
+				watchlater.push(id + "");
+				localStorage.setItem("watchlater", watchlater.join(", "));
+			}
+			// console.log(watchlater);
+			$(event.currentTarget).attr("disabled", "true").html("Added");
+		});
 	
 		
 	});
+
 	// Trailer for movie 
 	$(".playtrailer").on('click', () => {
 		$.getJSON(url4, function(vid) {
