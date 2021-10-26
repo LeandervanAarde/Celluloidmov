@@ -17,20 +17,14 @@ body{
     background-color: #262626;
 }
 
-.navbar{
-   
-    position: relative;
-    z-index: 1;
-   
-    
-}
+
 
 .bg-dark{
     background-color: #262626 !important;
 }
 
 li{
-    margin-left: 20%;
+    margin-left: 10%;
 }
 
 .logo-container{
@@ -39,6 +33,9 @@ li{
     background-repeat: no-repeat;
 }
 
+.container-photo{
+    align-self: center;
+}
 
 
 
@@ -48,6 +45,7 @@ li{
     width: 60px;
     background-color: white;
     border-radius: 100%;
+    align-self: center;
     
   
 }

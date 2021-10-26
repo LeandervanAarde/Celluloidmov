@@ -4,6 +4,7 @@ var names = [];
 var images = [];
 var description = [];
 var backdrop = [];
+var movId = [];
 
 function sleep(time){
     return new Promise(resolve => setTimeout(resolve, time));
@@ -16,15 +17,22 @@ function sleep(time){
     $(".description").fadeOut(300);
     $(".header-image").css("backgroundImage","url("+backdrop[counter]+")");
     $(".header-image .btn").fadeOut(300);
+  
     await sleep(300); 
-
+    if(localStorage.getItem('watchlater').includes( movId[counter])){
+        $(".header-image .watchlater-header").attr("disabled", "true");
+        $(".header-image .watchlater-header").html("Added");
+    } else{
+        $(".header-image .watchlater-header").removeAttr("disabled");
+        $(".header-image .watchlater-header").html("Watch later");
+    }
 
     $(".Movie-name").html(names[counter]);
 
     $(".mainM").html("<img id='mainCover' src=' "+images[counter]+"'class='card-img-top img-fluid' alt=''>");
 
     $(".description").html(description[counter]);
-
+    $(".header-image").attr("data-id", movId[counter]);
 
 
     $(".Movie-name").fadeIn(300);
@@ -109,7 +117,8 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
                 names.push(result.results[i].original_title);
                 images.push('https://image.tmdb.org/t/p/original'+result.results[i].poster_path);
                 description.push(result.results[i].overview);  
-                backdrop.push('https://image.tmdb.org/t/p/original'+result.results[i].backdrop_path)          
+                backdrop.push('https://image.tmdb.org/t/p/original'+result.results[i].backdrop_path)     
+                movId.push(result.results[i].id);      
             }  //If statement ends
             
 
@@ -118,7 +127,7 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
 
 
         // Function to add to local storage.
-        $('.watchlater').click(function(event){
+        $('.watchlater, .watchlater-header').click(function(event){
             let card = $(event.currentTarget).parent().parent()[0];
             let id= $(card).data("id"); 
             var temp = localStorage.getItem('watchlater');
@@ -142,6 +151,13 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
             $(event.currentTarget).attr("disabled", "true").html("Added");
 
         }); 
+
+        $(".header-watch").on("click", () =>{
+          var dataId = $(".header-image").data("id");
+          window.location.href = "I-movie.html?id=" + dataId;
+        console.log(dataId)
+
+        });
 
         // For image change
 

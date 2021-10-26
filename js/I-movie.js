@@ -18,10 +18,11 @@ $(function() {
 	const url = ' https://api.themoviedb.org/3/movie/' + id + '?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US';
 	// Url for similiar movies
 	const url2 = 'https://api.themoviedb.org/3/movie/' + id + '/similar?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1';
-	// Actor name url
-	const url3 = 'https://api.themoviedb.org/3/movie/' + id + '/credits?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US';
+	// url for upcoming movies
+	const url3 = 'https://api.themoviedb.org/3/movie/upcoming?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1';
 	// trailer const
 	const url4 = 'https://api.themoviedb.org/3/movie/' + id + '/videos?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US'
+
 	$.getJSON(url, function(result) {
 		// Console.log the result to see the data
 		console.log(result);
@@ -35,8 +36,8 @@ $(function() {
 		var mov_Name = result.original_title;
 		var mov_Rating = result.vote_average;
 		var mov_language = result.original_language;
-		console.log(mov_Duration)
-		console.log(mov_Year);
+		// console.log(mov_Duration)
+		// console.log(mov_Year);
 
 		$(".dscript").html(mov_Description);
 		$(".movieCover").css("backgroundImage", "url(" + mov_Image + ")")
@@ -52,7 +53,7 @@ $(function() {
 	// For similiar movies
 	$.getJSON(url2, function(similiar) {
 		// Console.log the result to see the data
-		console.log(similiar);
+		// console.log(similiar);
 		//    Variables for the data
 		// similar movies
 		for(var i = 0; i < 20; i++) {
@@ -108,17 +109,18 @@ $(function() {
 				watchlater.push(id + "");
 				localStorage.setItem("watchlater", watchlater.join(", "));
 			}
-			console.log(watchlater);
+			// console.log(watchlater);
 			$(event.currentTarget).attr("disabled", "true").html("Added");
 		});
 	});
-	$.getJSON(url3, function(actor) {
+	$.getJSON(url3, function(upcoming) {
 		// Console.log the result to see the data
-		console.log(actor);
+		console.log(upcoming);
 		//    Variables for the data
-		var actorName = actor.cast[0].name;
-		console.log(actorName)
-		$('.Aname h1').text('Other movies with ' + actorName);
+		
+		
+	
+		
 	});
 	// Trailer for movie 
 	$(".playtrailer").on('click', () => {
