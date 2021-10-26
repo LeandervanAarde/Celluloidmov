@@ -163,7 +163,7 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
 
         changeImage();
 
-        var car = setInterval("changeImage()", 3000);
+        var car = setInterval("changeImage()", 4000);
 
 
 

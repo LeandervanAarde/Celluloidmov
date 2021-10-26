@@ -46,9 +46,12 @@ $(function() {
 		$(".genre p").html(mov_Genre);
 		$(".mov_Title strong").html(mov_Name);
 		$(".rate").text(mov_Rating);
-		$(".language").text(mov_language);
+		$(".lang h3, .langsm").text(mov_language);
 		//    For small device
 		$(".center").css("backgroundImage", "url(" + mov_Image + ")");
+
+		// Scroll position for the small devices I-movie 
+
 	});
 	// For similiar movies
 	$.getJSON(url2, function(similiar) {
