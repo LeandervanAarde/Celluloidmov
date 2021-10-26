@@ -1,85 +1,71 @@
-.header-image{
+.header-image {
     height: 110vh;
-/* background-color: grey; */
-/* background-image: url("../img/PLaceholder-1.jpg"); */
-background-position: center;
-background-size: cover;
-
-
+/*  background-color: grey; */
+/*  background-image: url("../img/PLaceholder-1.jpg"); */
+    background-position: center;
+    background-size: cover;
 }
 
-
-.about{
+.about {
     background-color: #262626;
 }
 
-.navI{
+.navI {
     text-decoration: none !important;
     transition: 0.2s;
 }
 
-.navI:hover{
+.navI:hover {
     transform: scale(1.1);
     color: rgba(26,0,185,0.6);
     text-decoration: underline;
 }
 
-
-
-
-a:hover{
+a:hover {
     text-decoration: underline !important;
     color: rgba(26,0,185,0.6) !important;
 }
 
-.watch{
-margin-left: 0 !important;
-width: 50% !important;
-font-size: 14px !important;
-
-}
-
-.watchlater{
+.watch {
     margin-left: 0 !important;
-width: 45% !important;
-font-size: 14px !important;
+    width: 50% !important;
+    font-size: 14px !important;
 
 }
 
+.watchlater {
+    margin-left: 0 !important;
+    width: 45% !important;
+    font-size: 14px !important;
+}
 
-
-
-/* @Media for small */
-
+/* Media Query For Extra Small Devices */
 @media  (max-width: 576px){
 
-    .header-image{
+    .header-image {
         height: 100vh;
     }
 
-    .welcome{
-        
+    .welcome {
         text-align: center;
     }
 
-    .Movie-name{
+    .Movie-name {
         text-align: center;
     }
 
-    
-
-    .description{
+    .description {
         text-align: center;
         margin-top: 0 !important;
     }
 
-    .btn-primary{
+    .btn-primary {
         width: 47%;
         margin-left: 2%;
         font-size: small !important;
     }
 
-    .btn-outline-secondary{
+    .btn-outline-secondary {
         width: 43%;
         font-size: small !important;
         
@@ -92,7 +78,7 @@ font-size: 14px !important;
         height: 120px;
     } */
 
-    .card-name{
+    .card-name {
         font-size: 12px;
     }
 
@@ -100,202 +86,184 @@ font-size: 14px !important;
         height: 170px;
     } */
 
-    .footer{
+    .footer {
         padding-top: 5%;
     }
 
-    .social{
+    .social {
         margin-top: 20px !important;
         height: 35px;
     }
 
-    .icon-1{
+    .icon-1 {
         margin-left: 10px !important;
     }
 
 }
 
-
-
+/* Media Query For Small Devices */
 @media (min-width: 577px) and (max-width: 767.98px){
-   .welcome{
-       text-align: center;
-    margin-top: 5%;
+    .welcome {
+        text-align: center;
+        margin-top: 5%;
+    }
 
-   }
+    .Movie-name {
+        text-align: center;
+    }
 
-   .Movie-name{
-    text-align: center;
-}
-
-   .header-image{
+    .header-image {
        height: 112vh;
-   }
+    }
    
 
-    .mainM{
+    .mainM {
         height: 210px;
       
     }
 
-    .description{
+    .description {
         text-align: center;
     }
 
-    .btn-primary{
+    .btn-primary {
         width: 43%;
         margin-left: 2%;
     }
 
-    .btn-outline-secondary{
+    .btn-outline-secondary {
         width: 47%;
-
     }
   
-   
-
-    .card-name{
+    .card-name {
         font-size: 12px;
     }
 
-
-    .footer{
+    .footer {
         padding-top: 5%;
     }
 
-    .social{
+    .social {
         height: 40px;
     }
 
 }
 
-/* @media for md */
-
+/* Media Query For Medium Devices */
 @media (min-width: 768px) and (max-width: 991.98px){
 
-    .welcome{
+    .welcome {
         text-align: left;
         margin-left: 30px;
         margin-top: 5%;
     }
 
-    .Movie-name{
+    .Movie-name {
         text-align: left;
         margin-left: 35px;
     }
 
-    .description{
+    .description {
         text-align: left;
     }
 
-    .mainM{
+    .mainM {
         height: 700px;
-      
         margin-left: 60px;
     }
 
-    .btn-primary{
+    .btn-primary {
         margin-right: 40px;
     }
 
-    .footer{
+    .footer {
         padding-top: 2%;
     }
 
-    .social{
+    .social {
         height: 40px;
     }
 
 }
 
+/* Media Query For Large Devices */
 @media (min-width: 992px){ 
 
-    .header-image{
+    .header-image {
         height: 100vh;
     }
 
-.welcome{
-    text-align: left;
-    margin-left: 30px;
-}
+    .welcome {
+        text-align: left;
+        margin-left: 30px;
+    }
 
-.Movie-name{
-    text-align: left;
-    margin-left: 50px;
+    .Movie-name {
+        text-align: left;
+        margin-left: 50px;
+    }
+    .description {
+        text-align: left;
+    }
 
-}
-.description{
-    text-align: left;
-}
+    .mainM {
+        height: 800px;
+    }
 
-.mainM{
-    height: 800px;
-  
-}
+    .btn-primary {
+        width: 43%;
+        margin-left: 2%;
+    }
 
-.btn-primary{
-    width: 43%;
-    margin-left: 2%;
-}
+    .footer {
+        padding-top: 2%;
+    }
 
-.footer{
-    padding-top: 2%;
-}
-
-.social{
-    height: 40px;
-}
-
-
+    .social {
+        height: 40px;
+    }
 
  }
 
-
+/* Media Query For Extra Large Devices */
  @media (min-width: 1440px){ 
-     .header-image{
-         height: 105vh;
-     }
+    .header-image   {
+        height: 105vh;
+    }
 
-    .welcome{
+    .welcome    {
         text-align: left;
         margin-left: 30px;
     }
     
-    .Movie-name{
+    .Movie-name {
         text-align: left;
         margin-left: 50px;
-    
     }
-    .description{
+
+    .description {
         text-align: left;
     }
     
-    .mainM{
+    .mainM {
         height: 500px !important;
         overflow: hidden;
-      
     }
     
-    .btn-primary{
+    .btn-primary {
         margin-left: 80px;
     }
 
-
-    .card-name{
+    .card-name {
         font-size: 12px;
     }
 
-   
-
-    
-    .footer{
+    .footer {
         padding-top: 2%;
     }
     
-    .social{
+    .social {
         height: 40px;
     }
     
-    
-    
-     }
+}
