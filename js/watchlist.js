@@ -49,12 +49,21 @@ $(document).ready(function(){
             
             // for header
                 $(".body").append( card);
+
+            
                 console.log('film added');
             });
 
             console.log("creating event listeners");
     
         } 
+        //Clear all movies onclick 
+
+        $('.clear').on("click", () =>{
+            $(".card-container").remove();
+                localStorage.clear();
+            
+        })
    
 
 });

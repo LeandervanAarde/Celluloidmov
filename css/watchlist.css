@@ -130,6 +130,12 @@ body{
 
 }
 
+.clear{
+    background-color: tomato !important;
+    position: relative;
+    z-index: 1;
+}
+
 
 
 @media (min-width: 577px) and (max-width: 767.98px){
