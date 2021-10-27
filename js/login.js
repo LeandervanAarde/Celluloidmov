@@ -69,14 +69,31 @@ $(function(){
 
     $(".sign-btn").on("click",function(){
 
-        var pass1 = $(".pass").val();
-        var pass2 = $(".pass2").val();
+        var pass1 = $(".LG1").val();
+        var pass2 = $(".LG2").val();
 
         console.log(pass1);
 
         if(pass1 !== pass2){
             alert("Your Passwords Do not match!");
         }else{
+            // window.location.href = "../celluloidmov/pages/home.html";
+        }
+
+    });
+
+    $(".sign-btn").on("click",function(){
+
+        var smpass1 = $(".pass").val();
+        var smpass2 = $(".pass2").val();
+        var userName = $(".usernameSignUp").val();
+
+        console.log(smpass1);
+
+        if(smpass1 !== smpass2){
+            alert("Your Passwords Do not match!");
+        }else{
+            sessionStorage.setItem("Username SignUp", userName)
             // window.location.href = "../celluloidmov/pages/home.html";
         }
 
