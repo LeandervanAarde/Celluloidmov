@@ -230,7 +230,7 @@ input{
     /* padding: 0; */
 }
 
-.login-btn{
+.login-btn, .sign-btn{
     width: 200px;
     height: 30px;
     text-align: center;
@@ -245,7 +245,7 @@ input{
     transition: all ease-in-out 400ms;
 }
 
-.login-btn:hover{
+.login-btn:hover, .sign-btn:hover{
     transform: scale(1.1);
     background-color: #E3E800;
     height: 7%;

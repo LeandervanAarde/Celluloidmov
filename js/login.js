@@ -8,11 +8,6 @@ $(function(){
         $(this).html(($(this).html() == "Log In") ? 'Sign Up' : 'Log In');
     });
 
-    // $(".btnFlip").click(function(){
-    //     $(".flipper").addClass("flip");
-    //     console.log("Flip");
-    //   });
-
     $(".login-con").hide();
     
     $(".change-btn").on("click", function(){
@@ -71,6 +66,21 @@ $(function(){
     
 
 
+
+    $(".sign-btn").on("click",function(){
+
+        var pass1 = $(".pass").val();
+        var pass2 = $(".pass2").val();
+
+        console.log(pass1);
+
+        if(pass1 !== pass2){
+            alert("Your Passwords Do not match!");
+        }else{
+            // window.location.href = "../celluloidmov/pages/home.html";
+        }
+
+    });
 
 
 
