@@ -1,13 +1,22 @@
 .header-image {
     height: 110vh;
-/*  background-color: grey; */
-/*  background-image: url("../img/PLaceholder-1.jpg"); */
-    background-position: center;
-    background-size: cover;
+/* background-color: grey; */
+/* background-image: url("../img/eLaceholder-1.jpg"); */
+background-position: center;
+background-size: cover;
+position: relative;
+z-index: 2;
+padding-top: 2% !important;
+
+
 }
 
-.about {
+
+
+
+.about{
     background-color: #262626;
+    margin-top: 1% !important;
 }
 
 .navI {
@@ -35,11 +44,19 @@ a:hover {
 
 .watchlater {
     margin-left: 0 !important;
-    width: 45% !important;
-    font-size: 14px !important;
+    margin-top: 1% !important;
+width: 50% !important;
+font-size: 14px !important;
+
 }
 
-/* Media Query For Extra Small Devices */
+
+
+
+
+
+/* @Media for small */
+
 @media  (max-width: 576px){
 
     .header-image {
@@ -65,10 +82,8 @@ a:hover {
         font-size: small !important;
     }
 
-    .btn-outline-secondary {
-        width: 43%;
-        font-size: small !important;
-        
+    .header-watchlater{
+        width: 47%;
     }
     /* .card-container{
         height: 350px;
@@ -131,8 +146,9 @@ a:hover {
         margin-left: 2%;
     }
 
-    .btn-outline-secondary {
-        width: 47%;
+    .btn-outline-secondary{
+        width: 50%;
+
     }
   
     .card-name {
@@ -258,7 +274,12 @@ a:hover {
         font-size: 12px;
     }
 
-    .footer {
+   .icon-1{
+       margin-left: 13%;
+   }
+
+    
+    .footer{
         padding-top: 2%;
     }
     

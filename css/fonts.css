@@ -28,7 +28,7 @@ h4{
     color: white;
 }
 
-h5{
+h5, .nav-item{
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 16px;
@@ -58,6 +58,6 @@ p{
     color: white;
 }
 
-h5 a{
-    text-decoration: none;
-}
+
+
+

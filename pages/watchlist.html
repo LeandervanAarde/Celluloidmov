@@ -32,6 +32,9 @@
     <!-- Title -->
     <title>Watch Later</title>
 
+    <link rel = "icon" href = "../assets/svg/Asset 3.svg"
+    type = "image/x-icon">
+
     <!-- Stylesheets inserted here -->
    <link rel="stylesheet" href="../css/main.css">
    <link rel="stylesheet" href="../css/fonts.css">
@@ -43,72 +46,63 @@
 </head>
 <body>
     <!-- Insert content in container-fluid -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+        <div class="container-fluid pt-2">
+            <a class="navbar-brand" href="../pages/home.html">
+                <img src="../img/SVG/Asset 2.svg" alt="" width="180" height="50" >
+              </a>
+
+              <div class="col-3 d-block d-md-none">
+                  <div class="container-photo">
+                      <div class="photo" style="margin-left: 20%;"></div>
+                      <p class="text-center">Leander van Aarde</p>
+                  </div>
+              </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="../pages/home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/Movies.html">Browse</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="../pages/watchlist.html">Watchlist</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/home.html#about">About</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/home.html#about">LogOut</a>
+              </li>
+
+            </ul>
+          </div>
+          
+            <div class="container-photo d-none d-lg-block" style="height: 100px; width: 100px;">
+                <div class="photo" style="margin-left: 20%;"></div>
+                <p class="text-center">Leander van Aarde</p>
+             </div>
+        </div>
+
+        
+      </nav>
     <div class="container-fluid">
-    
-             <div class="col-12 navbar">
-                    <div class="col-4 col-md-3 logo-container"> </div>
-
-                    <div class="col-3 d-md-none profileS"> <!--Profile for small devices -->
-                        <!-- Photo for the profile -->
-                        <div class="photo"></div>
-                            <p class="name">Name here</p>
-                    </div> <!--profile for small devices end here-->
-
-                    <div class="col- d-block d-md-none B-menu">
-                        <div class="burger"><!--Lines for burger container-->
-                            <div class="line-1"></div>
-                            <div class="line-2"></div>
-                            <div class="line-3"></div>
-                        </div> <!--Lines for burger container-->
-
-                        <p class="">MENU</p> 
-
-                    </div> <!--Burger menu ends-->
-            
-                    <div class="col-6  d-md-none dropdown offset-6" >
-
-                        <div class="navItem"><a href="../pages/home.html"><h5 class=" b-Item">HOME</h5> </a> </div>
-                        <a href="../pages/Movies.html"><h5 class=" b-Item">BROWSE</h5></a>
-                         <a href="../pages/watchlist.html"> <h5 class=" b-Item">WATCHLIST</h5></a> 
-                        <a href=""><h5 class="b-Item">ABOUT</h5></a> <!--insert link-->
-
-                    </div>
-
-                    <!-- Navigation for md and bigger devices -->
-                    <div class="d-none d-md-block col-md-1 col-lg-1 navI "><a href="../pages/home.html"><h5 >HOME</h5> </a></div>
-                    <div class="d-none d-md-block col-md-1  col-lg-1 navI"><a href="../pages/Movies.html"><h5>BROWSE</h5></a></div>
-                    <div class="d-none d-md-block col-md-2 text-center  col-lg-1 navI"> <a href="../pages/watchlist.html"> <h5>WATCHLIST</h5></a> </div>
-                    <div class="d-none d-md-block col-md-1 text-center col-lg-1 navI"><a href="../pages/home.html#about"><h5>ABOUT</h5></div></a> <!--insert link-->
-
-                    <!-- Profile for md and larger devices -->
-                    <div class="col-2 d-none d-md-block  profileL"> <!--Profile for small devices -->
-                        <!-- Photo for the profile -->
-                        <div class="photo"></div>
-                            <p class="name">Name here</p>
-                    </div> <!--Profile for md and larger ends here-->
-                    
-
- 
-    
-            </div> <!--navbar ends here-->
-            
-            <div class="row"><!-- Search Bar Start -->
-                <div class="col-12 watchlist-heading"><h1>Watchlist</h1></div>
-                <div class="col-6 searchbar">
-                    <div class="searchbutton">
-                        <div id="search-img"></div>
-                    </div>
-                </div><!-- Search Bar End -->
-       
+      <button type="button" class="btn btn-primary clear d-none d-md-block col-2 offset-md-5 offset-10"> clear all</button>
             
             <div class="row body p-3 gx-4 gy-4"> <!--Body row start-->
                 
-                
+             
             </div>
-            
-            
-        </div> <!--Body row end-->
-        
+            <button type="button" class="btn btn-primary clear d-block d-md-none col-12 "> clear all</button>
+      
+           
 
 
         <div class="row footer ">

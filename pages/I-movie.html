@@ -31,6 +31,8 @@
 
     <!-- Title -->
     <title>Movie Name</title> <!-- Lets write a function that stores the id number of the movie then we can make the page name the name of the movie that the user opens -->
+    <link rel = "icon" href = "../assets/svg/Asset 3.svg"
+        type = "image/x-icon">
     
     <!-- Stylesheets inserted here -->
    <link rel="stylesheet" href="../css/main.css">
@@ -46,56 +48,54 @@
 
 <body>
     <!-- Insert content in container-fluid -->
-    <div class="container-fluid">
-        <div class="row ">
-            <div class="col-12 navbar mt-4">
-                <div class="col-4 col-md-3 logo-container"> </div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+        <div class="container-fluid pt-2">
+            <a class="navbar-brand" href="../pages/home.html">
+                <img src="../img/SVG/Asset 2.svg" alt="" width="180" height="50" >
+              </a>
 
-                <div class="col-3 d-md-none profileS"> <!--Profile for small devices -->
-                    <!-- Photo for the profile -->
-                    <div class="photo"></div>
-                        <p class="name">Name here</p>
-                </div> <!--profile for small devices end here-->
+              <div class="col-3 d-block d-md-none">
+                  <div class="container-photo">
+                      <div class="photo" style="margin-left: 20%;"></div>
+                      <p class="text-center">Leander van Aarde</p>
+                  </div>
+              </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../pages/home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/Movies.html">Browse</a>
+              </li>
 
-                <div class="col- d-block d-md-none B-menu">
-                    <div class="burger"><!--Lines for burger container-->
-                        <div class="line-1"></div>
-                        <div class="line-2"></div>
-                        <div class="line-3"></div>
-                    </div> <!--Lines for burger container-->
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/watchlist.html">Watchlist</a>
+              </li>
 
-                    <p class="">MENU</p> 
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/home.html#about">About</a>
+              </li>
 
-                </div> <!--Burger menu ends-->
+              <li class="nav-item ">
+                <a class="nav-link" href="../pages/home.html#about">LogOut</a>
+              </li>
 
-                            
-                <div class="col-6  d-md-none dropdown offset-6" >
-
-                    <div class="navItem"><a href="../pages/home.html"><h5 class=" b-Item">HOME</h5> </a> </div>
-                    <a href="../pages/Movies.html"><h5 class=" b-Item">BROWSE</h5></a>
-                     <a href="../pages/watchlist.html"> <h5 class=" b-Item">WATCHLIST</h5></a> 
-                    <a href=""><h5 class="b-Itemr">ABOUT</h5></a> <!--insert link-->
-
-                </div>
-
-                <!-- Navigation for md and bigger devices -->
-                <div class="d-none d-md-block col-md-1 col-lg-1 navI "><a href="../pages/home.html"><h5>HOME</h5> </a></div>
-                <div class="d-none d-md-block col-md-1  col-lg-1 navI"><a href="../pages/Movies.html"><h5>BROWSE</h5></a></div>
-                <div class="d-none d-md-block col-md-2 text-center  col-lg-1 navI"> <a href="../pages/watchlist.html"> <h5>WATCHLIST</h5></a> </div>
-                <div class="d-none d-md-block col-md-1 text-center col-lg-1 navI"><a href="../pages/home.html .about"><h5>ABOUT</h5></div></a> <!--insert link-->
-
-                <!-- Profile for md and larger devices -->
-                <div class="col-2 d-none d-md-block  profileL"> <!--Profile for small devices -->
-                    <!-- Photo for the profile -->
-                    <div class="photo"></div>
-                        <p class="name">Name here</p>
-                </div> <!--Profile for md and larger ends here-->
-
-            </div> <!--navbar ends here-->
-
+            </ul>
+          </div>
+          
+            <div class="container-photo d-none d-lg-block" style="height: 100px; width: 100px;">
+                <div class="photo" style="margin-left: 20%;"></div>
+                <p class="text-center">Leander van Aarde</p>
+             </div>
         </div>
 
-               
+        
+      </nav>
+    <div class="container-fluid">
 
         <div class="row movie-info"> <!--movie info for small devices-->
             <div class="col-12 d-block d-md-none I-movie">
@@ -120,8 +120,14 @@
                         <br>
                         <div class="col-12 genre small"><p class="text-left">strong</p></div>
 
+                        <div class=" small-circle-container playtrailer d-block d-md-none"data-bs-toggle="modal" data-bs-target="#modaltrailer">
+                            <div class="small-circle">
+                            </div>
+
+                    </div>
+
                         <!-- Rating  -->
-                        <div class=" rating-container d-md-none "style="margin-top: 0;">
+                        <div class=" rating-container d-md-none ">
                                 <h5 class="text-center rate">12.2</h5> 
                             <p class="text-center"><strong>Rating</strong></p>
                         </div>
@@ -129,23 +135,13 @@
                         <!-- age rating  -->
                         <div class="  rating-container d-md-none" style="margin-top: 0;">
                            
-                                <h5 class="text-center rating" >13+</h5>
+                                <h5 class="text-center rating langsm" >13+</h5>
                             
-                            <p class="text-center"><strong>Age</strong>
+                            <p class="text-center"><strong>language</strong>
                                   
                             </p>
                         </div>
-
-                        <div class=" small-circle-container playtrailer d-block d-md-none"data-bs-toggle="modal" data-bs-target="#modaltrailer">
-                                <div class="small-circle">
-
-
-                                </div>
-
-                        </div>
-
-
-        
+                        <button type="button" class="btn btn-outline-secondary d-block d-lg-none watchlater I-watch" style="width: 100% !important;" >Watch later</button>
                         
                     </div> <!--Right container "movie right" ends here-->
 
@@ -155,7 +151,7 @@
 
             <!-- Movies for md devices -->
             <div class="col-6 d-none d-md-block">
-                <div class="col-4 back"><h5>Back</h5></div>
+                <div class="col-4 back"><h5><i class="fa fa-chevron-left" aria-hidden="true"></i> Back </h5></div>
                 <div class="col-8 title"><h5 class="mov_Title"> <strong></strong></h5></div>
                 <br>
                 <br>
@@ -179,10 +175,10 @@
     
     
                     <div class=" col-3 col-xl-2 rating-container d-md-none d-lg-block">
-                        <div class="age circle">
+                        <div class="lang circle">
                             <h3 class="text-center rating" style="margin-top: 40%;">13+</h3>
                          </div>
-                        <p class="text-center"><strong>Age</strong>
+                        <p class="text-center"><strong>Language</strong>
                               
                         </p>
                     </div>
@@ -247,7 +243,7 @@
 
         <div class="row body-2 p-3 gx-4 gy-4"> <!--Body row start-->
 
-            <div class="col-12 Aname"><h1>Other movies with !actor name!</h1></div> <!--heading-->
+            <div class="col-12 Aname"><h1>Recommended by us</h1></div> <!--heading-->
 
             <!--  -->
 

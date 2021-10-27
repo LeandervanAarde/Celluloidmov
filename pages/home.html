@@ -31,6 +31,8 @@
 
     <!-- Title -->
     <title>Home</title>
+    <link rel = "icon" href = "../assets/svg/Asset 3.svg"
+        type = "image/x-icon">
 
     <!-- Stylesheets inserted here -->
    <link rel="stylesheet" href="../css/main.css">
@@ -43,47 +45,58 @@
 </head>
 <body>
     <!-- Insert content in container-fluid -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+        <div class="container-fluid pt-2">
+            <a class="navbar-brand" href="../pages/home.html">
+                <img src="../img/SVG/Asset 2.svg" alt="" width="180" height="50" >
+              </a>
+
+              
+                  <div class="container-photo col-3 d-block d-md-none">
+                      <div class="photo"></div>
+                      <p >Leander van Aarde</p>
+                  </div>
+             
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/Movies.html">Browse</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/watchlist.html">Watchlist</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/home.html#about">About</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/home.html#about">LogOut</a>
+              </li>
+
+            </ul>
+          </div>
+          
+            <div class=" container-photo d-none d-md-block">
+                <div class="photo"></div>
+                <p >Leander van Aarde</p>
+             </div>
+        </div>
+
+        
+      </nav>
+
     <div class="container-fluid">
-        <div class="row header-image">
-            <div class="col-12 navbar">
-                    <div class="col-4 col-md-3 logo-container"> </div>
 
-                    <div class="col-3 d-md-none profileS"> <!--Profile for small devices -->
-                        <!-- Photo for the profile -->
-                        <div class="photo"></div>
-                        <p class="name">Name here</p>
-                    </div> <!--profile for small devices end here-->
-
-                    <div class="col- d-block d-md-none B-menu">
-                        <div class="burger"><!--Lines for burger container-->
-                            <div class="line-1"></div>
-                            <div class="line-2"></div>
-                            <div class="line-3"></div>
-                        </div> <!--Lines for burger container-->
-
-                        <p class="">MENU</p> 
-                    </div> <!--Burger menu ends-->
+        <div class="row header-image" data-id = "">
             
-                    <div class="col-6  d-md-none dropdown offset-6" >
-                        <div class="navItem"><a href="../pages/home.html"><h5 class=" b-Item">HOME</h5> </a> </div>
-                        <a href="../pages/Movies.html"><h5 class=" b-Item">BROWSE</h5></a>
-                        <a href="../pages/watchlist.html"> <h5 class=" b-Item">WATCHLIST</h5></a> 
-                    </div>
-
-                    <!-- Navigation for md and bigger devices -->
-                    <div class="d-none d-md-block col-md-1 col-lg-1 navI "><a href="../pages/home.html"><h5 >HOME</h5> </a></div>
-                    <div class="d-none d-md-block col-md-1  col-lg-1 navI"><a href="../pages/Movies.html"><h5>BROWSE</h5></a></div>
-                    <div class="d-none d-md-block col-md-2 text-center  col-lg-1 navI"> <a href="../pages/watchlist.html"> <h5>WATCHLIST</h5></a> </div>
-                    <div class="d-none d-md-block col-md-1 text-center col-lg-1 navI"><a href=" #about"><h5>ABOUT</h5></div></a> <!--insert link-->
-
-                    <!-- Profile for md and larger devices -->
-                    <div class="col-2 d-none d-md-block  profileL"> <!--Profile for small devices -->
-                        <!-- Photo for the profile -->
-                        <div class="photo"></div>
-                        <p class="name">Name here</p>
-                    </div> <!--Profile for md and larger ends here-->
-            </div> <!--navbar ends here-->
-
             <div class="col-12 "><h2 class="welcome  md-text-left"> Welcome, User</h2></div>
         
             <div class="col-12"><h2 class="Movie-name"><strong>Movie Name</strong></h2></div>
@@ -91,15 +104,12 @@
             <div class="col-5 col-sm-4 offset-4 offset-md-1  col-md-4  col-lg-3 offset-lg-1 mainM" > <!--movie inside header-->
                <img src="../img/Placeholder-mov.jpeg" alt="" class="img-fluid"> 
             </div> <!--main featured movie-->
-
-             <div class="col-12 col-md-6 col-lg-4">
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor in imperdiet mauris integer integer massa id.
-                    Lorem commodo lorem malesuada sagittis, eu. Quis magna pretium senectus amet, ut. 
-                </p>
+             <div class="col-12 col-md-6 col-lg-4 featured"> <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor in imperdiet mauris integer integer massa id.
+                Lorem commodo lorem malesuada sagittis, eu. Quis magna pretium senectus amet, ut. </p>
 
                 <button type="button" class="btn btn-primary header-watch "> Watch now</button>
-                <a href="../pages/I-movie.html"?id=" " ></a><button type="button" class="btn btn-outline-secondary">Watch later</button> 
+                <button type="button" class="btn btn-outline-secondary watchlater-header">Watch later</button>
+            
             </div>
 
         </div> <!--header-image row ends-->
@@ -121,24 +131,16 @@
 
             <div class="col-12"><h1>Top Rated Movies</h1></div>
 
-            <!--<div class="col-6 col-md-4 col-lg-3 card-container" style="border: none;">
-                    <div class="card" style="border: none;">
-                        <img src="../img/Placeholder-mov.jpeg" class="card-img-top img-fluid" alt="">
-                        <div class="card-body d-block d-lg-none">
-                            <p class="cardName"><strong>STEP BROTHERS</strong> <br>Rating: 100% <br> 1h 38m</p> 
-                            <button type="button" class="btn btn-primary d-none d-lg-block "> Watch now</button>
-                        </div>
-                    </div>
-                </div> -->
-
         </div> <!--Body row end-->
 
         <div class="row footer ">
                 <div class="col-4 col-md-3 col-lg-2 logo-container"> </div>
-                <div class="col-1 social icon-1"></div>
+                a<div class="col-1 social icon-1"></div>
                 <div class="col-1 social icon-2"></div>
                 <div class="col-1 social icon-3"></div>
-                <div class="col-2 "><p class="">Celluloid 2021</p></div>
+
+                <div class="col-2 offset-md-2 "><p class="">Celluloid 2021</p></div>
+
         </div>
 
     </div> <!--container-fluid end-->
