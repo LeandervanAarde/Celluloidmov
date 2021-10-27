@@ -1,11 +1,20 @@
-.featured-movies-container {
+
+.search-input {
+    width: 80%;
+}
+
+.search-button {
+    width: 10%;
+}
+
+
+
+.featured-movies-container{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 2%;
 }
-
-.featured-items-container {
+.featured-items-container{
     width: 90%;
     height: max-content;
     overflow: hidden;
@@ -13,29 +22,26 @@
     justify-content: space-evenly;
     align-items: center;
 }
-
-.featured-card {
-    width: 19%;
-    height: auto;
+.container{
+    width: 20%;
+    height: max-content;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-
-.box {
+.box{
     width: 350px;
-    height: auto;
+    height: 410px;
     background-color: #1e1e26;
     border-radius: 10px;
     box-shadow: 2px 10px 12px rgba(0, 0, 0, 0);
 }
-
-img {
-    height: auto;
+img{
+    height: 100%;
     width: 100%;
 }
 
-.button {
+.button{
     height: 100px;
     width: 100px;
     display: flex;
@@ -48,162 +54,231 @@ img {
     font-size: 50px;
 }
 
-.featured-left-arrow {
+.featured-left-arrow{
     z-index: 1;
 }
 
-.buttons-container {
-    display: flex;
-    justify-content: space-evenly;
-}
 
-.filter-select {
-    margin-bottom: 1% !important;
-}
 
-.Movie-name {
-    text-align: center;
-}
 
-.description {
-    text-align: center;
-    margin-top: 0 !important;
-}
+/* @Media for small */
 
-.btn-outline-secondary {
-    width: 99%;
-}
-
-.watch {
-    margin-left: 0 !important;
-    width: 50% !important;
-    font-size: 14px !important;
-}
-
-.watchlater {
-    margin-left: 0 !important;
-    width: 45% !important;
-    font-size: 14px !important;
-}
-
-/* Media Query For Extra Small Devices */
 @media  (max-width: 576px){
 
-    .featured-movies-container {
-        display: none;
+    .header-image{
+        height: 100vh;
     }
 
-    .footer {
+    .welcome{
+        
+        text-align: center;
+    }
+
+    .Movie-name{
+        text-align: center;
+    }
+
+    .description{
+        text-align: center;
+        margin-top: 0 !important;
+    }
+
+    .btn-primary{
+        width: 47%;
+        margin-left: 2%;
+        font-size: small !important;
+    }
+
+    .btn-outline-secondary{
+        width: 43%;
+        font-size: small !important;
+    }
+
+    .card-name{
+        font-size: 12px;
+    }
+
+    .footer{
         padding-top: 5%;
     }
 
-    .social {
+    .social{
         margin-top: 20px !important;
         height: 35px;
     }
 
-    .icon-1 {
+    .icon-1{
         margin-left: 10px !important;
     }
 
 }
 
-/* Media Query For Small Devices */
+
 @media (min-width: 577px) and (max-width: 767.98px){
 
-    .featured-movies-container {
-        display: none;
+    .welcome{
+        text-align: center;
+        margin-top: 5%;
     }
 
-    .mainM {
+    .Movie-name{
+        text-align: center;
+    }
+
+    .header-image{
+       height: 112vh;
+    }
+   
+    .mainM{
         height: 210px;
     }
 
-    .footer {
+    .description{
+        text-align: center;
+    }
+
+    .btn-primary{
+        width: 43%;
+        margin-left: 2%;
+    }
+
+    .btn-outline-secondary{
+        width: 47%;
+    }
+  
+    .card-name{
+        font-size: 12px;
+    }
+
+    .footer{
         padding-top: 5%;
     }
 
-    .social {
+    .social{
         height: 40px;
     }
 
 }
 
-/* Media Query For Medium Devices */
+/* @media for md */
+
 @media (min-width: 768px) and (max-width: 991.98px){
 
-    .Movie-name {
+    .welcome{
+        text-align: left;
+        margin-left: 30px;
+        margin-top: 5%;
+    }
+
+    .Movie-name{
         text-align: left;
         margin-left: 35px;
     }
 
-    .description {
+    .description{
         text-align: left;
     }
 
-    .mainM {
+    .mainM{
         height: 700px;
+      
         margin-left: 60px;
     }
 
-    .footer {
+    .btn-primary{
+        margin-right: 40px;
+    }
+
+    .footer{
         padding-top: 2%;
     }
 
-    .social {
+    .social{
         height: 40px;
     }
 
 }
 
-/* Media Query For Large Devices */
 @media (min-width: 992px){ 
 
-    .Movie-name {
+    .header-image{
+        height: 100vh;
+    }
+
+    .welcome{
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    .Movie-name{
         text-align: left;
         margin-left: 50px;
-    }
 
-    .description {
+    }
+    .description{
         text-align: left;
     }
 
-    .mainM {
+    .mainM{
         height: 800px;
     }
 
-    .footer {
+    .btn-primary{
+        width: 43%;
+        margin-left: 2%;
+    }
+
+    .footer{
         padding-top: 2%;
     }
 
-    .social {
+    .social{
         height: 40px;
     }
 
 }
 
-/* Media Query For Extra Large Devices */
+
 @media (min-width: 1440px){ 
 
-    .Movie-name {
+
+    .header-image{
+        height: 105vh;
+    }
+
+    .welcome{
+        text-align: left;
+        margin-left: 30px;
+    }
+    
+    .Movie-name{
         text-align: left;
         margin-left: 50px;
     }
 
-    .description {
+    .description{
         text-align: left;
     }
     
-    .mainM {
+    .mainM{
         height: 500px !important;
         overflow: hidden;
     }
+    
+    .btn-primary{
+        margin-left: 80px;
+    }
 
-    .footer {
+
+    .card-name{
+        font-size: 12px;
+    }
+
+    .footer{
         padding-top: 2%;
     }
     
-    .social {
+    .social{
         height: 40px;
     }
     
