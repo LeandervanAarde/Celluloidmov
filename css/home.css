@@ -12,22 +12,6 @@
     margin-top: 1% !important;
 }
 
-.navI {
-    text-decoration: none !important;
-    transition: 0.2s;
-}
-
-.navI:hover {
-    transform: scale(1.1);
-    color: rgba(26,0,185,0.6);
-    text-decoration: underline;
-}
-
-a:hover {
-    text-decoration: underline !important;
-    color: rgba(26,0,185,0.6) !important;
-}
-
 .watch {
     margin-left: 0 !important;
     width: 50% !important;
