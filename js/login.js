@@ -2,6 +2,45 @@ $(function(){
 
     console.log("Login");
 
+<<<<<<< Updated upstream
+=======
+    $(".btn-click").on("click", function(){
+        $(".panel").toggleClass("panel-slider");
+        // $(".btn-click").html("Log In");
+        $(this).html(($(this).html() == "Log In") ? 'Sign Up' : 'Log In');
+    });
+
+    // $(".btnFlip").click(function(){
+    //     $(".flipper").addClass("flip");
+    //     console.log("Flip");
+    //   });
+
+
+    $(".signup").on("click", function(){
+        var pass1 = $(".pass").val();
+        var pass2 = $(".pass2").val();
+    
+        console.log(check);
+
+        if(pass1 != pass2){
+            alert("Your passwords do not match!")
+        }else{
+            // window.location.href = "../celluloidmov/pages/home.html";
+            // $("#signedUp").attr("href", "../Celluloidmov/pages/home.html");
+        }
+
+    });
+
+
+
+    $(".login-con").hide();
+    
+    $(".change-btn").on("click", function(){
+        $(".signUp-con").slideToggle();
+        $(".login-con").slideToggle();
+    });
+
+>>>>>>> Stashed changes
     $(".login-btn").on("click", function(){
 
         var username = $(".username").val();
@@ -44,11 +83,15 @@ $(function(){
 
             };
 
+<<<<<<< Updated upstream
 
 
         });
 
     });
 
+=======
+}); //Document.ready ends heere
+>>>>>>> Stashed changes
 
 });
