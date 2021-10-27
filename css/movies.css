@@ -74,6 +74,18 @@ img {
     width: 99%;
 }
 
+.watch {
+    margin-left: 0 !important;
+    width: 50% !important;
+    font-size: 14px !important;
+}
+
+.watchlater {
+    margin-left: 0 !important;
+    width: 45% !important;
+    font-size: 14px !important;
+}
+
 /* Media Query For Extra Small Devices */
 @media  (max-width: 576px){
 
