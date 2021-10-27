@@ -1,20 +1,13 @@
 .header-image {
     height: 110vh;
-/* background-color: grey; */
-/* background-image: url("../img/eLaceholder-1.jpg"); */
-background-position: center;
-background-size: cover;
-position: relative;
-z-index: 2;
-padding-top: 2% !important;
-
-
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    padding-top: 2% !important;
 }
 
-
-
-
-.about{
+.about {
     background-color: #262626;
     margin-top: 1% !important;
 }
@@ -39,26 +32,17 @@ a:hover {
     margin-left: 0 !important;
     width: 50% !important;
     font-size: 14px !important;
-
 }
 
 .watchlater {
     margin-left: 0 !important;
     margin-top: 1% !important;
-width: 50% !important;
-font-size: 14px !important;
-
+    width: 50% !important;
+    font-size: 14px !important;
 }
 
-
-
-
-
-
-/* @Media for small */
-
+/* @Media Query for Extra Small Devices */
 @media  (max-width: 576px){
-
     .header-image {
         height: 100vh;
     }
@@ -82,24 +66,13 @@ font-size: 14px !important;
         font-size: small !important;
     }
 
-    .header-watchlater{
+    .header-watchlater {
         width: 47%;
     }
-    /* .card-container{
-        height: 350px;
-    } */
-
-    /* .card-body{
-        height: 120px;
-    } */
 
     .card-name {
         font-size: 12px;
     }
-
-    /* .card-img-top{
-        height: 170px;
-    } */
 
     .footer {
         padding-top: 5%;
@@ -113,7 +86,6 @@ font-size: 14px !important;
     .icon-1 {
         margin-left: 10px !important;
     }
-
 }
 
 /* Media Query For Small Devices */
@@ -131,10 +103,8 @@ font-size: 14px !important;
        height: 112vh;
     }
    
-
     .mainM {
         height: 210px;
-      
     }
 
     .description {
@@ -146,9 +116,8 @@ font-size: 14px !important;
         margin-left: 2%;
     }
 
-    .btn-outline-secondary{
+    .btn-outline-secondary {
         width: 50%;
-
     }
   
     .card-name {
@@ -162,12 +131,10 @@ font-size: 14px !important;
     .social {
         height: 40px;
     }
-
 }
 
 /* Media Query For Medium Devices */
 @media (min-width: 768px) and (max-width: 991.98px){
-
     .welcome {
         text-align: left;
         margin-left: 30px;
@@ -199,12 +166,10 @@ font-size: 14px !important;
     .social {
         height: 40px;
     }
-
 }
 
 /* Media Query For Large Devices */
 @media (min-width: 992px){ 
-
     .header-image {
         height: 100vh;
     }
@@ -238,7 +203,6 @@ font-size: 14px !important;
     .social {
         height: 40px;
     }
-
  }
 
 /* Media Query For Extra Large Devices */
@@ -274,17 +238,15 @@ font-size: 14px !important;
         font-size: 12px;
     }
 
-   .icon-1{
+    .icon-1 {
        margin-left: 13%;
-   }
+    }
 
-    
-    .footer{
+    .footer {
         padding-top: 2%;
     }
     
     .social {
         height: 40px;
     }
-    
 }

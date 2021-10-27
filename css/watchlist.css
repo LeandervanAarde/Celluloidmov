@@ -1,24 +1,13 @@
-html{
+html {
     padding: 0;
     margin: 0;
-
 }
 
-body{
+body {
     background-color: #262626 !important;
 }
-/* 
-.row{
-    background-color: white;
-}
 
-.nav-con{
-    background-color: white;
-    height: 15vh;
-} */
-
-.logo-img{
-    /* position: absolute; */
+.logo-img {
     height: 10vh;
     background-image: url("../img/SVG/Asset\ 1.svg");
     background-position: center;
@@ -28,15 +17,14 @@ body{
     float: left;
 }
 
-#my-list{
+#my-list {
     text-align: center;
     margin-bottom: 5vh;
     color: black;
 }
 
-.searchbar{
+.searchbar {
     height: 4vh;
-    /* background-color: teal; */
     position: relative;
     margin: 0 auto;
     border-radius: 5px;
@@ -45,24 +33,21 @@ body{
     box-shadow: 4px -3px 18px -7px rgba(0,0,0,0.75);
     -webkit-box-shadow: 4px -3px 18px -7px rgba(0,0,0,0.75);
     -moz-box-shadow: 4px -3px 18px -7px rgba(0,0,0,0.75);
-    /* margin-bottom: 10vh; */
 }
 
-.searchbutton{
+.searchbutton {
     width: 10%;
     height: 100%;
     background-color: gray ;
     padding: 0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    /* outline: 1px solid black; */
     position: absolute;
     right: 0%;
     cursor: pointer;
-    /* border: black solid 3px; */
 }
 
-#search-img{
+#search-img {
     width: 50%;
     height: 50%;
     background-image: url(../img/SearchIcon.png);
@@ -73,157 +58,125 @@ body{
     margin-top: 1vh;
 }
 
-
-.watchlist-heading{
+.watchlist-heading {
     color: white;
     text-align: center;
     padding-top: 5vh;
     padding-bottom: 5vh;
 }
 
-
+/* Media Queries For Extra Small Devices */
 @media  (max-width: 576px){
-
-    .welcome{
+    .welcome {
         margin-top: 40px;
         text-align: center;
     }
 
-    .Movie-name{
+    .Movie-name {
         text-align: center;
     }
 
-    .mainM{
+    .mainM {
         height: 200px;
-      
     }
 
-    .description{
+    .description {
         text-align: center;
     }
 
-    .btn-primary{
+    .btn-primary {
         width: 47%;
-        
         font-size: small !important;
     }
 
-    .btn-outline-secondary{
+    .btn-outline-secondary {
         width: 43%;
         font-size: small !important;
     }
 
-
-    .card-name{
+    .card-name {
         font-size: 12px;
         color: white;
     }
 
-
-    .footer{
+    .footer {
         padding-top: 5%;
     }
 
-    .social{
+    .social {
         height: 35px;
     }
-
 }
 
-.clear{
+.clear {
     background-color: tomato !important;
     position: relative;
     z-index: 1;
 }
 
-
-
+/* Media Queries For Small Devices */
 @media (min-width: 577px) and (max-width: 767.98px){
-
-
-    .btn-primary{
+    .btn-primary {
         width: 43%;
         margin-left: 2%;
     }
 
-    .btn-outline-secondary{
+    .btn-outline-secondary {
         width: 47%;
     }
   
-   
-
-    .card-name{
+    .card-name {
         font-size: 12px;
     }
 
-
-    .footer{
+    .footer {
         padding-top: 5%;
     }
 
-    .social{
+    .social {
         height: 40px;
     }
-
 }
 
-/* @media for md */
-
+/* Media Queries For Medium Devices */
 @media (min-width: 768px) and (max-width: 991.98px){
-
-
-    .btn-primary{
+    .btn-primary {
         margin-right: 40px;
     }
 
-    .footer{
+    .footer {
         padding-top: 2%;
     }
 
-    .social{
+    .social {
         height: 40px;
     }
-
 }
 
+/* Media Queries For Large Devices */
 @media (min-width: 992px){ 
+    .footer {
+        padding-top: 2%;
+    }
 
-
-
-
-.footer{
-    padding-top: 2%;
+    .social {
+        height: 40px;
+    }
 }
 
-.social{
-    height: 40px;
-}
+/* Media Queries For Extra Large Devices */
+@media (min-width: 1440px){ 
 
-
-
- }
-
-
- @media (min-width: 1440px){ 
-
-    
-
-
-    .card-name{
+    .card-name {
         font-size: 12px;
         color: white;
     }
 
-      
-    .footer{
+    .footer {
         padding-top: 2%;
     }
     
-    .social{
+    .social {
         height: 40px;
     }
-    
-    
-    
-     }
-
+}
