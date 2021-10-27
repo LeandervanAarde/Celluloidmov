@@ -88,7 +88,6 @@ img {
 
 /* Media Query For Extra Small Devices */
 @media  (max-width: 576px){
-
     .featured-movies-container {
         display: none;
     }
@@ -105,12 +104,10 @@ img {
     .icon-1 {
         margin-left: 10px !important;
     }
-
 }
 
 /* Media Query For Small Devices */
 @media (min-width: 577px) and (max-width: 767.98px){
-
     .featured-movies-container {
         display: none;
     }
@@ -126,12 +123,10 @@ img {
     .social {
         height: 40px;
     }
-
 }
 
 /* Media Query For Medium Devices */
 @media (min-width: 768px) and (max-width: 991.98px){
-
     .Movie-name {
         text-align: left;
         margin-left: 35px;
@@ -153,12 +148,10 @@ img {
     .social {
         height: 40px;
     }
-
 }
 
 /* Media Query For Large Devices */
 @media (min-width: 992px){ 
-
     .Movie-name {
         text-align: left;
         margin-left: 50px;
@@ -179,12 +172,10 @@ img {
     .social {
         height: 40px;
     }
-
 }
 
 /* Media Query For Extra Large Devices */
 @media (min-width: 1440px){ 
-
     .Movie-name {
         text-align: left;
         margin-left: 50px;
@@ -206,5 +197,4 @@ img {
     .social {
         height: 40px;
     }
-    
 }

@@ -5,11 +5,8 @@ $(document).ready(function(){
     const genreList = "https://api.themoviedb.org/3/genre/movie/list?api_key=7c133cc72a2ad03fcf238f8ad51a53a3&language=en-US";
     var card;
         
-
-
     /* Featured Movies Functionality */
     $.getJSON(popularURL, function(result) {
-
         for(var i = 0; i < 11; i++){
             if(i < 5){
                 card = 
@@ -99,11 +96,8 @@ $(document).ready(function(){
                 }
                 
             }
-
                 $(".body").append(card);
-        
                 $(".Movie-name").html(result.original_title);
-        
                 $(".description").html(result.overview);
         });
     }
@@ -112,11 +106,8 @@ $(document).ready(function(){
     /* Filter With Genre Functionality */
     $.getJSON(genreList, function(result) {
         for (var i = 0; i < result.genres.length; i++) {
-
             var list = `<option>${result.genres[i].name}</option>`;
-
             $(".genre_select").append(list);
-
         }
     });
 
@@ -125,7 +116,6 @@ $(document).ready(function(){
         $(".year_select").val("Year");
         $(".search-input").val('');
         
-
         var genreType = $(this).val();
         console.log(genreType)
 
@@ -309,7 +299,4 @@ $(document).ready(function(){
         });
     }); //keyword search function end
     /* End of Search Movies With Keywords Functionality */
-
-
-
 });

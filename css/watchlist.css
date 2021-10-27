@@ -166,7 +166,6 @@ body {
 
 /* Media Queries For Extra Large Devices */
 @media (min-width: 1440px){ 
-
     .card-name {
         font-size: 12px;
         color: white;
