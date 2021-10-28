@@ -220,6 +220,11 @@ li {
     .icon-1 {
         margin-left: 10px !important;
     }
+
+    .container-photo{
+        margin-left: 100px;
+    }
+ 
 }
 
 /* Media Queries For Small Devices */
