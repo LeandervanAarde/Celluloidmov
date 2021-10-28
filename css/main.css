@@ -5,6 +5,7 @@ html {
 
 a {
     text-decoration: none !important;
+    color: white !important;
 }
 
 body {
@@ -219,6 +220,11 @@ li {
     .icon-1 {
         margin-left: 10px !important;
     }
+
+    .container-photo{
+        margin-left: 100px;
+    }
+ 
 }
 
 /* Media Queries For Small Devices */
@@ -241,6 +247,10 @@ li {
     .social {
         height: 40px;
     }
+
+    li{
+        margin-left: 1%; 
+     }
 }
 
 /* Media Queries For Large Devices */
@@ -251,6 +261,10 @@ li {
 
     .social {
         height: 40px;
+    }
+
+    li{
+       margin-left: 2%; 
     }
 }
 
