@@ -58,8 +58,8 @@
                             <input type="text" placeholder="Name & Surname" class="input-sections name" autofocus>
                             <input type="text" placeholder="User Name" class="input-sections userN" required>
                             <input type="email" placeholder="Your Email" class="input-sections mail" required>
-                            <input type="password" placeholder="Password" class="input-sections pass" required> 
-                            <input type="password" placeholder="Password" class="input-sections pass2" required> 
+                            <input type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="input-sections pass" required> 
+                            <input type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="input-sections pass2" required> 
                             <button class="btn btn-primary signup sm d-block d-lg-none">Sign up</button>
                         </form>
                         <div class="change-btn"><p id="btn-text">Already Have an account</p></div>
@@ -71,7 +71,7 @@
                     <div class="form-container">
                         <form>
                             <input type="text" placeholder="User Name" class="input-sections usernameSM">
-                            <input type="password" placeholder="Password" class="input-sections passwordSM"> 
+                            <input type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="input-sections passwordSM"> 
                             <div class="login-btnSM">Login</div>
                             <div class="change-btn"><p id="btn-text">Don't have an account</p></div>
                             <div class="col-12 message"></div>
@@ -90,7 +90,7 @@
                     <div class="form-container">
                         <form>
                             <input type="text" placeholder="User Name" class="input-sections username">
-                            <input type="password" placeholder="Password" class="input-sections password"> 
+                            <input type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="input-sections password"> 
                             <div class="login-btn">Login</div>
                             <div class="message"></div>
                         </form>
@@ -105,8 +105,8 @@
                             <input type="text" placeholder="Name & Surname" class="input-sections name" autofocus>
                             <input type="text" placeholder="User Name" class="input-sections username usernameSignUp" required="true">
                             <input type="email" placeholder="Your Email" class="input-sections mail">
-                            <input type="password" placeholder="Password" class="input-sections LG1" required> 
-                            <input type="password" placeholder="Password" class="input-sections LG2" required> 
+                            <input type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="input-sections LG1" required> 
+                            <input type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="input-sections LG2" required> 
                             <button class="btn-primary signup d-none d-lg-block">Sign up</button>
                         </form>
                        
