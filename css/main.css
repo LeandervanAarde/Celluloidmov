@@ -242,6 +242,10 @@ li {
     .social {
         height: 40px;
     }
+
+    li{
+        margin-left: 1%; 
+     }
 }
 
 /* Media Queries For Large Devices */
@@ -252,6 +256,10 @@ li {
 
     .social {
         height: 40px;
+    }
+
+    li{
+       margin-left: 2%; 
     }
 }
 
