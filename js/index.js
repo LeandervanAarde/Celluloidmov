@@ -1,9 +1,4 @@
 $(document).ready(function(){
-    $(".dropdown").hide();
-
-    $(".burger").click(function(){
-        $(".dropdown").toggle(100);
-    });
 
     // Open social icons
     $(".icon-1").on("click", function(){
