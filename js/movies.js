@@ -19,7 +19,7 @@ $(document).ready(function(){
                         <div class='card no-hover' style='border: none;' data-id='" + result.results[i].id + "'>\
                             <img src='https://image.tmdb.org/t/p/original" + result.results[i].poster_path + "' class='card-img-top img-fluid' alt=''>\
                             <div class='card-body d-block '>\
-                                <p class='cardName'><strong>" + result.results[i].original_title + "</strong> <br>Rating:" + result.results[i].vote_average + " <br> Release date:" + result.results[i].release_date + "</p> \
+                                <p class='cardName'><strong>" + result.results[i].original_title + "</strong> <br>Rating: " + result.results[i].vote_average + " <br> Release date: " + result.results[i].release_date + "</p> \
                                 <a href='I-movie.html?id=" + result.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
                                 <button type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Watch later</button>  \
                                 <button type='button' class='btn btn-outline-secondary d-block d-lg-none  watchlater'style='width: 100% !important; >Watch later</button>\
@@ -38,7 +38,7 @@ $(document).ready(function(){
                             <div class='card no-hover' style='border: none;' data-id='" + result.results[i].id+"'>\
                                 <img src='https://image.tmdb.org/t/p/original" + result.results[i].poster_path + "'class='card-img-top img-fluid' alt=''>\
                                 <div class='card-body d-block '>\
-                                    <p class='cardName'><strong>" + result.results[i].original_title + "</strong> <br>Rating:" + result.results[i].vote_average + " <br> Release date:" + result.results[i].release_date + "</p> \
+                                    <p class='cardName'><strong>" + result.results[i].original_title + "</strong> <br>Rating: " + result.results[i].vote_average + " <br> Release date: " + result.results[i].release_date + "</p> \
                                     <a href='I-movie.html?id=" + result.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
                                     <button disabled type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Added</button>  \
                                     <button disabled type='button' class='btn btn-outline-secondary d-block d-lg-none  watchlater'style='width: 100% !important; >Added</button>\
@@ -94,7 +94,7 @@ $(document).ready(function(){
                                 <div class='card' style='border: none;' data-id='"+result.id+"'>\
                                     <img src='https://image.tmdb.org/t/p/original"+result.poster_path+"'class='card-img-top img-fluid' alt=''>\
                                     <div class='card-body d-block '>\
-                                        <p class='cardName'><strong>" + result.original_title + "</strong> <br>Rating:" + result.vote_average+" <br> Release date:" + result.release_date + "</p> \
+                                        <p class='cardName'><strong>" + result.original_title + "</strong> <br>Rating: " + result.vote_average+" <br> Release date: " + result.release_date + "</p> \
                                         <a href='I-movie.html?id=" + result.id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
                                         <button  type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Watch later</button>  \
                                         <button  type='button' class='btn btn-outline-secondary d-block d-lg-none  watchlater'style='width: 100% !important; >Watch later</button>\
@@ -115,7 +115,7 @@ $(document).ready(function(){
                             <div class='card' style='border: none;' data-id ='" + result.id + "'>\
                                 <img src='https://image.tmdb.org/t/p/original" + result.poster_path + "'class='card-img-top img-fluid' alt=''>\
                                 <div class='card-body d-block '>\
-                                    <p class='cardName'><strong>" + result.original_title + "</strong> <br>Rating:" + result.vote_average + " <br> Release date:" + result.release_date + "</p> \
+                                    <p class='cardName'><strong>" + result.original_title + "</strong> <br>Rating: " + result.vote_average + " <br> Release date: " + result.release_date + "</p> \
                                     <a href='I-movie.html?id=" + result.id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
                                     <button disabled type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Added</button>  \
                                     <button disabled type='button' class='btn btn-outline-secondary d-block d-lg-none  watchlater'style='width: 100% !important; >Added</button>\
