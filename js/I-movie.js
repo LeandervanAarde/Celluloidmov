@@ -219,4 +219,10 @@ $(function() {
 	myModalEl.addEventListener('hide.bs.modal', function(event) {
 		$('#video').html("");
 	});
+
+
+	$(".logout-btn").on("click", function () {
+        sessionStorage.clear();
+    });
+	
 });

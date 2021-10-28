@@ -163,4 +163,14 @@ $(document).ready(function () {
 
 
 
+
+    $(".logout-btn").on("click", function () {
+        sessionStorage.clear();
+    });
+
+
+
+
+
+
 });  //Document on load ends
