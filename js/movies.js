@@ -13,7 +13,7 @@ $(document).ready(function(){
                     `
                         <div class="featured-card featured-card-1">
                             <div class="box">
-                                <img src="https://image.tmdb.org/t/p/original${result.results[i].poster_path}" class="model">
+                                <img class="featured-img" src="https://image.tmdb.org/t/p/original${result.results[i].poster_path}" class="model">
                             </div>
                         </div>        
                     `;
@@ -24,7 +24,7 @@ $(document).ready(function(){
                     `
                         <div class="featured-card featured-card-2 d-none">
                             <div class="box">
-                                <img src="https://image.tmdb.org/t/p/original${result.results[i].poster_path}" class="model">
+                                <img class="featured-img" src="https://image.tmdb.org/t/p/original${result.results[i].poster_path}" class="model">
                             </div>
                         </div>        
                     `;
