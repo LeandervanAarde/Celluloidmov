@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    var username = sessionStorage.getItem("username")
+
+    $(".username").text(username);
 
     // Open social icons
     $(".icon-1").on("click", function(){
