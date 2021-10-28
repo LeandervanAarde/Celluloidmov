@@ -270,4 +270,12 @@ $(document).ready(function(){
         });
     });
     /* End of Search Movies With Keywords Functionality */
+
+
+
+    $(".logout-btn").on("click", function () {
+        sessionStorage.clear();
+    });
+
+
 });

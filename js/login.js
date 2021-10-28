@@ -87,7 +87,7 @@ $(function(){
 
                 if(result.users[i].username === username){
 
-                    // console.log("Hello");
+                    // console.log("Hello");s
 
                     if(result.users[i].password === password){
 
