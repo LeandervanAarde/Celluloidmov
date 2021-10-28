@@ -82,8 +82,9 @@ $(function(){
 
     });
 
-    $(".signup").on("click",function(){
+    $(".signup").on("click",function(event){
 
+        event.preventDefault(); 
         var pass1 = $(".LG1").val();
         var pass2 = $(".LG2").val();
         var userName = $(".usernameSignUp").val();
@@ -94,7 +95,8 @@ $(function(){
             alert("Your Passwords Do not match!");
         }else{
             sessionStorage.setItem("Username SignUp", userName)
-            // window.location.href = "../celluloidmov/pages/home.html";
+             window.location.href = "../celluloidmov/pages/home.html";
+            
         }
 
     });
