@@ -157,8 +157,4 @@ $(document).ready(function () {
         }; // for loops ends here 
     });
     /* End of Gets Users Images and Updates them on Pages */
-
-    $(".logout-btn").on("click", function () {
-        sessionStorage.clear();
-    });
 });  //Document on load ends

@@ -1,7 +1,7 @@
 $(document).ready(function(){
     /* Gets Users Name when they log In */
     var username = sessionStorage.getItem("username")
-
+    
     $(".username").text(username);
 
     // Open social icons
@@ -17,4 +17,10 @@ $(document).ready(function(){
         window.open("https://www.facebook.com/");
     }); 
     // end of social icons 
+
+    /* Logout User */
+    $(".logout-btn").on("click", function () {
+        sessionStorage.clear();
+        localStorage.setItem("logged", false);
+    });
 });

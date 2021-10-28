@@ -47,9 +47,5 @@ $(document).ready(function(){
             $(".card-container").remove();
             localStorage.clear();
         });
-        
-        $(".logout-btn").on("click", function () {
-            sessionStorage.clear();
-        });
 });
     

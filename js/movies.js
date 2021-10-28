@@ -98,7 +98,7 @@ $(document).ready(function(){
                                             <p class='cardName'><strong>" + result.original_title + "</strong> <br>Rating: " + result.vote_average+" <br> Release date: " + result.release_date + "</p> \
                                             <a href='I-movie.html?id=" + result.id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
                                             <button  type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Watch later</button>  \
-                                            <button  type='button' class='btn btn-outline-secondary d-block d-lg-none  watchlater'style='width: 100% !important; >Watch later</button>\
+                                            <button  type='button' class='btn btn-outline-secondary d-block d-lg-none  watchlater' style='width: 100% !important;'>Watch later</button>\
                                         </div>\
                                     </div>\
                                     </a>\
@@ -264,8 +264,4 @@ $(document).ready(function(){
         });
     });
     /* End of Search Movies With Keywords Functionality */
-
-    $(".logout-btn").on("click", function () {
-        sessionStorage.clear();
-    });
 });
