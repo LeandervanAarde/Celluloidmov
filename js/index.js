@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    /* Gets Users Name when they log In */
     var username = sessionStorage.getItem("username")
 
     $(".username").text(username);

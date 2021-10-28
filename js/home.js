@@ -53,11 +53,11 @@ if (!localStorage.getItem("watchlater")) {
 }
 
 $(document).ready(function () {
-
     // Welcome message if the user does exist in the session storage
     $('.welcome').html("Welcome, " + sessionStorage.getItem("username"));
-    // end of greeting
+
     const popularurl = "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1";
+
     $.getJSON(popularurl, function (result) {
         for (var i = 0; i < 8; i++) {
             var card =
@@ -142,35 +142,23 @@ $(document).ready(function () {
         changeImage();
 
         var car = setInterval("changeImage()", 4000);
-
     }); //get JSON ends here
 
-
-
+    /* Gets Users Images and Updates them on Pages */
     usersUrl = "https://owmakerspace.co.za/users/usersImages";
     var username = sessionStorage.getItem("username");
 
     $.getJSON(usersUrl, function (result) {
         for (i = 0; i < result.users.length; i++) {
-            console.log(result.users[i].username);
             if (result.users[i].username === username) {
                 // thePhoto = result.users[i].usersImages;
                 $(".photo").css("background-image", "url(" + result.users[i].usersImages + ")");
             }
         }; // for loops ends here 
-
     });
-
-
-
+    /* End of Gets Users Images and Updates them on Pages */
 
     $(".logout-btn").on("click", function () {
         sessionStorage.clear();
     });
-
-
-
-
-
-
 });  //Document on load ends

@@ -13,8 +13,6 @@ function remove(id){
 }
 
 $(document).ready(function(){
-    console.log("JQuery is linked and ready");
-
         var watchlater = localStorage.getItem('watchlater').split(", ");
 
         for(var i= 0; i < watchlater.length; i++){
@@ -50,11 +48,8 @@ $(document).ready(function(){
             localStorage.clear();
         });
         
-
         $(".logout-btn").on("click", function () {
             sessionStorage.clear();
         });
-
-
 });
     

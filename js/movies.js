@@ -6,7 +6,6 @@
     var pageNr = 0; 
 
 $(document).ready(function(){
-
     const popularURL = "https://api.themoviedb.org/3/movie/popular?api_key=7c133cc72a2ad03fcf238f8ad51a53a3&language=en-US&page=3";
     const genreList = "https://api.themoviedb.org/3/genre/movie/list?api_key=7c133cc72a2ad03fcf238f8ad51a53a3&language=en-US";
     var card;
@@ -60,7 +59,7 @@ $(document).ready(function(){
                 var temp = localStorage.getItem('watchlater');
                 var watchlater ;
                 
-                if(temp == ""){
+                if(temp == "") {
                      watchlater = []; 
                 } else {
                     watchlater= temp.split(", ");
@@ -70,7 +69,7 @@ $(document).ready(function(){
                     return item != id;
                 });
 
-                if(doesNotExist){
+                if(doesNotExist) {
                     watchlater.push(id + ""); 
                     localStorage.setItem("watchlater", watchlater.join(", "));
                 }
@@ -145,7 +144,7 @@ $(document).ready(function(){
                         return item != id;
                     });
 
-                    if(doesNotExist){
+                    if(doesNotExist) {
                         watchlater.push(id + ""); 
                         localStorage.setItem("watchlater", watchlater.join(", "));
                     }
@@ -156,7 +155,6 @@ $(document).ready(function(){
                 $(".body").append(card);
                 $(".Movie-name").html(result.original_title);
                 $(".description").html(result.overview);
-
             });
         }
         pageNr++;
@@ -176,7 +174,6 @@ $(document).ready(function(){
         $(".search-input").val(''); 
     });
     
-
     /* Filter With Genre Functionality */
     $.getJSON(genreList, function(result) {
         for (var i = 0; i < result.genres.length; i++) {
@@ -194,7 +191,7 @@ $(document).ready(function(){
 
         $(".card-container").css("display", "none");
 
-        if(genreType == "Genre"){
+        if(genreType == "Genre") {
             $(".card-container").css("display", "block");
         } else {
             $(".featured-card").css("display", "block");
@@ -218,14 +215,11 @@ $(document).ready(function(){
 
         if(selectedTime !== "Runtime") {
             for(i; i <= selectedTimeEnd; i++){
-                console.log(i)
                 if(selectedTime == "Runtime") {
                     $(".card-container").css("display", "block");
-                    console.log("oops")
                 } else if($("[data-runtime]") == i) {
                     $(".featured-card").css("display", "block");
                     $("[data-runtime=\"" + i + "\"]").css("display", "block");
-                    console.log("oops")
                 }
             } 
         } else {
@@ -271,11 +265,7 @@ $(document).ready(function(){
     });
     /* End of Search Movies With Keywords Functionality */
 
-
-
     $(".logout-btn").on("click", function () {
         sessionStorage.clear();
     });
-
-
 });

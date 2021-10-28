@@ -111,9 +111,9 @@ $(function() {
 		$('.watchlaterIsm').click(function(event) {
 			let card = $(event.currentTarget).parent()[0];
 			let id = $(card).data("id");
-			console.log(id)
 			var temp = localStorage.getItem('watchlater');
 			var watchlater;
+			
 			if(temp == "") {
 				watchlater = [];
 			} else {
@@ -172,6 +172,7 @@ $(function() {
             			</div>\
 					";
 			}
+
 			// for header
 			$(".body-2").append(card);
 		} //For loop ends 
@@ -220,9 +221,7 @@ $(function() {
 		$('#video').html("");
 	});
 
-
 	$(".logout-btn").on("click", function () {
         sessionStorage.clear();
     });
-	
 });
