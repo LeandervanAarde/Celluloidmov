@@ -144,4 +144,25 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
         var car = setInterval("changeImage()", 4000);
 
     }); //get JSON ends here
+
+
+
+    usersUrl = "https://owmakerspace.co.za/users/data.json";
+    var username = sessionStorage.getItem("username");
+
+    $.getJSON(usersUrl, function(result){
+        for(i = 0; i < result.users.length; i ++){
+            if(result.users[i].username === username) {
+                thePhoto = result.users[i].usersImages;
+                $(".photo").css("background-image", "url(" + thePhoto + ")");
+            }
+        }; // for loops ends here 
+
+    });
+
+
+
+
+
+
 });  //Document on load ends

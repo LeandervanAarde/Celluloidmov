@@ -236,3 +236,26 @@ input {
     border-radius: 7px;
     color: black;
 }
+
+.login-btnSM {
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #1A00B9;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding-top: 3px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: all ease-in-out 400ms;
+}
+
+.login-btnSM:hover {
+    transform: scale(1.1);
+    background-color: #E3E800;
+    height: 7%;
+    border-radius: 7px;
+    color: black;
+}
