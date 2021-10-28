@@ -24,7 +24,7 @@ $(function(){
                     if(result.users[i].password === password) {
 
                         if(result.users[i].account === "active") {
-                            window.location.href = "../celluloidmov/pages/home.html";
+                            window.location.href = "../pages/home.html";
                             sessionStorage.setItem("username", username);
                         } else {
                             $(".message").css("background-color", "orange");
@@ -54,7 +54,7 @@ $(function(){
                 if(result.users[i].username === username) {
                     if(result.users[i].password === password) {
                         if(result.users[i].account === "active"){
-                            window.location.href = "../celluloidmov/pages/home.html";
+                            window.location.href = "../pages/home.html";
                             sessionStorage.setItem("username", username);
                         } else {
                             $(".message").css("background-color", "orange");
@@ -94,7 +94,7 @@ $(function(){
             alert("Your Passwords Do not match!");
         }else{
             sessionStorage.setItem("Username SignUp", userName)
-            window.location.href = "../celluloidmov/pages/home.html"; 
+            window.location.href = "../pages/home.html"; 
         }
     });
 }); //Document.ready ends heere
