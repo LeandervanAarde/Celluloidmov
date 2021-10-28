@@ -14,6 +14,7 @@ $(function() {
 	const recommendedMovieUrl = 'https://api.themoviedb.org/3/movie/' + id + '/recommendations?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1';
 	const trailerUrl = 'https://api.themoviedb.org/3/movie/' + id + '/videos?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US';
 
+	$(".info").attr("data-id", id);
 	$.getJSON(individualMovieUrl, function(result) {
 		// Variables for the data
 		var mov_Description = result.overview;
@@ -87,6 +88,30 @@ $(function() {
 		$('.watchlater').click(function(event) {
 			let card = $(event.currentTarget).parent().parent()[0];
 			let id = $(card).data("id");
+			var temp = localStorage.getItem('watchlater');
+			var watchlater;
+			if(temp == "") {
+				watchlater = [];
+			} else {
+				watchlater = temp.split(", ");
+			}
+
+			var doesNotExist = watchlater.every(item => {
+				return item != id;
+			});
+
+			if(doesNotExist) {
+				watchlater.push(id + "");
+				localStorage.setItem("watchlater", watchlater.join(", "));
+			}
+			
+			$(event.currentTarget).attr("disabled", "true").html("Added");
+		});
+
+		$('.watchlaterIsm').click(function(event) {
+			let card = $(event.currentTarget).parent()[0];
+			let id = $(card).data("id");
+			console.log(id)
 			var temp = localStorage.getItem('watchlater');
 			var watchlater;
 			if(temp == "") {

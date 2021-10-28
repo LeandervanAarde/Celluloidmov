@@ -83,6 +83,12 @@ input{
     font-size: 14px !important;
 }
 
+#loader {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 /* Media Query For Extra Small Devices */
 @media  (max-width: 576px){
     .featured-movies-container {

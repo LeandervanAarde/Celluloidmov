@@ -2,7 +2,7 @@
 if(!localStorage.getItem("watchlater")){
     localStorage.setItem("watchlater", "");
 }
-
+var pageNr = 0; 
 $(document).ready(function(){
 
     const popularURL = "https://api.themoviedb.org/3/movie/popular?api_key=7c133cc72a2ad03fcf238f8ad51a53a3&language=en-US&page=3";
@@ -80,8 +80,12 @@ $(document).ready(function(){
     /* End of Featured Movies Functioanality */
 
     /* Show All Movies Functionality */
-    for(var i = 0; i < 500; i++){
-        var moviesURL = "https://api.themoviedb.org/3/movie/" + i + "?api_key=7c133cc72a2ad03fcf238f8ad51a53a3&language=en-US";
+
+    function loadNext(){
+
+    
+    for(var i = 0; i < 20; i++){
+        var moviesURL = "https://api.themoviedb.org/3/movie/" + i+(20*pageNr) + "?api_key=7c133cc72a2ad03fcf238f8ad51a53a3&language=en-US";
         
         $.getJSON(moviesURL, function(result) {
 
@@ -158,6 +162,13 @@ $(document).ready(function(){
             console.clear()
         });
     }
+    pageNr++;
+} 
+loadNext();
+$("#loader button").on("click", () => {
+    // Call the loadNext function with the page variable increased by one
+    loadNext(   );
+});
     /* End of Show All Movies Functionality */
 
     /* Filter With Genre Functionality */
