@@ -217,7 +217,7 @@ $(document).ready(function(){
             for(i; i <= selectedTimeEnd; i++){
                 if(selectedTime == "Runtime") {
                     $(".card-container").css("display", "block");
-                } else if($("[data-runtime]") == i) {
+                } else if($("[data-runtime]") !== i) {
                     $(".featured-card").css("display", "block");
                     $("[data-runtime=\"" + i + "\"]").css("display", "block");
                 }
