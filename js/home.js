@@ -53,12 +53,13 @@ if(!localStorage.getItem("watchlater")) {
 }
 
 $(document).ready(function(){
+    // Welcome message if the user does exist in the session storage
+    $('.welcome').html("Welcome, "+ sessionStorage.getItem("username"));
+    
 
-// Welcome message if the user does exist in the session storage
-$('.welcome').html("Welcome, "+ sessionStorage.getItem("username"));
-// end of greeting
-const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1";
-    $.getJSON(popularurl, function(result) {
+    const popularUrl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1";
+
+    $.getJSON(popularUrl, function(result) {
         for(var i= 0; i < 8; i++){
             var card = 
                     "\
@@ -125,7 +126,7 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
                 return item != id;
             });
 
-            if(doesNotExist ) {
+            if(doesNotExist) {
                 watchlater.push(id + ""); 
                 localStorage.setItem("watchlater", watchlater.join(", "));
             }
@@ -144,25 +145,4 @@ const popularurl= "https://api.themoviedb.org/3/movie/popular?api_key=fbdaccb39d
         var car = setInterval("changeImage()", 4000);
 
     }); //get JSON ends here
-
-
-
-    usersUrl = "https://owmakerspace.co.za/users/data.json";
-    var username = sessionStorage.getItem("username");
-
-    $.getJSON(usersUrl, function(result){
-        for(i = 0; i < result.users.length; i ++){
-            if(result.users[i].username === username) {
-                thePhoto = result.users[i].usersImages;
-                $(".photo").css("background-image", "url(" + thePhoto + ")");
-            }
-        }; // for loops ends here 
-
-    });
-
-
-
-
-
-
 });  //Document on load ends

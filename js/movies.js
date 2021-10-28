@@ -1,8 +1,10 @@
-// Check the localstorage onload.
-if(!localStorage.getItem("watchlater")){
-    localStorage.setItem("watchlater", "");
-}
-var pageNr = 0; 
+    // Check the localstorage onload.
+    if(!localStorage.getItem("watchlater")){
+        localStorage.setItem("watchlater", "");
+    }
+    
+    var pageNr = 0; 
+
 $(document).ready(function(){
 
     const popularURL = "https://api.themoviedb.org/3/movie/popular?api_key=7c133cc72a2ad03fcf238f8ad51a53a3&language=en-US&page=3";
@@ -79,97 +81,101 @@ $(document).ready(function(){
     });
     /* End of Featured Movies Functioanality */
 
-    /* Show All Movies Functionality */
-
+    /* Load Movie Functionality */
     function loadNext(){
+        for(var i = 0; i < 20; i++){
+            var moviesURL = "https://api.themoviedb.org/3/movie/" + i+(20*pageNr) + "?api_key=7c133cc72a2ad03fcf238f8ad51a53a3&language=en-US";
 
-    
-    for(var i = 0; i < 20; i++){
-        var moviesURL = "https://api.themoviedb.org/3/movie/" + i+(20*pageNr) + "?api_key=7c133cc72a2ad03fcf238f8ad51a53a3&language=en-US";
-        
-        $.getJSON(moviesURL, function(result) {
+            $.getJSON(moviesURL, function(result) {
+                if(result.poster_path !== null && result.success !== false){
+                    for(var i= 0; i < 1; i++){
+                        card = 
+                            "\
+                                <div class='col-6 col-md-4 col-lg-3 card-container' data-genre='" + result.genres[0].name + "' data-runtime=" + result.runtime + " data-rating=" + result.vote_average + " style='border: none;'>\
+                                    <a href='I-movie.html?id=" + result.id + "'>\
+                                    <div class='card' style='border: none;' data-id='"+result.id+"'>\
+                                        <img src='https://image.tmdb.org/t/p/original"+result.poster_path+"'class='card-img-top img-fluid' alt=''>\
+                                        <div class='card-body d-block '>\
+                                            <p class='cardName'><strong>" + result.original_title + "</strong> <br>Rating: " + result.vote_average+" <br> Release date: " + result.release_date + "</p> \
+                                            <a href='I-movie.html?id=" + result.id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
+                                            <button  type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Watch later</button>  \
+                                            <button  type='button' class='btn btn-outline-secondary d-block d-lg-none  watchlater'style='width: 100% !important; >Watch later</button>\
+                                        </div>\
+                                    </div>\
+                                    </a>\
+                                </div>\
+                            ";    
+                    }
+                }
 
-            if(result.poster_path !== null && result.success !== false){
-                for(var i= 0; i < 1; i++){
+                // If already in localstorage append a card with disabled class that will state movie is already added
+                if(localStorage.getItem('watchlater').includes(result.id)){
                     card = 
                         "\
                             <div class='col-6 col-md-4 col-lg-3 card-container' data-genre='" + result.genres[0].name + "' data-runtime=" + result.runtime + " data-rating=" + result.vote_average + " style='border: none;'>\
                                 <a href='I-movie.html?id=" + result.id + "'>\
-                                <div class='card' style='border: none;' data-id='"+result.id+"'>\
-                                    <img src='https://image.tmdb.org/t/p/original"+result.poster_path+"'class='card-img-top img-fluid' alt=''>\
+                                <div class='card' style='border: none;' data-id ='" + result.id + "'>\
+                                    <img src='https://image.tmdb.org/t/p/original" + result.poster_path + "'class='card-img-top img-fluid' alt=''>\
                                     <div class='card-body d-block '>\
-                                        <p class='cardName'><strong>" + result.original_title + "</strong> <br>Rating: " + result.vote_average+" <br> Release date: " + result.release_date + "</p> \
+                                        <p class='cardName'><strong>" + result.original_title + "</strong> <br>Rating: " + result.vote_average + " <br> Release date: " + result.release_date + "</p> \
                                         <a href='I-movie.html?id=" + result.id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
-                                        <button  type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Watch later</button>  \
-                                        <button  type='button' class='btn btn-outline-secondary d-block d-lg-none  watchlater'style='width: 100% !important; >Watch later</button>\
+                                        <button disabled type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Added</button>  \
+                                        <button disabled type='button' class='btn btn-outline-secondary d-block d-lg-none  watchlater'style='width: 100% !important; >Added</button>\
                                     </div>\
                                 </div>\
                                 </a>\
                             </div>\
-                        ";    
-                }
-            }
-            
-            // If already in localstorage append a card with disabled class that will state movie is already added
-            if(localStorage.getItem('watchlater').includes(result.id)){
-                card = 
-                    "\
-                        <div class='col-6 col-md-4 col-lg-3 card-container' data-genre='" + result.genres[0].name + "' data-runtime=" + result.runtime + " data-rating=" + result.vote_average + " style='border: none;'>\
-                            <a href='I-movie.html?id=" + result.id + "'>\
-                            <div class='card' style='border: none;' data-id ='" + result.id + "'>\
-                                <img src='https://image.tmdb.org/t/p/original" + result.poster_path + "'class='card-img-top img-fluid' alt=''>\
-                                <div class='card-body d-block '>\
-                                    <p class='cardName'><strong>" + result.original_title + "</strong> <br>Rating: " + result.vote_average + " <br> Release date: " + result.release_date + "</p> \
-                                    <a href='I-movie.html?id=" + result.id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
-                                    <button disabled type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Added</button>  \
-                                    <button disabled type='button' class='btn btn-outline-secondary d-block d-lg-none  watchlater'style='width: 100% !important; >Added</button>\
-                                </div>\
-                            </div>\
-                            </a>\
-                        </div>\
-                    ";
-            }
-
-            // Function to add to local storage.
-            $('.watchlater').click(function(event){
-                let card = $(event.currentTarget).parent().parent()[0];
-                let id= $(card).data("id"); 
-                var temp = localStorage.getItem('watchlater');
-                var watchlater ;
-
-                if(temp == "") {
-                     watchlater = []; 
-                } else {
-                    watchlater= temp.split(", ");
+                        ";
                 }
 
-                var doesNotExist = watchlater.every(item =>{
-                    return item != id;
-                });
+                // Function to add to local storage.
+                $('.watchlater').click(function(event){
+                    let card = $(event.currentTarget).parent().parent()[0];
+                    let id= $(card).data("id"); 
+                    var temp = localStorage.getItem('watchlater');
+                    var watchlater ;
 
-                if(doesNotExist){
-                    watchlater.push(id + ""); 
-                    localStorage.setItem("watchlater", watchlater.join(", "));
-                }
+                    if(temp == "") {
+                         watchlater = []; 
+                    } else {
+                        watchlater= temp.split(", ");
+                    }
 
-                $(event.currentTarget).attr("disabled", "true").html("Added");
-            }); 
+                    var doesNotExist = watchlater.every(item =>{
+                        return item != id;
+                    });
 
-            $(".body").append(card);
-            $(".Movie-name").html(result.original_title);
-            $(".description").html(result.overview);
-            
-            console.clear()
-        });
+                    if(doesNotExist){
+                        watchlater.push(id + ""); 
+                        localStorage.setItem("watchlater", watchlater.join(", "));
+                    }
+
+                    $(event.currentTarget).attr("disabled", "true").html("Added");
+                }); 
+
+                $(".body").append(card);
+                $(".Movie-name").html(result.original_title);
+                $(".description").html(result.overview);
+
+            });
+        }
+        pageNr++;
     }
-    pageNr++;
-} 
-loadNext();
-$("#loader button").on("click", () => {
-    // Call the loadNext function with the page variable increased by one
-    loadNext(   );
-});
-    /* End of Show All Movies Functionality */
+    /* End of Load Movies Functionality */
+
+    loadNext();
+
+    $("#loader button").on("click", () => {
+        // Call the loadNext function with the page variable increased by one
+        loadNext();
+
+        /* Clears All Filters */
+        $(".genre_select").val("Genre");
+        $(".rating_select").val("Rating");
+        $(".time_select").val(1);
+        $(".search-input").val(''); 
+    });
+    
 
     /* Filter With Genre Functionality */
     $.getJSON(genreList, function(result) {
@@ -181,17 +187,12 @@ $("#loader button").on("click", () => {
 
     $(".genre_select").change(function(){
         $(".rating_select").val("Rating");
-        $(".year_select").val("Year");
+        $(".time_select").val(1);
         $(".search-input").val('');
         
         var genreType = $(this).val();
 
         $(".card-container").css("display", "none");
-
-        if ($(".card-container").css("display") == "none") {
-            $(".body h1").css("display", "none");
-            $(".body").append(`<h1 class="text-center">Please Select a Different Genre</h1>`);
-        } 
 
         if(genreType == "Genre"){
             $(".card-container").css("display", "block");
@@ -203,7 +204,7 @@ $("#loader button").on("click", () => {
     /* End of Filter With Genre Functionality */
 
     /* Filter With Runtime Functionality  */
-    $(".year_select").change(function(){
+    $(".time_select").change(function(){
         $(".genre_select").val("Genre");
         $(".rating_select").val("Rating");
         $(".search-input").val(''); 
@@ -220,7 +221,8 @@ $("#loader button").on("click", () => {
                 console.log(i)
                 if(selectedTime == "Runtime") {
                     $(".card-container").css("display", "block");
-                } else if($("[data-rating]") !== i) {
+                    console.log("oops")
+                } else if($("[data-runtime]") == i) {
                     $(".featured-card").css("display", "block");
                     $("[data-runtime=\"" + i + "\"]").css("display", "block");
                     console.log("oops")
@@ -235,7 +237,7 @@ $("#loader button").on("click", () => {
     /* Filter With Rating Functionality */
     $(".rating_select").change(function(){
         $(".genre_select").val("Genre");
-        $(".year_select").val("Year");
+        $(".time_select").val(1);
         $(".search-input").val('');
 
         var selectedRating = $(this).val();
@@ -258,7 +260,8 @@ $("#loader button").on("click", () => {
     /* Search Movies With Keywords Functionality */
     $(".search-input").keyup(function () { 
         $(".genre_select").val("Genre");
-        $(".rating_select").val("Rating"); 
+        $(".rating_select").val("Rating");
+        $(".time_select").val(1); 
 
         var value = $(this).val().toLowerCase() 
 
