@@ -1,3 +1,30 @@
+/* ScrollBar Styling */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 10px;
+}
+
+:hover::-webkit-scrollbar {
+    height: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #0b5ed7;
+}
+
+:hover::-webkit-scrollbar-thumb {
+    border: white 1px solid;
+}
+
 html {
     padding: 0;
     margin: 0;
@@ -224,7 +251,6 @@ li {
     .container-photo{
         margin-left: 100px;
     }
- 
 }
 
 /* Media Queries For Small Devices */
@@ -250,7 +276,7 @@ li {
 
     li{
         margin-left: 1%; 
-     }
+    }
 }
 
 /* Media Queries For Large Devices */

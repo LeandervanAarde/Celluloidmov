@@ -191,11 +191,11 @@
 
 /* Media Query For Extra Large Devices */
  @media (min-width: 1440px){ 
-    .header-image   {
+    .header-image {
         height: 105vh;
     }
 
-    .welcome    {
+    .welcome {
         text-align: left;
         margin-left: 30px;
     }

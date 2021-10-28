@@ -156,7 +156,6 @@
     .watchlater {
         margin-left: 0;
     }
-
 }
 
 /* @Media Query for Small Devices */
@@ -202,7 +201,6 @@
 
 /* @Media Query for Extra Large Devices */
 @media (max-width: 1440px){ 
-
     .circle {
         height: 100px !important;
     }

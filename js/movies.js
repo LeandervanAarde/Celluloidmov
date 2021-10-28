@@ -16,10 +16,10 @@ $(document).ready(function(){
                 "\
                     <div class='col-6 col-md-4 col-lg-3 featured-card card-container' style='border: none;'>\
                         <a href='I-movie.html?id=" + result.results[i].id + "'>\
-                        <div class='card no-hover' style='border: none;' data-id = '"+result.results[i].id+"'>\
-                            <img src='https://image.tmdb.org/t/p/original"+result.results[i].poster_path+"'class='card-img-top img-fluid' alt=''>\
+                        <div class='card no-hover' style='border: none;' data-id='" + result.results[i].id + "'>\
+                            <img src='https://image.tmdb.org/t/p/original" + result.results[i].poster_path + "' class='card-img-top img-fluid' alt=''>\
                             <div class='card-body d-block '>\
-                                <p class='cardName'><strong>"+result.results[i].original_title+"</strong> <br>Rating: "+result.results[i].vote_average+" <br> Release date: "+result.results[i].release_date+"</p> \
+                                <p class='cardName'><strong>" + result.results[i].original_title + "</strong> <br>Rating:" + result.results[i].vote_average + " <br> Release date:" + result.results[i].release_date + "</p> \
                                 <a href='I-movie.html?id=" + result.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
                                 <button type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Watch later</button>  \
                                 <button type='button' class='btn btn-outline-secondary d-block d-lg-none  watchlater'style='width: 100% !important; >Watch later</button>\
@@ -35,10 +35,10 @@ $(document).ready(function(){
                     "\
                         <div class='col-6 col-md-4 col-lg-3 featured-card card-container' style='border: none;'>\
                             <a href='I-movie.html?id=" + result.results[i].id + "'>\
-                            <div class='card no-hover' style='border: none;' data-id = '"+result.results[i].id+"'>\
-                                <img src='https://image.tmdb.org/t/p/original"+result.results[i].poster_path+"'class='card-img-top img-fluid' alt=''>\
+                            <div class='card no-hover' style='border: none;' data-id='" + result.results[i].id+"'>\
+                                <img src='https://image.tmdb.org/t/p/original" + result.results[i].poster_path + "'class='card-img-top img-fluid' alt=''>\
                                 <div class='card-body d-block '>\
-                                    <p class='cardName'><strong>"+result.results[i].original_title+"</strong> <br>Rating: "+result.results[i].vote_average+" <br> Release date: "+result.results[i].release_date+"</p> \
+                                    <p class='cardName'><strong>" + result.results[i].original_title + "</strong> <br>Rating:" + result.results[i].vote_average + " <br> Release date:" + result.results[i].release_date + "</p> \
                                     <a href='I-movie.html?id=" + result.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
                                     <button disabled type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Added</button>  \
                                     <button disabled type='button' class='btn btn-outline-secondary d-block d-lg-none  watchlater'style='width: 100% !important; >Added</button>\
@@ -53,25 +53,27 @@ $(document).ready(function(){
 
             // Function to add to local storage.
             $('.watchlater').click(function(event){
-            let card = $(event.currentTarget).parent().parent()[0];
-            let id= $(card).data("id"); 
-            var temp = localStorage.getItem('watchlater');
-            var watchlater ;
-            if(temp == ""){
-                 watchlater = []; 
-            } else{
-                watchlater= temp.split(", ");
-            }
-            var doesNotExist = watchlater.every(item =>{
-                return item != id;
-            });
+                let card = $(event.currentTarget).parent().parent()[0];
+                let id= $(card).data("id"); 
+                var temp = localStorage.getItem('watchlater');
+                var watchlater ;
+                
+                if(temp == ""){
+                     watchlater = []; 
+                } else {
+                    watchlater= temp.split(", ");
+                }
 
-            if(doesNotExist){
-                watchlater.push(id + ""); 
-                localStorage.setItem("watchlater", watchlater.join(", "));
-            }
+                var doesNotExist = watchlater.every(item =>{
+                    return item != id;
+                });
 
-            $(event.currentTarget).attr("disabled", "true").html("Added");
+                if(doesNotExist){
+                    watchlater.push(id + ""); 
+                    localStorage.setItem("watchlater", watchlater.join(", "));
+                }
+
+                $(event.currentTarget).attr("disabled", "true").html("Added");
             }); 
         }
     });
@@ -79,7 +81,7 @@ $(document).ready(function(){
 
     /* Show All Movies Functionality */
     for(var i = 0; i < 500; i++){
-        var moviesURL = "https://api.themoviedb.org/3/movie/"+i+"?api_key=7c133cc72a2ad03fcf238f8ad51a53a3&language=en-US";
+        var moviesURL = "https://api.themoviedb.org/3/movie/" + i + "?api_key=7c133cc72a2ad03fcf238f8ad51a53a3&language=en-US";
         
         $.getJSON(moviesURL, function(result) {
 
@@ -87,12 +89,12 @@ $(document).ready(function(){
                 for(var i= 0; i < 1; i++){
                     card = 
                         "\
-                            <div class='col-6 col-md-4 col-lg-3 card-container' data-genre='"+result.genres[0].name+"' data-runtime="+result.runtime+" data-rating="+result.vote_average+" style='border: none;'>\
+                            <div class='col-6 col-md-4 col-lg-3 card-container' data-genre='" + result.genres[0].name + "' data-runtime=" + result.runtime + " data-rating=" + result.vote_average + " style='border: none;'>\
                                 <a href='I-movie.html?id=" + result.id + "'>\
                                 <div class='card' style='border: none;' data-id='"+result.id+"'>\
                                     <img src='https://image.tmdb.org/t/p/original"+result.poster_path+"'class='card-img-top img-fluid' alt=''>\
                                     <div class='card-body d-block '>\
-                                        <p class='cardName'><strong>"+result.original_title+"</strong> <br>Rating: "+result.vote_average+" <br> Release date: "+result.release_date+"</p> \
+                                        <p class='cardName'><strong>" + result.original_title + "</strong> <br>Rating:" + result.vote_average+" <br> Release date:" + result.release_date + "</p> \
                                         <a href='I-movie.html?id=" + result.id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
                                         <button  type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Watch later</button>  \
                                         <button  type='button' class='btn btn-outline-secondary d-block d-lg-none  watchlater'style='width: 100% !important; >Watch later</button>\
@@ -108,12 +110,12 @@ $(document).ready(function(){
             if(localStorage.getItem('watchlater').includes(result.id)){
                 card = 
                     "\
-                        <div class='col-6 col-md-4 col-lg-3 card-container' data-genre='"+result.genres[0].name+"' data-runtime="+result.runtime+" data-rating="+result.vote_average+" style='border: none;'>\
+                        <div class='col-6 col-md-4 col-lg-3 card-container' data-genre='" + result.genres[0].name + "' data-runtime=" + result.runtime + " data-rating=" + result.vote_average + " style='border: none;'>\
                             <a href='I-movie.html?id=" + result.id + "'>\
-                            <div class='card' style='border: none;' data-id = '"+result.id+"'>\
-                                <img src='https://image.tmdb.org/t/p/original"+result.poster_path+"'class='card-img-top img-fluid' alt=''>\
+                            <div class='card' style='border: none;' data-id ='" + result.id + "'>\
+                                <img src='https://image.tmdb.org/t/p/original" + result.poster_path + "'class='card-img-top img-fluid' alt=''>\
                                 <div class='card-body d-block '>\
-                                    <p class='cardName'><strong>"+result.original_title+"</strong> <br>Rating: "+result.vote_average+" <br> Release date: "+result.release_date+"</p> \
+                                    <p class='cardName'><strong>" + result.original_title + "</strong> <br>Rating:" + result.vote_average + " <br> Release date:" + result.release_date + "</p> \
                                     <a href='I-movie.html?id=" + result.id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
                                     <button disabled type='button' class='btn btn-outline-secondary d-none d-lg-block watchlater'>Added</button>  \
                                     <button disabled type='button' class='btn btn-outline-secondary d-block d-lg-none  watchlater'style='width: 100% !important; >Added</button>\
@@ -126,30 +128,33 @@ $(document).ready(function(){
 
             // Function to add to local storage.
             $('.watchlater').click(function(event){
-            let card = $(event.currentTarget).parent().parent()[0];
-            let id= $(card).data("id"); 
-            var temp = localStorage.getItem('watchlater');
-            var watchlater ;
-            if(temp == ""){
-                 watchlater = []; 
-            } else{
-                watchlater= temp.split(", ");
-            }
-            var doesNotExist = watchlater.every(item =>{
-                return item != id;
-            });
+                let card = $(event.currentTarget).parent().parent()[0];
+                let id= $(card).data("id"); 
+                var temp = localStorage.getItem('watchlater');
+                var watchlater ;
 
-            if(doesNotExist){
-                watchlater.push(id + ""); 
-                localStorage.setItem("watchlater", watchlater.join(", "));
-            }
+                if(temp == "") {
+                     watchlater = []; 
+                } else {
+                    watchlater= temp.split(", ");
+                }
 
-            $(event.currentTarget).attr("disabled", "true").html("Added");
+                var doesNotExist = watchlater.every(item =>{
+                    return item != id;
+                });
+
+                if(doesNotExist){
+                    watchlater.push(id + ""); 
+                    localStorage.setItem("watchlater", watchlater.join(", "));
+                }
+
+                $(event.currentTarget).attr("disabled", "true").html("Added");
             }); 
 
             $(".body").append(card);
             $(".Movie-name").html(result.original_title);
             $(".description").html(result.overview);
+            
             console.clear()
         });
     }
@@ -213,10 +218,6 @@ $(document).ready(function(){
         } else {
                 $(".card-container").css("display", "block");
         }
-
-
-
-       
     });
     /*  End of Filter With Runtime Functionality */ 
 

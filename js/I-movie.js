@@ -4,25 +4,17 @@ if(!localStorage.getItem("watchlater")) {
 }
 
 $(function() {
-	console.log("Jquery is linked and ready I-movie")
-		// Get info
+	// Get info
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams(queryString);
 	// Get the ID
 	const id = urlParams.get('id');
-	// Url and movie Id from arary
-	// Url for I-movie
-	const url = ' https://api.themoviedb.org/3/movie/' + id + '?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US';
-	// Url for similiar movies
-	const url2 = 'https://api.themoviedb.org/3/movie/' + id + '/similar?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1';
-	// url for the recommended movies 
-	const url3 = 'https://api.themoviedb.org/3/movie/' + id + '/recommendations?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1';
-	// trailer const
-	const url4 = 'https://api.themoviedb.org/3/movie/' + id + '/videos?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US';
+	const individualMovieUrl = ' https://api.themoviedb.org/3/movie/' + id + '?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US';
+	const similarMovieUrl = 'https://api.themoviedb.org/3/movie/' + id + '/similar?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1';
+	const recommendedMovieUrl = 'https://api.themoviedb.org/3/movie/' + id + '/recommendations?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US&page=1';
+	const trailerUrl = 'https://api.themoviedb.org/3/movie/' + id + '/videos?api_key=fbdaccb39dfca477ec685d5da0f0e705&language=en-US';
 
-	$.getJSON(url, function(result) {
-		// Console.log the result to see the data
-		console.log(result);
+	$.getJSON(individualMovieUrl, function(result) {
 		// Variables for the data
 		var mov_Description = result.overview;
 		var mov_Image = 'https://image.tmdb.org/t/p/original' + result.poster_path;
@@ -45,21 +37,17 @@ $(function() {
 
 		// For small device
 		$(".center").css("backgroundImage", "url(" + mov_Image + ")");
-
-		// Scroll position for the small devices I-movie 
 	});
 
 	// For similiar movies
-	$.getJSON(url2, function(similiar) {
-		//    Variables for the data
-		// similar movies
+	$.getJSON(similarMovieUrl, function(similiar) {
 		for(var i = 0; i < 20; i++) {
 			var card = 
 					"\
 						<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>\
         					<a href='I-movie.html?id=" + similiar.results[i].id + "'>\
-								<div class='card' style='border: none;' data-id = '" + similiar.results[i].id + "'>\
-            						<img src='https://image.tmdb.org/t/p/original" + similiar.results[i].poster_path + "'class='card-img-top img-fluid' alt=''>\
+								<div class='card' style='border: none;' data-id='" + similiar.results[i].id + "'>\
+            						<img src='https://image.tmdb.org/t/p/original" + similiar.results[i].poster_path + "' class='card-img-top img-fluid' alt=''>\
             						<div class='card-body d-block '>\
             							<p class='cardName'><strong>" + similiar.results[i].original_title + "</strong> <br>Rating: " + similiar.results[i].vote_average + " <br> Release date: " + similiar.results[i].release_date + "</p> \
             							<a href='I-movie.html?id=" + similiar.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
@@ -77,8 +65,8 @@ $(function() {
 					"\
 						<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>\
             				<a href='I-movie.html?id=" + similiar.results[i].id + "'>\
-								<div class='card' style='border: none;' data-id = '" + similiar.results[i].id + "'>\
-                					<img src='https://image.tmdb.org/t/p/original" + similiar.results[i].poster_path + "'class='card-img-top img-fluid' alt=''>\
+								<div class='card' style='border: none;' data-id='" + similiar.results[i].id + "'>\
+                					<img src='https://image.tmdb.org/t/p/original" + similiar.results[i].poster_path + "' class='card-img-top img-fluid' alt=''>\
                     				<div class='card-body d-block '>\
                         				<p class='cardName'><strong>" + similiar.results[i].original_title + "</strong> <br>Rating: " + similiar.results[i].vote_average + " <br> Release date: " + similiar.results[i].release_date + "</p> \
                         				<a href='I-movie.html?id=" + similiar.results[i].id + "'><button type='button' class='btn btn-primary d-none d-lg-block watch'> Watch now</button> </a>\
@@ -105,30 +93,28 @@ $(function() {
 			} else {
 				watchlater = temp.split(", ");
 			}
+
 			var doesNotExist = watchlater.every(item => {
 				return item != id;
 			});
+
 			if(doesNotExist) {
 				watchlater.push(id + "");
 				localStorage.setItem("watchlater", watchlater.join(", "));
 			}
-			// console.log(watchlater);
+			
 			$(event.currentTarget).attr("disabled", "true").html("Added");
 		});
 	});
 
 	// Recommended movies 
-	$.getJSON(url3, function(Recommended) {
-		// Console.log the result to see the data
-		console.log(Recommended);
-		//    Variables for the data
-		
+	$.getJSON(recommendedMovieUrl, function(Recommended) {
 		for(var i = 0; i < 4; i++) {
 			var card = 
 					"\
 					<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>\
         				<a href='I-movie.html?id=" + Recommended.results[i].id + "'>\
-							<div class='card' style='border: none;' data-id = '" + Recommended.results[i].id + "'>\
+							<div class='card' style='border: none;' data-id='" + Recommended.results[i].id + "'>\
             					<img src='https://image.tmdb.org/t/p/original" + Recommended.results[i].poster_path + "'class='card-img-top img-fluid' alt=''>\
             					<div class='card-body d-block '>\
             						<p class='cardName'><strong>" + Recommended.results[i].original_title + "</strong> <br>Rating: " + Recommended.results[i].vote_average + " <br> Release date: " + Recommended.results[i].release_date + "</p> \
@@ -147,7 +133,7 @@ $(function() {
 					"\
 						<div class='col-6 col-md-4 col-lg-3 card-container' style='border: none;'>\
             				<a href='I-movie.html?id=" + Recommended.results[i].id + "'>\
-								<div class='card' style='border: none;' data-id = '" + Recommended.results[i].id + "'>\
+								<div class='card' style='border: none;' data-id='" + Recommended.results[i].id + "'>\
                 					<img src='https://image.tmdb.org/t/p/original" + Recommended.results[i].poster_path + "'class='card-img-top img-fluid' alt=''>\
                 					<div class='card-body d-block '>\
                 						<p class='cardName'><strong>" + Recommended.results[i].original_title + "</strong> <br>Rating: " + Recommended.results[i].vote_average + " <br> Release date: " + Recommended.results[i].release_date + "</p> \
@@ -169,11 +155,13 @@ $(function() {
 			let id = $(card).data("id");
 			var temp = localStorage.getItem('watchlater');
 			var watchlater;
+
 			if(temp == "") {
 				watchlater = [];
 			} else {
 				watchlater = temp.split(", ");
 			}
+			
 			var doesNotExist = watchlater.every(item => {
 				return item != id;
 			});
@@ -183,15 +171,14 @@ $(function() {
 				localStorage.setItem("watchlater", watchlater.join(", "));
 			}
 
-			// console.log(watchlater);
 			$(event.currentTarget).attr("disabled", "true").html("Added");
 		});
 	});
 
 	// Trailer for movie 
 	$(".playtrailer").on('click', () => {
-		$.getJSON(url4, function(vid) {
-			//    Variables for the data
+		$.getJSON(trailerUrl, function(vid) {
+			// Variables for the data
 			let array = vid.results;
 			for(i = 0; i < array.length; i++) {
 				if(array[i].name.includes("Trailer")) {

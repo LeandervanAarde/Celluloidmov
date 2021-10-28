@@ -46,9 +46,7 @@
    <!-- Bootstrap CDN -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
-
 </head>
-
 <body>
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
@@ -56,11 +54,12 @@
             <a class="navbar-brand" href="../pages/home.html">
                 <img src="../img/SVG/Asset 2.svg" alt="" width="180" height="50" >
             </a>
+
             <!-- Profile photo for small devices -->
             <div class="container-photo col-3 d-block d-md-none">
-            <div class="photo"></div>
-            <p >Leander van Aarde</p>
-        </div><!-- Container Photo -->
+                <div class="photo"></div>
+                <p >Leander van Aarde</p>
+            </div><!-- Container Photo -->
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -85,65 +84,57 @@
                     </li>
                 </ul>
             </div>
+
             <!-- Profile photo for large devices -->
             <div class="container-photo d-none d-lg-block" style="height: 100px; width: 100px;">
                 <div class="photo" style="margin-left: 20%;"></div>
                 <p class="text-center">Leander van Aarde</p>
-             </div>
+            </div>
         </div>
-      </nav>
+    </nav><!-- Navbar End -->
 
     <div class="container-fluid">
-
         <div class="row movie-info"> <!--movie info for small devices-->
             <div class="col-12 d-block d-md-none I-movie">
                 <div class="movie-container">
-
 
                     <div class="movie left" style="overflow: scroll;">
                         <h3 class="text-center"><strong>Overview</strong></h3>
                         <!-- Description for small devices  -->
                         <p class=" mt-4 dscript">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor in imperdiet mauris integer integer massa id. Lorem commodo lorem malesuada sagittis, eu. Quis magna pretium senectus amet, ut. Id at sed at integer diam eget orci quam. habitant volutpat at nunc. Imperdiet facilisis quam ultrices vitae massa.</p>
-
                     </div>
 
                     <div class="movie center">
-                        <!-- <img  src="../img/Placeholder-mov.jpeg" class="card-img-top img-fluid" alt=""> -->
+                        <!-- Movie Center on Tablet and Mobile Screens -->
                     </div>
 
                     <div class="movie right">
-                        <div class="col-12 year small"><p class="text-left">year</p></div>
+                        <div class="col-12 year small"><p class="text-left">Year</p></div>
                         <br>
-                        <div class="col-12 duration small"><p class="text-left">year</p></div>
+                        <div class="col-12 duration small"><p class="text-left">Duration</p></div>
                         <br>
-                        <div class="col-12 genre small"><p class="text-left">strong</p></div>
+                        <div class="col-12 genre small"><p class="text-left">Genre</p></div>
 
-                        <div class=" small-circle-container playtrailer d-block d-md-none"data-bs-toggle="modal" data-bs-target="#modaltrailer">
-                            <div class="small-circle">
-                            </div>
-
-                    </div>
+                        <div class="small-circle-container playtrailer d-block d-md-none"data-bs-toggle="modal" data-bs-target="#modaltrailer">
+                            <div class="small-circle"></div>
+                        </div>
 
                         <!-- Rating  -->
-                        <div class=" rating-container d-md-none ">
+                        <div class="rating-container d-md-none ">
                                 <h5 class="text-center rate">12.2</h5> 
                             <p class="text-center"><strong>Rating</strong></p>
                         </div>
 
                         <!-- age rating  -->
-                        <div class="  rating-container d-md-none" style="margin-top: 0;">
-                           
-                                <h5 class="text-center rating langsm" >13+</h5>
-                            
-                            <p class="text-center"><strong>language</strong>
-                                  
+                        <div class="rating-container d-md-none" style="margin-top: 0;">
+                            <h5 class="text-center rating langsm" >13+</h5>                          
+                            <p class="text-center"><strong>Language</strong>          
                             </p>
                         </div>
+
                         <button type="button" class="btn btn-outline-secondary d-block d-lg-none watchlater I-watch" style="width: 100% !important;" >Watch later</button>
-                        
                     </div> <!--Right container "movie right" ends here-->
 
-                    
                 </div> <!--Movie container ends here-->
             </div> <!--I movie container ends here-->
 
@@ -158,47 +149,39 @@
                 <div class="col-3 genre"><p>Genre</p></div>
 
                 <p class="mt-5 dscript">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor in imperdiet mauris integer integer massa id. Lorem commodo lorem malesuada sagittis, eu. Quis magna pretium senectus amet, ut. Id at sed at integer diam eget orci quam. habitant volutpat at nunc. Imperdiet facilisis quam ultrices vitae massa.</p>
+                
                 <button type="button" class="btn btn-primary  "> Watch now</button>
                 <button type="button" class="btn btn-outline-secondary">Watch later</button>
 
                 <div class="col-12">
-
-                    <div class=" col-3 col-xl-2 rating-container d-md-none d-lg-block">
+                    <div class="col-3 col-xl-2 rating-container d-md-none d-lg-block">
                         <div class="rating circle">
                             <h3 class="text-center rate" style="margin-top: 40%;">12.2</h3>    
                         </div>
-    
+
                         <p class="text-center"><strong>Rating</strong></p>
                     </div>
     
-    
-                    <div class=" col-3 col-xl-2 rating-container d-md-none d-lg-block">
+                    <div class="col-3 col-xl-2 rating-container d-md-none d-lg-block">
                         <div class="lang circle">
                             <h3 class="text-center rating" style="margin-top: 40%;">13+</h3>
                          </div>
-                        <p class="text-center"><strong>Language</strong>
-                              
-                        </p>
+
+                        <p class="text-center"><strong>Language</strong></p>
                     </div>
     
-    
-                    <div class=" col-3 col-xl-2 rating-container d-md-none d-lg-block playtrailer"  data-bs-toggle="modal" data-bs-target="#modaltrailer">
-                        <div class="trailer circle" > 
+                    <div class="col-3 col-xl-2 rating-container d-md-none d-lg-block playtrailer"  data-bs-toggle="modal" data-bs-target="#modaltrailer">
+                        <div class="trailer circle"></div>
 
-                        </div>
                         <p class="text-center"><strong>Trailer</strong></p>
                     </div>
                 </div>
-
-    
             </div>
 
             <div class="col-6 d-none d-md-block">
-                <div class="col-10 offset-1 movieCover"> <!--movie cover -->
-            
-                </div>
+                <div class="col-10 offset-1 movieCover"><!--movie cover --></div>
 
-                <div class=" col-3 rating-container d-md-block d-lg-none">
+                <div class="col-3 rating-container d-md-block d-lg-none">
                     <div class="rating circle"> 
                         <h3 class="text-center rate" style="margin-top: 35%;">12.2</h3>  
                     </div>
@@ -206,85 +189,62 @@
                     <p class="text-center"><strong>Rating</strong></p>
                 </div>
 
-
-                <div class=" col-3 rating-container d-md-block d-lg-none">
+                <div class="col-3 rating-container d-md-block d-lg-none">
                     <div class="age circle">
                         <h3 class="text-center rating" style="margin-top: 40%;"></h3>
                     </div>
                     <p class="text-center"><strong>Age</strong></p>
                 </div>
 
-
-                <div class=" col-3 rating-container d-md-block d-lg-none playtrailer"  data-bs-toggle="modal" data-bs-target="#modaltrailer">
+                <div class="col-3 rating-container d-md-block d-lg-none playtrailer"  data-bs-toggle="modal" data-bs-target="#modaltrailer">
                     <div class="trailer circle"> </div>
                     <p class="text-center "><strong>Trailer</strong></p>
                 </div>
-                
-    
             </div>
-           
-
-            
-
-        
-
             <!-- Movie information for small devices to end here -->
-
         </div> <!--Row ends here-->
 
         <!-- New row -->
         <div class="row body p-3 gx-4 gy-4"> <!--Body row start-->
-
             <div class="col-12"><h1>Other people also liked</h1></div> <!--heading-->
-
         </div> <!--Other people liked-->
 
         <div class="row body-2 p-3 gx-4 gy-4"> <!--Body row start-->
-
             <div class="col-12 Aname"><h1>Recommended by us</h1></div> <!--heading-->
-
-            <!--  -->
-
         </div> <!--Body row end-->
 
-
-
         <div class="row footer ">
-         
             <div class="col-4 col-md-3 col-lg-2 logo-container"> </div>
             <div class="col-1 social icon-1"></div>
             <div class="col-1 social icon-2"></div>
             <div class="col-1 social icon-3"></div>
-
             <div class="col-2 "><p class="">Celluloid 2021</p></div>
-
-    </div>
+        </div><!-- Footer -->
     </div>
     <!-- Content ends here -->
 
     <!-- script sources added here -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <!-- font awesome script tag for icons -->
     <script src="https://use.fontawesome.com/44515d03f6.js"></script>
-    <!-- font awesome script tag ends -->
+
+    <!-- JS Link -->
     <script src="../js/index.js"></script>
     <script src="../js/I-movie.js"></script>
 
-     <!-- modal  -->
-     <div class="modal fade" id="modaltrailer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal  -->
+    <div class="modal fade" id="modaltrailer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class=" modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body ratio ratio-16x9" id="video"></div>
             </div>
-            <div class="modal-body ratio ratio-16x9" id="video">
-            </div>
-            
-          </div>
         </div>
-      </div>
-
-
-      <!-- Modal end -->
+    </div><!-- Modal end -->
+    
 </body>
 </html>
