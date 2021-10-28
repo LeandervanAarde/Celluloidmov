@@ -74,7 +74,7 @@ $(function(){
 
     $(".sm").on("click",function(){
         var pass1 = $(".pass").val();
-        var pass2 = $(".pass1").val();
+        var pass2 = $(".pass2").val();
 
         if(pass1 !== pass2) {
             alert("Your Passwords Do not match!");
@@ -93,7 +93,7 @@ $(function(){
         if(pass1 !== pass2) {
             alert("Your Passwords Do not match!");
         }else{
-            sessionStorage.setItem("Username SignUp", userName)
+            sessionStorage.setItem("username", username)
             window.location.href = "../pages/home.html"; 
         }
     });
