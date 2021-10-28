@@ -38,9 +38,11 @@
     -ms-overflow-style: none; 
 }
 
-.I-movie::-webkit-scrollbar {
+.I-movie::-webkit-scrollbar, .left::-webkit-scrollbar {
     display: none;
 }
+
+.left
 
 .cover {
     height: 300px;
@@ -116,7 +118,6 @@
 }
 
 .center {
-    background-image: url("../img/Placeholder-mov.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
