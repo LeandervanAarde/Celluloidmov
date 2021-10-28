@@ -67,10 +67,10 @@ $(function(){
 
 
 
-    $(".sign-btn").on("click",function(){
+    $(".sm").on("click",function(){
 
-        var pass1 = $(".LG1").val();
-        var pass2 = $(".LG2").val();
+        var pass1 = $(".pass").val();
+        var pass2 = $(".pass1").val();
 
         console.log(pass1);
 
@@ -82,15 +82,15 @@ $(function(){
 
     });
 
-    $(".sign-btn").on("click",function(){
+    $(".signup").on("click",function(){
 
-        var smpass1 = $(".pass").val();
-        var smpass2 = $(".pass2").val();
+        var pass1 = $(".LG1").val();
+        var pass2 = $(".LG2").val();
         var userName = $(".usernameSignUp").val();
 
-        console.log(smpass1);
+        console.log(pass1);
 
-        if(smpass1 !== smpass2){
+        if(pass1 !== pass2){
             alert("Your Passwords Do not match!");
         }else{
             sessionStorage.setItem("Username SignUp", userName)

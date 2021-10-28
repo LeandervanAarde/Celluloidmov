@@ -28,13 +28,14 @@
 
 .signup{
     padding-top: 1%;
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
     background-color: #1A00B9;
     height: 7%;
     border-radius: 7px;
     color: white;
     transition: all ease-in 400ms;
+    margin-top: 5vh;
 }
 
 
@@ -47,6 +48,7 @@
     height: 7%;
     border-radius: 7px;
     color: black;
+    margin-top: 5vh;
 }
 
 #login-heading{
@@ -230,7 +232,7 @@ input{
     /* padding: 0; */
 }
 
-.login-btn, .sign-btn{
+.login-btn{
     width: 200px;
     height: 30px;
     text-align: center;
@@ -245,7 +247,7 @@ input{
     transition: all ease-in-out 400ms;
 }
 
-.login-btn:hover, .sign-btn:hover{
+.login-btn:hover{
     transform: scale(1.1);
     background-color: #E3E800;
     height: 7%;
