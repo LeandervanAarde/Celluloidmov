@@ -88,7 +88,7 @@ $(function(){
 
         var pass1 = $(".LG1").val();
         var pass2 = $(".LG2").val();
-        var userName = $(".usernameSignUp").val();
+        var username = $(".usernameSignUp").val();
 
         if(pass1 !== pass2) {
             alert("Your Passwords Do not match!");
